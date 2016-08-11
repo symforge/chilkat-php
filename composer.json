@@ -1,0 +1,19 @@
+{
+    "name": "symforge/chilkat-php",
+    "description": "Versioned Package for Chilkat PHP 5.6 Library",
+    "version": "9.5.0.58",
+    "require": {
+      "php": ">=5.6"
+    },
+    "license": "Chilkat Software License",
+    "authors": [
+        {
+            "name": "Matt Fausey",
+            "email": "support@chilkatsoft.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Ck" : "src/" }
+    },
+    "minimum-stability": "dev"
+}
