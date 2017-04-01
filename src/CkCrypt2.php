@@ -39,76 +39,20 @@ class CkCrypt2 {
 		CkCrypt2_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkCrypt2_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkCrypt2_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkCrypt2_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkCrypt2_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkCrypt2_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkCrypt2_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkCrypt2_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCrypt2_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCrypt2_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCrypt2_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCrypt2_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCrypt2_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCrypt2_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkCrypt2_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkCrypt2_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCrypt2_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AbortCurrent() {
 		return CkCrypt2_get_AbortCurrent($this->_cPtr);
 	}
 
 	function put_AbortCurrent($newVal) {
 		CkCrypt2_put_AbortCurrent($this->_cPtr,$newVal);
+	}
+
+	function get_BCryptWorkFactor() {
+		return CkCrypt2_get_BCryptWorkFactor($this->_cPtr);
+	}
+
+	function put_BCryptWorkFactor($newVal) {
+		CkCrypt2_put_BCryptWorkFactor($this->_cPtr,$newVal);
 	}
 
 	function get_BlockSize() {
@@ -207,6 +151,18 @@ class CkCrypt2 {
 		CkCrypt2_put_CryptAlgorithm($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkCrypt2_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCrypt2_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCrypt2_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_EncodingMode($str) {
 		CkCrypt2_get_EncodingMode($this->_cPtr,$str);
 	}
@@ -255,14 +211,6 @@ class CkCrypt2 {
 		CkCrypt2_put_HeartbeatMs($this->_cPtr,$newVal);
 	}
 
-	function get_IV($outBytes) {
-		CkCrypt2_get_IV($this->_cPtr,$outBytes);
-	}
-
-	function put_IV($inBytes) {
-		CkCrypt2_put_IV($this->_cPtr,$inBytes);
-	}
-
 	function get_IncludeCertChain() {
 		return CkCrypt2_get_IncludeCertChain($this->_cPtr);
 	}
@@ -287,6 +235,14 @@ class CkCrypt2 {
 		CkCrypt2_put_IterationCount($this->_cPtr,$newVal);
 	}
 
+	function get_IV($outBytes) {
+		CkCrypt2_get_IV($this->_cPtr,$outBytes);
+	}
+
+	function put_IV($inBytes) {
+		CkCrypt2_put_IV($this->_cPtr,$inBytes);
+	}
+
 	function get_KeyLength() {
 		return CkCrypt2_get_KeyLength($this->_cPtr);
 	}
@@ -301,6 +257,38 @@ class CkCrypt2 {
 
 	function put_LastChunk($newVal) {
 		CkCrypt2_put_LastChunk($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkCrypt2_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkCrypt2_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkCrypt2_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkCrypt2_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkCrypt2_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkCrypt2_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkCrypt2_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkCrypt2_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_MacAlgorithm($str) {
@@ -411,24 +399,56 @@ class CkCrypt2 {
 		CkCrypt2_put_UuMode($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkCrypt2_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCrypt2_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCrypt2_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCrypt2_version($this->_cPtr);
+	}
+
 	function AddEncryptCert($cert) {
 		CkCrypt2_AddEncryptCert($this->_cPtr,$cert);
 	}
 
-	function AddPfxSourceData($pfxData,$password) {
-		return CkCrypt2_AddPfxSourceData($this->_cPtr,$pfxData,$password);
+	function AddPfxSourceData($pfxBytes,$pfxPassword) {
+		return CkCrypt2_AddPfxSourceData($this->_cPtr,$pfxBytes,$pfxPassword);
 	}
 
-	function AddPfxSourceFile($pfxFilePath,$password) {
-		return CkCrypt2_AddPfxSourceFile($this->_cPtr,$pfxFilePath,$password);
+	function AddPfxSourceFile($pfxFilePath,$pfxPassword) {
+		return CkCrypt2_AddPfxSourceFile($this->_cPtr,$pfxFilePath,$pfxPassword);
 	}
 
-	function ByteSwap4321($data,$outBytes) {
-		return CkCrypt2_ByteSwap4321($this->_cPtr,$data,$outBytes);
+	function aesKeyUnwrap($kek,$wrappedKeyData,$encoding) {
+		return CkCrypt2_aesKeyUnwrap($this->_cPtr,$kek,$wrappedKeyData,$encoding);
+	}
+
+	function aesKeyWrap($kek,$keyData,$encoding) {
+		return CkCrypt2_aesKeyWrap($this->_cPtr,$kek,$keyData,$encoding);
+	}
+
+	function bCryptHash($password) {
+		return CkCrypt2_bCryptHash($this->_cPtr,$password);
+	}
+
+	function BCryptVerify($password,$bcryptHash) {
+		return CkCrypt2_BCryptVerify($this->_cPtr,$password,$bcryptHash);
 	}
 
 	function bytesToString($inData,$charset) {
 		return CkCrypt2_bytesToString($this->_cPtr,$inData,$charset);
+	}
+
+	function ByteSwap4321($data,$outBytes) {
+		return CkCrypt2_ByteSwap4321($this->_cPtr,$data,$outBytes);
 	}
 
 	function CkDecryptFile($srcFile,$destFile) {
@@ -497,16 +517,16 @@ class CkCrypt2 {
 		return $r;
 	}
 
-	function CreateDetachedSignature($filename,$sigFile) {
-		return CkCrypt2_CreateDetachedSignature($this->_cPtr,$filename,$sigFile);
+	function CreateDetachedSignature($inFilePath,$sigFilePath) {
+		return CkCrypt2_CreateDetachedSignature($this->_cPtr,$inFilePath,$sigFilePath);
 	}
 
 	function CreateP7M($inFilename,$p7mPath) {
 		return CkCrypt2_CreateP7M($this->_cPtr,$inFilename,$p7mPath);
 	}
 
-	function CreateP7S($inFilename,$p7sFilename) {
-		return CkCrypt2_CreateP7S($this->_cPtr,$inFilename,$p7sFilename);
+	function CreateP7S($inFilename,$p7sPath) {
+		return CkCrypt2_CreateP7S($this->_cPtr,$inFilename,$p7sPath);
 	}
 
 	function Decode($str,$encoding,$outData) {
@@ -525,8 +545,8 @@ class CkCrypt2 {
 		return CkCrypt2_DecryptBytesENC($this->_cPtr,$str,$outData);
 	}
 
-	function decryptEncoded($str) {
-		return CkCrypt2_decryptEncoded($this->_cPtr,$str);
+	function decryptEncoded($encodedEncryptedData) {
+		return CkCrypt2_decryptEncoded($this->_cPtr,$encodedEncryptedData);
 	}
 
 	function DecryptStream($strm) {
@@ -551,12 +571,12 @@ class CkCrypt2 {
 		return CkCrypt2_decryptStringENC($this->_cPtr,$str);
 	}
 
-	function encode($data,$encoding) {
-		return CkCrypt2_encode($this->_cPtr,$data,$encoding);
+	function encode($byteData,$encoding) {
+		return CkCrypt2_encode($this->_cPtr,$byteData,$encoding);
 	}
 
-	function encodeString($inStr,$charset,$encoding) {
-		return CkCrypt2_encodeString($this->_cPtr,$inStr,$charset,$encoding);
+	function encodeString($strToEncode,$charsetName,$toEncodingName) {
+		return CkCrypt2_encodeString($this->_cPtr,$strToEncode,$charsetName,$toEncodingName);
 	}
 
 	function EncryptBytes($data,$outData) {
@@ -597,16 +617,16 @@ class CkCrypt2 {
 		return CkCrypt2_genEncodedSecretKey($this->_cPtr,$password,$encoding);
 	}
 
-	function genRandomBytesENC($numBytes) {
-		return CkCrypt2_genRandomBytesENC($this->_cPtr,$numBytes);
-	}
-
 	function GenerateSecretKey($password,$outData) {
 		return CkCrypt2_GenerateSecretKey($this->_cPtr,$password,$outData);
 	}
 
 	function generateUuid() {
 		return CkCrypt2_generateUuid($this->_cPtr);
+	}
+
+	function genRandomBytesENC($numBytes) {
+		return CkCrypt2_genRandomBytesENC($this->_cPtr,$numBytes);
 	}
 
 	function GetDecryptCert() {
@@ -701,8 +721,8 @@ class CkCrypt2 {
 		return $r;
 	}
 
-	function HasSignatureSigningTime($index) {
-		return CkCrypt2_HasSignatureSigningTime($this->_cPtr,$index);
+	function hashBdENC($bd) {
+		return CkCrypt2_hashBdENC($this->_cPtr,$bd);
 	}
 
 	function HashBeginBytes($data) {
@@ -721,12 +741,12 @@ class CkCrypt2 {
 		return CkCrypt2_hashBytesENC($this->_cPtr,$data);
 	}
 
-	function HashFile($filename,$outBytes) {
-		return CkCrypt2_HashFile($this->_cPtr,$filename,$outBytes);
+	function HashFile($path,$outBytes) {
+		return CkCrypt2_HashFile($this->_cPtr,$path,$outBytes);
 	}
 
-	function HashFileAsync($filename) {
-		$r=CkCrypt2_HashFileAsync($this->_cPtr,$filename);
+	function HashFileAsync($path) {
+		$r=CkCrypt2_HashFileAsync($this->_cPtr,$path);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -735,12 +755,12 @@ class CkCrypt2 {
 		return $r;
 	}
 
-	function hashFileENC($filename) {
-		return CkCrypt2_hashFileENC($this->_cPtr,$filename);
+	function hashFileENC($path) {
+		return CkCrypt2_hashFileENC($this->_cPtr,$path);
 	}
 
-	function HashFileENCAsync($filename) {
-		$r=CkCrypt2_HashFileENCAsync($this->_cPtr,$filename);
+	function HashFileENCAsync($path) {
+		$r=CkCrypt2_HashFileENCAsync($this->_cPtr,$path);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -771,6 +791,10 @@ class CkCrypt2 {
 
 	function hashStringENC($str) {
 		return CkCrypt2_hashStringENC($this->_cPtr,$str);
+	}
+
+	function HasSignatureSigningTime($index) {
+		return CkCrypt2_HasSignatureSigningTime($this->_cPtr,$index);
 	}
 
 	function HmacBytes($inBytes,$outHmac) {
@@ -809,6 +833,10 @@ class CkCrypt2 {
 		return CkCrypt2_IsUnlocked($this->_cPtr);
 	}
 
+	function macBdENC($bd) {
+		return CkCrypt2_macBdENC($this->_cPtr,$bd);
+	}
+
 	function MacBytes($inBytes,$outBytes) {
 		return CkCrypt2_MacBytes($this->_cPtr,$inBytes,$outBytes);
 	}
@@ -825,12 +853,12 @@ class CkCrypt2 {
 		return CkCrypt2_macStringENC($this->_cPtr,$inText);
 	}
 
-	function mySqlAesDecrypt($strEncrypted,$strKey) {
-		return CkCrypt2_mySqlAesDecrypt($this->_cPtr,$strEncrypted,$strKey);
+	function mySqlAesDecrypt($strEncryptedHex,$strPassword) {
+		return CkCrypt2_mySqlAesDecrypt($this->_cPtr,$strEncryptedHex,$strPassword);
 	}
 
-	function mySqlAesEncrypt($strData,$strKey) {
-		return CkCrypt2_mySqlAesEncrypt($this->_cPtr,$strData,$strKey);
+	function mySqlAesEncrypt($strData,$strPassword) {
+		return CkCrypt2_mySqlAesEncrypt($this->_cPtr,$strData,$strPassword);
 	}
 
 	function OpaqueSignBytes($data,$outData) {
@@ -885,12 +913,16 @@ class CkCrypt2 {
 		CkCrypt2_RandomizeKey($this->_cPtr);
 	}
 
-	function reEncode($data,$fromEncoding,$toEncoding) {
-		return CkCrypt2_reEncode($this->_cPtr,$data,$fromEncoding,$toEncoding);
-	}
-
 	function ReadFile($filename,$outBytes) {
 		return CkCrypt2_ReadFile($this->_cPtr,$filename,$outBytes);
+	}
+
+	function reEncode($encodedData,$fromEncoding,$toEncoding) {
+		return CkCrypt2_reEncode($this->_cPtr,$encodedData,$fromEncoding,$toEncoding);
+	}
+
+	function SaveLastError($path) {
+		return CkCrypt2_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetDecryptCert($cert) {
@@ -957,8 +989,8 @@ class CkCrypt2 {
 		return CkCrypt2_SetSigningCert($this->_cPtr,$cert);
 	}
 
-	function SetSigningCert2($cert,$key) {
-		return CkCrypt2_SetSigningCert2($this->_cPtr,$cert,$key);
+	function SetSigningCert2($cert,$privateKey) {
+		return CkCrypt2_SetSigningCert2($this->_cPtr,$cert,$privateKey);
 	}
 
 	function SetVerifyCert($cert) {
@@ -1005,8 +1037,8 @@ class CkCrypt2 {
 		return CkCrypt2_VerifyBytesENC($this->_cPtr,$data,$encodedSig);
 	}
 
-	function VerifyDetachedSignature($filename,$sigFile) {
-		return CkCrypt2_VerifyDetachedSignature($this->_cPtr,$filename,$sigFile);
+	function VerifyDetachedSignature($inFilename,$p7sFilename) {
+		return CkCrypt2_VerifyDetachedSignature($this->_cPtr,$inFilename,$p7sFilename);
 	}
 
 	function VerifyP7M($p7mPath,$destPath) {

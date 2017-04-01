@@ -1,9 +1,9 @@
 {
     "name": "symforge/chilkat-php",
-    "description": "Versioned Package for Chilkat PHP 5.6 Library",
-    "version": "9.5.0.58",
+    "description": "Versioned Package for Chilkat PHP 5.5+ Library",
+    "version": "9.5.0.66",
     "require": {
-      "php": ">=5.6"
+      "php": ">=5.5"
     },
     "license": "Chilkat Software License",
     "authors": [
@@ -13,7 +13,11 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Ck" : "src/" }
+        "psr-0": {
+            "Ck" : "src/",
+            "SYSTEMTIME": "src/",
+            "chilkat_": "src/"
+        }
     },
     "minimum-stability": "dev"
 }

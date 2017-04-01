@@ -35,6 +35,18 @@ class CkEmailBundle {
 		CkEmailBundle_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkEmailBundle_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkEmailBundle_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkEmailBundle_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkEmailBundle_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +71,16 @@ class CkEmailBundle {
 		return CkEmailBundle_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkEmailBundle_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkEmailBundle_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkEmailBundle_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkEmailBundle_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkEmailBundle_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkEmailBundle_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkEmailBundle_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function get_MessageCount() {
+		return CkEmailBundle_get_MessageCount($this->_cPtr);
 	}
 
 	function get_VerboseLogging() {
@@ -87,28 +91,20 @@ class CkEmailBundle {
 		CkEmailBundle_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkEmailBundle_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkEmailBundle_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkEmailBundle_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkEmailBundle_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_MessageCount() {
-		return CkEmailBundle_get_MessageCount($this->_cPtr);
+	function version() {
+		return CkEmailBundle_version($this->_cPtr);
 	}
 
 	function AddEmail($email) {
 		return CkEmailBundle_AddEmail($this->_cPtr,$email);
 	}
 
-	function FindByHeader($name,$value) {
-		$r=CkEmailBundle_FindByHeader($this->_cPtr,$name,$value);
+	function FindByHeader($headerFieldName,$headerFieldValue) {
+		$r=CkEmailBundle_FindByHeader($this->_cPtr,$headerFieldName,$headerFieldValue);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -163,6 +159,10 @@ class CkEmailBundle {
 
 	function RemoveEmailByIndex($index) {
 		return CkEmailBundle_RemoveEmailByIndex($this->_cPtr,$index);
+	}
+
+	function SaveLastError($path) {
+		return CkEmailBundle_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveXml($filename) {

@@ -35,6 +35,42 @@ class CkRsa {
 		CkRsa_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_Charset($str) {
+		CkRsa_get_Charset($this->_cPtr,$str);
+	}
+
+	function charset() {
+		return CkRsa_charset($this->_cPtr);
+	}
+
+	function put_Charset($newVal) {
+		CkRsa_put_Charset($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkRsa_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkRsa_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkRsa_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_EncodingMode($str) {
+		CkRsa_get_EncodingMode($this->_cPtr,$str);
+	}
+
+	function encodingMode() {
+		return CkRsa_encodingMode($this->_cPtr);
+	}
+
+	function put_EncodingMode($newVal) {
+		CkRsa_put_EncodingMode($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkRsa_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,68 +95,12 @@ class CkRsa {
 		return CkRsa_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkRsa_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkRsa_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkRsa_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkRsa_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkRsa_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkRsa_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkRsa_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkRsa_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkRsa_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkRsa_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_Charset($str) {
-		CkRsa_get_Charset($this->_cPtr,$str);
-	}
-
-	function charset() {
-		return CkRsa_charset($this->_cPtr);
-	}
-
-	function put_Charset($newVal) {
-		CkRsa_put_Charset($this->_cPtr,$newVal);
-	}
-
-	function get_EncodingMode($str) {
-		CkRsa_get_EncodingMode($this->_cPtr,$str);
-	}
-
-	function encodingMode() {
-		return CkRsa_encodingMode($this->_cPtr);
-	}
-
-	function put_EncodingMode($newVal) {
-		CkRsa_put_EncodingMode($this->_cPtr,$newVal);
 	}
 
 	function get_LittleEndian() {
@@ -163,32 +143,48 @@ class CkRsa {
 		CkRsa_put_OaepPadding($this->_cPtr,$newVal);
 	}
 
-	function DecryptBytes($data,$bUsePrivateKey,$outData) {
-		return CkRsa_DecryptBytes($this->_cPtr,$data,$bUsePrivateKey,$outData);
+	function get_VerboseLogging() {
+		return CkRsa_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkRsa_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkRsa_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkRsa_version($this->_cPtr);
+	}
+
+	function DecryptBytes($inData,$usePrivateKey,$outData) {
+		return CkRsa_DecryptBytes($this->_cPtr,$inData,$usePrivateKey,$outData);
 	}
 
 	function DecryptBytesENC($str,$bUsePrivateKey,$outData) {
 		return CkRsa_DecryptBytesENC($this->_cPtr,$str,$bUsePrivateKey,$outData);
 	}
 
-	function decryptString($data,$bUsePrivateKey) {
-		return CkRsa_decryptString($this->_cPtr,$data,$bUsePrivateKey);
+	function decryptString($binarySig,$usePrivateKey) {
+		return CkRsa_decryptString($this->_cPtr,$binarySig,$usePrivateKey);
 	}
 
-	function decryptStringENC($str,$bUsePrivateKey) {
-		return CkRsa_decryptStringENC($this->_cPtr,$str,$bUsePrivateKey);
+	function decryptStringENC($encodedSig,$usePrivateKey) {
+		return CkRsa_decryptStringENC($this->_cPtr,$encodedSig,$usePrivateKey);
 	}
 
-	function EncryptBytes($data,$bUsePrivateKey,$outData) {
-		return CkRsa_EncryptBytes($this->_cPtr,$data,$bUsePrivateKey,$outData);
+	function EncryptBytes($binaryData,$usePrivateKey,$outData) {
+		return CkRsa_EncryptBytes($this->_cPtr,$binaryData,$usePrivateKey,$outData);
 	}
 
 	function encryptBytesENC($data,$bUsePrivateKey) {
 		return CkRsa_encryptBytesENC($this->_cPtr,$data,$bUsePrivateKey);
 	}
 
-	function EncryptString($str,$bUsePrivateKey,$outData) {
-		return CkRsa_EncryptString($this->_cPtr,$str,$bUsePrivateKey,$outData);
+	function EncryptString($stringToEncrypt,$usePrivateKey,$outData) {
+		return CkRsa_EncryptString($this->_cPtr,$stringToEncrypt,$usePrivateKey,$outData);
 	}
 
 	function encryptStringENC($str,$bUsePrivateKey) {
@@ -227,16 +223,16 @@ class CkRsa {
 		return CkRsa_GenerateKey($this->_cPtr,$numBits);
 	}
 
-	function ImportPrivateKey($xml) {
-		return CkRsa_ImportPrivateKey($this->_cPtr,$xml);
+	function ImportPrivateKey($xmlKey) {
+		return CkRsa_ImportPrivateKey($this->_cPtr,$xmlKey);
 	}
 
 	function ImportPrivateKeyObj($key) {
 		return CkRsa_ImportPrivateKeyObj($this->_cPtr,$key);
 	}
 
-	function ImportPublicKey($xml) {
-		return CkRsa_ImportPublicKey($this->_cPtr,$xml);
+	function ImportPublicKey($xmlKey) {
+		return CkRsa_ImportPublicKey($this->_cPtr,$xmlKey);
 	}
 
 	function ImportPublicKeyObj($key) {
@@ -275,12 +271,16 @@ class CkRsa {
 		return CkRsa_openSslVerifyStringENC($this->_cPtr,$str);
 	}
 
-	function SignBytes($data,$hashAlg,$outData) {
-		return CkRsa_SignBytes($this->_cPtr,$data,$hashAlg,$outData);
+	function SaveLastError($path) {
+		return CkRsa_SaveLastError($this->_cPtr,$path);
 	}
 
-	function signBytesENC($data,$hashAlg) {
-		return CkRsa_signBytesENC($this->_cPtr,$data,$hashAlg);
+	function SignBytes($binaryData,$hashAlgorithm,$outData) {
+		return CkRsa_SignBytes($this->_cPtr,$binaryData,$hashAlgorithm,$outData);
+	}
+
+	function signBytesENC($binaryData,$hashAlgorithm) {
+		return CkRsa_signBytesENC($this->_cPtr,$binaryData,$hashAlgorithm);
 	}
 
 	function SignHash($hashBytes,$hashAlg,$outBytes) {
@@ -291,12 +291,12 @@ class CkRsa {
 		return CkRsa_signHashENC($this->_cPtr,$encodedHash,$hashAlg);
 	}
 
-	function SignString($str,$hashAlg,$outData) {
-		return CkRsa_SignString($this->_cPtr,$str,$hashAlg,$outData);
+	function SignString($strToBeHashed,$hashAlgorithm,$outData) {
+		return CkRsa_SignString($this->_cPtr,$strToBeHashed,$hashAlgorithm,$outData);
 	}
 
-	function signStringENC($str,$hashAlg) {
-		return CkRsa_signStringENC($this->_cPtr,$str,$hashAlg);
+	function signStringENC($strToBeHashed,$hashAlgorithm) {
+		return CkRsa_signStringENC($this->_cPtr,$strToBeHashed,$hashAlgorithm);
 	}
 
 	function snkToXml($filename) {
@@ -307,12 +307,12 @@ class CkRsa {
 		return CkRsa_UnlockComponent($this->_cPtr,$unlockCode);
 	}
 
-	function VerifyBytes($data,$hashAlg,$sig) {
-		return CkRsa_VerifyBytes($this->_cPtr,$data,$hashAlg,$sig);
+	function VerifyBytes($originalData,$hashAlgorithm,$signatureBytes) {
+		return CkRsa_VerifyBytes($this->_cPtr,$originalData,$hashAlgorithm,$signatureBytes);
 	}
 
-	function VerifyBytesENC($data,$hashAlg,$encodedSig) {
-		return CkRsa_VerifyBytesENC($this->_cPtr,$data,$hashAlg,$encodedSig);
+	function VerifyBytesENC($originalData,$hashAlgorithm,$encodedSig) {
+		return CkRsa_VerifyBytesENC($this->_cPtr,$originalData,$hashAlgorithm,$encodedSig);
 	}
 
 	function VerifyHash($hashBytes,$hashAlg,$sigBytes) {
@@ -327,12 +327,12 @@ class CkRsa {
 		return CkRsa_VerifyPrivateKey($this->_cPtr,$xml);
 	}
 
-	function VerifyString($str,$hashAlg,$sig) {
-		return CkRsa_VerifyString($this->_cPtr,$str,$hashAlg,$sig);
+	function VerifyString($originalString,$hashAlgorithm,$binarySig) {
+		return CkRsa_VerifyString($this->_cPtr,$originalString,$hashAlgorithm,$binarySig);
 	}
 
-	function VerifyStringENC($str,$hashAlg,$sig) {
-		return CkRsa_VerifyStringENC($this->_cPtr,$str,$hashAlg,$sig);
+	function VerifyStringENC($originalString,$hashAlgorithm,$encodedSig) {
+		return CkRsa_VerifyStringENC($this->_cPtr,$originalString,$hashAlgorithm,$encodedSig);
 	}
 }
 

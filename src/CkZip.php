@@ -39,70 +39,6 @@ class CkZip {
 		CkZip_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkZip_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkZip_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkZip_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkZip_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkZip_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkZip_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkZip_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkZip_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkZip_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkZip_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkZip_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkZip_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkZip_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkZip_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkZip_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkZip_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AbortCurrent() {
 		return CkZip_get_AbortCurrent($this->_cPtr);
 	}
@@ -159,6 +95,18 @@ class CkZip {
 		CkZip_put_Comment($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkZip_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkZip_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkZip_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_DecryptPassword($str) {
 		CkZip_get_DecryptPassword($this->_cPtr,$str);
 	}
@@ -179,6 +127,14 @@ class CkZip {
 		CkZip_put_DiscardPaths($this->_cPtr,$newVal);
 	}
 
+	function get_Encryption() {
+		return CkZip_get_Encryption($this->_cPtr);
+	}
+
+	function put_Encryption($newVal) {
+		CkZip_put_Encryption($this->_cPtr,$newVal);
+	}
+
 	function get_EncryptKeyLength() {
 		return CkZip_get_EncryptKeyLength($this->_cPtr);
 	}
@@ -197,14 +153,6 @@ class CkZip {
 
 	function put_EncryptPassword($newVal) {
 		CkZip_put_EncryptPassword($this->_cPtr,$newVal);
-	}
-
-	function get_Encryption() {
-		return CkZip_get_Encryption($this->_cPtr);
-	}
-
-	function put_Encryption($newVal) {
-		CkZip_put_Encryption($this->_cPtr,$newVal);
 	}
 
 	function get_FileCount() {
@@ -241,6 +189,38 @@ class CkZip {
 
 	function put_IgnoreAccessDenied($newVal) {
 		CkZip_put_IgnoreAccessDenied($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkZip_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkZip_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkZip_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkZip_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkZip_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkZip_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkZip_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkZip_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_NumEntries() {
@@ -311,6 +291,22 @@ class CkZip {
 		CkZip_put_TextFlag($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkZip_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkZip_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkZip_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkZip_version($this->_cPtr);
+	}
+
 	function get_Zipx() {
 		return CkZip_get_Zipx($this->_cPtr);
 	}
@@ -345,8 +341,8 @@ class CkZip {
 		return $r;
 	}
 
-	function AppendCompressed($fileName,$inData) {
-		$r=CkZip_AppendCompressed($this->_cPtr,$fileName,$inData);
+	function AppendCompressed($filename,$inData) {
+		$r=CkZip_AppendCompressed($this->_cPtr,$filename,$inData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -357,6 +353,16 @@ class CkZip {
 
 	function AppendData($fileName,$inData) {
 		$r=CkZip_AppendData($this->_cPtr,$fileName,$inData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkZipEntry($r);
+		}
+		return $r;
+	}
+
+	function AppendDataEncoded($filename,$encoding,$data) {
+		$r=CkZip_AppendDataEncoded($this->_cPtr,$filename,$encoding,$data);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -437,12 +443,12 @@ class CkZip {
 		return $r;
 	}
 
-	function AppendOneFileOrDir($fileOrDirName,$saveExtraPath) {
-		return CkZip_AppendOneFileOrDir($this->_cPtr,$fileOrDirName,$saveExtraPath);
+	function AppendOneFileOrDir($fileOrDirPath,$saveExtraPath) {
+		return CkZip_AppendOneFileOrDir($this->_cPtr,$fileOrDirPath,$saveExtraPath);
 	}
 
-	function AppendOneFileOrDirAsync($fileOrDirName,$saveExtraPath) {
-		$r=CkZip_AppendOneFileOrDirAsync($this->_cPtr,$fileOrDirName,$saveExtraPath);
+	function AppendOneFileOrDirAsync($fileOrDirPath,$saveExtraPath) {
+		$r=CkZip_AppendOneFileOrDirAsync($this->_cPtr,$fileOrDirPath,$saveExtraPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -451,8 +457,8 @@ class CkZip {
 		return $r;
 	}
 
-	function AppendString($fileName,$str) {
-		$r=CkZip_AppendString($this->_cPtr,$fileName,$str);
+	function AppendString($internalZipFilepath,$textData) {
+		$r=CkZip_AppendString($this->_cPtr,$internalZipFilepath,$textData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -461,8 +467,8 @@ class CkZip {
 		return $r;
 	}
 
-	function AppendString2($fileName,$str,$charset) {
-		$r=CkZip_AppendString2($this->_cPtr,$fileName,$str,$charset);
+	function AppendString2($internalZipFilepath,$textData,$charset) {
+		$r=CkZip_AppendString2($this->_cPtr,$internalZipFilepath,$textData,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -607,8 +613,12 @@ class CkZip {
 		return CkZip_IsUnlocked($this->_cPtr);
 	}
 
-	function NewZip($ZipFileName) {
-		return CkZip_NewZip($this->_cPtr,$ZipFileName);
+	function NewZip($zipFilePath) {
+		return CkZip_NewZip($this->_cPtr,$zipFilePath);
+	}
+
+	function OpenBd($binData) {
+		return CkZip_OpenBd($this->_cPtr,$binData);
 	}
 
 	function OpenFromByteData($byteData) {
@@ -619,12 +629,12 @@ class CkZip {
 		return CkZip_OpenFromMemory($this->_cPtr,$inData);
 	}
 
-	function OpenZip($ZipFileName) {
-		return CkZip_OpenZip($this->_cPtr,$ZipFileName);
+	function OpenZip($zipPath) {
+		return CkZip_OpenZip($this->_cPtr,$zipPath);
 	}
 
-	function OpenZipAsync($ZipFileName) {
-		$r=CkZip_OpenZipAsync($this->_cPtr,$ZipFileName);
+	function OpenZipAsync($zipPath) {
+		$r=CkZip_OpenZipAsync($this->_cPtr,$zipPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -649,6 +659,10 @@ class CkZip {
 
 	function RemoveNoCompressExtension($fileExtension) {
 		CkZip_RemoveNoCompressExtension($this->_cPtr,$fileExtension);
+	}
+
+	function SaveLastError($path) {
+		return CkZip_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetCompressionLevel($level) {
@@ -739,6 +753,20 @@ class CkZip {
 
 	function VerifyPassword() {
 		return CkZip_VerifyPassword($this->_cPtr);
+	}
+
+	function WriteBd($binData) {
+		return CkZip_WriteBd($this->_cPtr,$binData);
+	}
+
+	function WriteBdAsync($binData) {
+		$r=CkZip_WriteBdAsync($this->_cPtr,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
 	}
 
 	function WriteToMemory($outData) {

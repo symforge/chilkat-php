@@ -35,70 +35,6 @@ class CkEmail {
 		CkEmail_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkEmail_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkEmail_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkEmail_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkEmail_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkEmail_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkEmail_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkEmail_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkEmail_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkEmail_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkEmail_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkEmail_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkEmail_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkEmail_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkEmail_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkEmail_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkEmail_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Body($str) {
 		CkEmail_get_Body($this->_cPtr,$str);
 	}
@@ -133,6 +69,18 @@ class CkEmail {
 
 	function put_Charset($newVal) {
 		CkEmail_put_Charset($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkEmail_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkEmail_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkEmail_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_Decrypted() {
@@ -231,6 +179,38 @@ class CkEmail {
 		return CkEmail_language($this->_cPtr);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkEmail_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkEmail_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkEmail_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkEmail_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkEmail_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkEmail_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkEmail_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkEmail_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_LocalDate($outSysTime) {
 		CkEmail_get_LocalDate($this->_cPtr,$outSysTime);
 	}
@@ -285,6 +265,10 @@ class CkEmail {
 
 	function get_NumDaysOld() {
 		return CkEmail_get_NumDaysOld($this->_cPtr);
+	}
+
+	function get_NumDigests() {
+		return CkEmail_get_NumDigests($this->_cPtr);
 	}
 
 	function get_NumHeaderFields() {
@@ -391,14 +375,6 @@ class CkEmail {
 		CkEmail_put_SendEncrypted($this->_cPtr,$newVal);
 	}
 
-	function get_SendSigned() {
-		return CkEmail_get_SendSigned($this->_cPtr);
-	}
-
-	function put_SendSigned($newVal) {
-		CkEmail_put_SendSigned($this->_cPtr,$newVal);
-	}
-
 	function get_Sender($str) {
 		CkEmail_get_Sender($this->_cPtr,$str);
 	}
@@ -409,6 +385,14 @@ class CkEmail {
 
 	function put_Sender($newVal) {
 		CkEmail_put_Sender($this->_cPtr,$newVal);
+	}
+
+	function get_SendSigned() {
+		return CkEmail_get_SendSigned($this->_cPtr);
+	}
+
+	function put_SendSigned($newVal) {
+		CkEmail_put_SendSigned($this->_cPtr,$newVal);
 	}
 
 	function get_SignaturesValid() {
@@ -467,6 +451,26 @@ class CkEmail {
 		CkEmail_put_UnpackUseRelPaths($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkEmail_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkEmail_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkEmail_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkEmail_version($this->_cPtr);
+	}
+
+	function AddAttachmentBd($filename,$binData,$contentType) {
+		return CkEmail_AddAttachmentBd($this->_cPtr,$filename,$binData,$contentType);
+	}
+
 	function AddAttachmentHeader($index,$fieldName,$fieldValue) {
 		CkEmail_AddAttachmentHeader($this->_cPtr,$index,$fieldName,$fieldValue);
 	}
@@ -479,12 +483,12 @@ class CkEmail {
 		return CkEmail_AddCC($this->_cPtr,$friendlyName,$emailAddress);
 	}
 
-	function AddDataAttachment($filePath,$content) {
-		return CkEmail_AddDataAttachment($this->_cPtr,$filePath,$content);
+	function AddDataAttachment($fileName,$content) {
+		return CkEmail_AddDataAttachment($this->_cPtr,$fileName,$content);
 	}
 
-	function AddDataAttachment2($path,$content,$contentType) {
-		return CkEmail_AddDataAttachment2($this->_cPtr,$path,$content,$contentType);
+	function AddDataAttachment2($fileName,$content,$contentType) {
+		return CkEmail_AddDataAttachment2($this->_cPtr,$fileName,$content,$contentType);
 	}
 
 	function AddEncryptCert($cert) {
@@ -511,6 +515,10 @@ class CkEmail {
 		return CkEmail_AddHtmlAlternativeBody($this->_cPtr,$body);
 	}
 
+	function AddiCalendarAlternativeBody($icalContent,$methodName) {
+		return CkEmail_AddiCalendarAlternativeBody($this->_cPtr,$icalContent,$methodName);
+	}
+
 	function AddMultipleBcc($commaSeparatedAddresses) {
 		return CkEmail_AddMultipleBcc($this->_cPtr,$commaSeparatedAddresses);
 	}
@@ -523,20 +531,28 @@ class CkEmail {
 		return CkEmail_AddMultipleTo($this->_cPtr,$commaSeparatedAddresses);
 	}
 
-	function AddPfxSourceData($pfxData,$password) {
-		return CkEmail_AddPfxSourceData($this->_cPtr,$pfxData,$password);
+	function AddPfxSourceData($pfxBytes,$pfxPassword) {
+		return CkEmail_AddPfxSourceData($this->_cPtr,$pfxBytes,$pfxPassword);
 	}
 
-	function AddPfxSourceFile($pfxFilePath,$password) {
-		return CkEmail_AddPfxSourceFile($this->_cPtr,$pfxFilePath,$password);
+	function AddPfxSourceFile($pfxFilePath,$pfxPassword) {
+		return CkEmail_AddPfxSourceFile($this->_cPtr,$pfxFilePath,$pfxPassword);
 	}
 
 	function AddPlainTextAlternativeBody($body) {
 		return CkEmail_AddPlainTextAlternativeBody($this->_cPtr,$body);
 	}
 
-	function addRelatedData($path,$inData) {
-		return CkEmail_addRelatedData($this->_cPtr,$path,$inData);
+	function addRelatedBd($filename,$binData) {
+		return CkEmail_addRelatedBd($this->_cPtr,$filename,$binData);
+	}
+
+	function AddRelatedBd2($binData,$fileNameInHtml) {
+		return CkEmail_AddRelatedBd2($this->_cPtr,$binData,$fileNameInHtml);
+	}
+
+	function addRelatedData($fileName,$inData) {
+		return CkEmail_addRelatedData($this->_cPtr,$fileName,$inData);
 	}
 
 	function AddRelatedData2($inData,$fileNameInHtml) {
@@ -559,8 +575,8 @@ class CkEmail {
 		return CkEmail_addRelatedString($this->_cPtr,$nameInHtml,$str,$charset);
 	}
 
-	function AddRelatedString2($content,$charset,$fileNameInHtml) {
-		CkEmail_AddRelatedString2($this->_cPtr,$content,$charset,$fileNameInHtml);
+	function AddRelatedString2($fileNameInHtml,$content,$charset) {
+		CkEmail_AddRelatedString2($this->_cPtr,$fileNameInHtml,$content,$charset);
 	}
 
 	function AddStringAttachment($path,$content) {
@@ -573,10 +589,6 @@ class CkEmail {
 
 	function AddTo($friendlyName,$emailAddress) {
 		return CkEmail_AddTo($this->_cPtr,$friendlyName,$emailAddress);
-	}
-
-	function AddiCalendarAlternativeBody($body,$methodName) {
-		return CkEmail_AddiCalendarAlternativeBody($this->_cPtr,$body,$methodName);
 	}
 
 	function AesDecrypt($password) {
@@ -641,8 +653,12 @@ class CkEmail {
 		return CkEmail_computeGlobalKey($this->_cPtr,$encoding,$bFold);
 	}
 
-	function CreateDsn($explanation,$xmlDeliveryStatus,$bHeaderOnly) {
-		$r=CkEmail_CreateDsn($this->_cPtr,$explanation,$xmlDeliveryStatus,$bHeaderOnly);
+	function computeGlobalKey2($encoding,$bFold) {
+		return CkEmail_computeGlobalKey2($this->_cPtr,$encoding,$bFold);
+	}
+
+	function CreateDsn($humanReadableMessage,$xmlStatusFields,$bHeaderOnly) {
+		$r=CkEmail_CreateDsn($this->_cPtr,$humanReadableMessage,$xmlStatusFields,$bHeaderOnly);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -661,8 +677,8 @@ class CkEmail {
 		return $r;
 	}
 
-	function CreateMdn($explanation,$xmlMdnFields,$bHeaderOnly) {
-		$r=CkEmail_CreateMdn($this->_cPtr,$explanation,$xmlMdnFields,$bHeaderOnly);
+	function CreateMdn($humanReadableMessage,$xmlStatusFields,$bHeaderOnly) {
+		$r=CkEmail_CreateMdn($this->_cPtr,$humanReadableMessage,$xmlStatusFields,$bHeaderOnly);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -715,14 +731,6 @@ class CkEmail {
 		return CkEmail_generateFilename($this->_cPtr);
 	}
 
-	function getAltHeaderField($index,$fieldName) {
-		return CkEmail_getAltHeaderField($this->_cPtr,$index,$fieldName);
-	}
-
-	function altHeaderField($index,$fieldName) {
-		return CkEmail_altHeaderField($this->_cPtr,$index,$fieldName);
-	}
-
 	function getAlternativeBody($index) {
 		return CkEmail_getAlternativeBody($this->_cPtr,$index);
 	}
@@ -745,6 +753,14 @@ class CkEmail {
 
 	function alternativeContentType($index) {
 		return CkEmail_alternativeContentType($this->_cPtr,$index);
+	}
+
+	function getAltHeaderField($index,$fieldName) {
+		return CkEmail_getAltHeaderField($this->_cPtr,$index,$fieldName);
+	}
+
+	function altHeaderField($index,$fieldName) {
+		return CkEmail_altHeaderField($this->_cPtr,$index,$fieldName);
 	}
 
 	function GetAttachedMessage($index) {
@@ -893,6 +909,16 @@ class CkEmail {
 		return CkEmail_deliveryStatusInfo($this->_cPtr,$fieldName);
 	}
 
+	function GetDigest($index) {
+		$r=CkEmail_GetDigest($this->_cPtr,$index);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkEmail($r);
+		}
+		return $r;
+	}
+
 	function GetDsnFinalRecipients() {
 		$r=CkEmail_GetDsnFinalRecipients($this->_cPtr);
 		if (is_resource($r)) {
@@ -1003,8 +1029,16 @@ class CkEmail {
 		return CkEmail_mime($this->_cPtr);
 	}
 
+	function GetMimeBd($bindat) {
+		return CkEmail_GetMimeBd($this->_cPtr,$bindat);
+	}
+
 	function GetMimeBinary($outBytes) {
 		return CkEmail_GetMimeBinary($this->_cPtr,$outBytes);
+	}
+
+	function GetMimeSb($sb) {
+		return CkEmail_GetMimeSb($this->_cPtr,$sb);
 	}
 
 	function GetNthBinaryPartOfType($index,$contentType,$inlineOnly,$excludeAttachments,$outBytes) {
@@ -1185,8 +1219,8 @@ class CkEmail {
 		return CkEmail_xml($this->_cPtr);
 	}
 
-	function HasHeaderMatching($fieldName,$valuePattern,$caseInsensitive) {
-		return CkEmail_HasHeaderMatching($this->_cPtr,$fieldName,$valuePattern,$caseInsensitive);
+	function HasHeaderMatching($fieldName,$valuePattern,$caseSensitive) {
+		return CkEmail_HasHeaderMatching($this->_cPtr,$fieldName,$valuePattern,$caseSensitive);
 	}
 
 	function HasHtmlBody() {
@@ -1249,20 +1283,24 @@ class CkEmail {
 		CkEmail_RemovePlainTextAlternative($this->_cPtr);
 	}
 
-	function SaveAllAttachments($directory) {
-		return CkEmail_SaveAllAttachments($this->_cPtr,$directory);
+	function SaveAllAttachments($dirPath) {
+		return CkEmail_SaveAllAttachments($this->_cPtr,$dirPath);
 	}
 
-	function SaveAttachedFile($index,$directory) {
-		return CkEmail_SaveAttachedFile($this->_cPtr,$index,$directory);
+	function SaveAttachedFile($index,$dirPath) {
+		return CkEmail_SaveAttachedFile($this->_cPtr,$index,$dirPath);
 	}
 
-	function SaveEml($path) {
-		return CkEmail_SaveEml($this->_cPtr,$path);
+	function SaveEml($emlFilePath) {
+		return CkEmail_SaveEml($this->_cPtr,$emlFilePath);
 	}
 
-	function SaveRelatedItem($index,$directory) {
-		return CkEmail_SaveRelatedItem($this->_cPtr,$index,$directory);
+	function SaveLastError($path) {
+		return CkEmail_SaveLastError($this->_cPtr,$path);
+	}
+
+	function SaveRelatedItem($index,$dirPath) {
+		return CkEmail_SaveRelatedItem($this->_cPtr,$index,$dirPath);
 	}
 
 	function SaveXml($path) {
@@ -1277,8 +1315,8 @@ class CkEmail {
 		return CkEmail_SetAttachmentDisposition($this->_cPtr,$index,$disposition);
 	}
 
-	function SetAttachmentFilename($index,$path) {
-		return CkEmail_SetAttachmentFilename($this->_cPtr,$index,$path);
+	function SetAttachmentFilename($index,$filename) {
+		return CkEmail_SetAttachmentFilename($this->_cPtr,$index,$filename);
 	}
 
 	function SetBinaryBody($byteData,$contentType,$disposition,$filename) {
@@ -1305,12 +1343,20 @@ class CkEmail {
 		return CkEmail_SetEncryptCert($this->_cPtr,$cert);
 	}
 
+	function SetFromMimeBd($bindat) {
+		return CkEmail_SetFromMimeBd($this->_cPtr,$bindat);
+	}
+
 	function SetFromMimeBytes($mimeBytes) {
 		return CkEmail_SetFromMimeBytes($this->_cPtr,$mimeBytes);
 	}
 
 	function SetFromMimeBytes2($mimeBytes,$charset) {
 		return CkEmail_SetFromMimeBytes2($this->_cPtr,$mimeBytes,$charset);
+	}
+
+	function SetFromMimeSb($sb) {
+		return CkEmail_SetFromMimeSb($this->_cPtr,$sb);
 	}
 
 	function SetFromMimeText($mimeText) {
@@ -1357,12 +1403,12 @@ class CkEmail {
 		return CkEmail_UidlEquals($this->_cPtr,$e);
 	}
 
-	function UnSpamify() {
-		CkEmail_UnSpamify($this->_cPtr);
-	}
-
 	function UnpackHtml($unpackDir,$htmlFilename,$partsSubdir) {
 		return CkEmail_UnpackHtml($this->_cPtr,$unpackDir,$htmlFilename,$partsSubdir);
+	}
+
+	function UnSpamify() {
+		CkEmail_UnSpamify($this->_cPtr);
 	}
 
 	function UnzipAttachments() {

@@ -39,70 +39,6 @@ class CkZipEntry {
 		CkZipEntry_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkZipEntry_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkZipEntry_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkZipEntry_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkZipEntry_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkZipEntry_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkZipEntry_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkZipEntry_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkZipEntry_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkZipEntry_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkZipEntry_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkZipEntry_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkZipEntry_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkZipEntry_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkZipEntry_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkZipEntry_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkZipEntry_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Comment($str) {
 		CkZipEntry_get_Comment($this->_cPtr,$str);
 	}
@@ -145,6 +81,18 @@ class CkZipEntry {
 
 	function get_Crc() {
 		return CkZipEntry_get_Crc($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkZipEntry_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkZipEntry_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkZipEntry_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_EntryID() {
@@ -207,6 +155,38 @@ class CkZipEntry {
 		return CkZipEntry_get_IsDirectory($this->_cPtr);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkZipEntry_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkZipEntry_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkZipEntry_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkZipEntry_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkZipEntry_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkZipEntry_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkZipEntry_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkZipEntry_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_TextFlag() {
 		return CkZipEntry_get_TextFlag($this->_cPtr);
 	}
@@ -227,6 +207,22 @@ class CkZipEntry {
 		return CkZipEntry_uncompressedLengthStr($this->_cPtr);
 	}
 
+	function get_VerboseLogging() {
+		return CkZipEntry_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkZipEntry_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkZipEntry_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkZipEntry_version($this->_cPtr);
+	}
+
 	function AppendData($inData) {
 		return CkZipEntry_AppendData($this->_cPtr,$inData);
 	}
@@ -241,12 +237,12 @@ class CkZipEntry {
 		return $r;
 	}
 
-	function AppendString($inStr,$charset) {
-		return CkZipEntry_AppendString($this->_cPtr,$inStr,$charset);
+	function AppendString($strContent,$charset) {
+		return CkZipEntry_AppendString($this->_cPtr,$strContent,$charset);
 	}
 
-	function AppendStringAsync($inStr,$charset) {
-		$r=CkZipEntry_AppendStringAsync($this->_cPtr,$inStr,$charset);
+	function AppendStringAsync($strContent,$charset) {
+		$r=CkZipEntry_AppendStringAsync($this->_cPtr,$strContent,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -343,8 +339,12 @@ class CkZipEntry {
 		return CkZipEntry_ReplaceData($this->_cPtr,$inData);
 	}
 
-	function ReplaceString($inStr,$charset) {
-		return CkZipEntry_ReplaceString($this->_cPtr,$inStr,$charset);
+	function ReplaceString($strContent,$charset) {
+		return CkZipEntry_ReplaceString($this->_cPtr,$strContent,$charset);
+	}
+
+	function SaveLastError($path) {
+		return CkZipEntry_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetDt($dt) {

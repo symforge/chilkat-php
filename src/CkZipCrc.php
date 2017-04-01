@@ -39,6 +39,14 @@ class CkZipCrc {
 		CkZipCrc_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkZipCrc_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkZipCrc_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function BeginStream() {
 		CkZipCrc_BeginStream($this->_cPtr);
 	}

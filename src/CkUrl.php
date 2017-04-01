@@ -59,6 +59,14 @@ class CkUrl {
 		return CkUrl_hostType($this->_cPtr);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkUrl_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkUrl_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_Login($str) {
 		CkUrl_get_Login($this->_cPtr,$str);
 	}
@@ -83,6 +91,14 @@ class CkUrl {
 		return CkUrl_path($this->_cPtr);
 	}
 
+	function get_PathWithQueryParams($str) {
+		CkUrl_get_PathWithQueryParams($this->_cPtr,$str);
+	}
+
+	function pathWithQueryParams() {
+		return CkUrl_pathWithQueryParams($this->_cPtr);
+	}
+
 	function get_Port() {
 		return CkUrl_get_Port($this->_cPtr);
 	}
@@ -97,14 +113,6 @@ class CkUrl {
 
 	function get_Ssl() {
 		return CkUrl_get_Ssl($this->_cPtr);
-	}
-
-	function get_PathWithQueryParams($str) {
-		CkUrl_get_PathWithQueryParams($this->_cPtr,$str);
-	}
-
-	function pathWithQueryParams() {
-		return CkUrl_pathWithQueryParams($this->_cPtr);
 	}
 
 	function ParseUrl($url) {

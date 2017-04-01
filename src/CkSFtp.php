@@ -39,68 +39,12 @@ class CkSFtp {
 		CkSFtp_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkSFtp_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkSFtp_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkSFtp_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkSFtp_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkSFtp_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkSFtp_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkSFtp_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkSFtp_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkSFtp_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkSFtp_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkSFtp_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkSFtp_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkSFtp_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkSFtp_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkSFtp_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkSFtp_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkSFtp_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkSFtp_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_AccumulateBuffer($outBytes) {
@@ -157,6 +101,18 @@ class CkSFtp {
 
 	function put_ConnectTimeoutMs($newVal) {
 		CkSFtp_put_ConnectTimeoutMs($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkSFtp_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkSFtp_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkSFtp_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_DisconnectCode() {
@@ -355,6 +311,38 @@ class CkSFtp {
 		CkSFtp_put_KeepSessionLog($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkSFtp_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkSFtp_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkSFtp_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkSFtp_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkSFtp_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkSFtp_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkSFtp_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSFtp_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_MaxPacketSize() {
 		return CkSFtp_get_MaxPacketSize($this->_cPtr);
 	}
@@ -427,22 +415,6 @@ class CkSFtp {
 		return CkSFtp_sessionLog($this->_cPtr);
 	}
 
-	function get_SoRcvBuf() {
-		return CkSFtp_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkSFtp_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkSFtp_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkSFtp_put_SoSndBuf($this->_cPtr,$newVal);
-	}
-
 	function get_SocksHostname($str) {
 		CkSFtp_get_SocksHostname($this->_cPtr,$str);
 	}
@@ -495,6 +467,46 @@ class CkSFtp {
 		CkSFtp_put_SocksVersion($this->_cPtr,$newVal);
 	}
 
+	function get_SoRcvBuf() {
+		return CkSFtp_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkSFtp_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkSFtp_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkSFtp_put_SoSndBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SyncDirectives($str) {
+		CkSFtp_get_SyncDirectives($this->_cPtr,$str);
+	}
+
+	function syncDirectives() {
+		return CkSFtp_syncDirectives($this->_cPtr);
+	}
+
+	function put_SyncDirectives($newVal) {
+		CkSFtp_put_SyncDirectives($this->_cPtr,$newVal);
+	}
+
+	function get_SyncedFiles($str) {
+		CkSFtp_get_SyncedFiles($this->_cPtr,$str);
+	}
+
+	function syncedFiles() {
+		return CkSFtp_syncedFiles($this->_cPtr);
+	}
+
+	function put_SyncedFiles($newVal) {
+		CkSFtp_put_SyncedFiles($this->_cPtr,$newVal);
+	}
+
 	function get_SyncMustMatch($str) {
 		CkSFtp_get_SyncMustMatch($this->_cPtr,$str);
 	}
@@ -517,18 +529,6 @@ class CkSFtp {
 
 	function put_SyncMustNotMatch($newVal) {
 		CkSFtp_put_SyncMustNotMatch($this->_cPtr,$newVal);
-	}
-
-	function get_SyncedFiles($str) {
-		CkSFtp_get_SyncedFiles($this->_cPtr,$str);
-	}
-
-	function syncedFiles() {
-		return CkSFtp_syncedFiles($this->_cPtr);
-	}
-
-	function put_SyncedFiles($newVal) {
-		CkSFtp_put_SyncedFiles($this->_cPtr,$newVal);
 	}
 
 	function get_TcpNoDelay() {
@@ -555,24 +555,20 @@ class CkSFtp {
 		CkSFtp_put_UtcMode($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkSFtp_get_AbortCurrent($this->_cPtr);
+	function get_VerboseLogging() {
+		return CkSFtp_get_VerboseLogging($this->_cPtr);
 	}
 
-	function put_AbortCurrent($newVal) {
-		CkSFtp_put_AbortCurrent($this->_cPtr,$newVal);
+	function put_VerboseLogging($newVal) {
+		CkSFtp_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_SyncDirectives($str) {
-		CkSFtp_get_SyncDirectives($this->_cPtr,$str);
+	function get_Version($str) {
+		CkSFtp_get_Version($this->_cPtr,$str);
 	}
 
-	function syncDirectives() {
-		return CkSFtp_syncDirectives($this->_cPtr);
-	}
-
-	function put_SyncDirectives($newVal) {
-		CkSFtp_put_SyncDirectives($this->_cPtr,$newVal);
+	function version() {
+		return CkSFtp_version($this->_cPtr);
 	}
 
 	function AccumulateBytes($handle,$maxBytes) {
@@ -661,12 +657,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function Connect($hostname,$port) {
-		return CkSFtp_Connect($this->_cPtr,$hostname,$port);
+	function Connect($domainName,$port) {
+		return CkSFtp_Connect($this->_cPtr,$domainName,$port);
 	}
 
-	function ConnectAsync($hostname,$port) {
-		$r=CkSFtp_ConnectAsync($this->_cPtr,$hostname,$port);
+	function ConnectAsync($domainName,$port) {
+		$r=CkSFtp_ConnectAsync($this->_cPtr,$domainName,$port);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -689,12 +685,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function CopyFileAttr($localFilename,$remoteFilename,$bIsHandle) {
-		return CkSFtp_CopyFileAttr($this->_cPtr,$localFilename,$remoteFilename,$bIsHandle);
+	function CopyFileAttr($localFilename,$remoteFilename,$isHandle) {
+		return CkSFtp_CopyFileAttr($this->_cPtr,$localFilename,$remoteFilename,$isHandle);
 	}
 
-	function CopyFileAttrAsync($localFilename,$remoteFilename,$bIsHandle) {
-		$r=CkSFtp_CopyFileAttrAsync($this->_cPtr,$localFilename,$remoteFilename,$bIsHandle);
+	function CopyFileAttrAsync($localFilename,$remoteFilename,$isHandle) {
+		$r=CkSFtp_CopyFileAttrAsync($this->_cPtr,$localFilename,$remoteFilename,$isHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -719,6 +715,20 @@ class CkSFtp {
 
 	function Disconnect() {
 		CkSFtp_Disconnect($this->_cPtr);
+	}
+
+	function DownloadBd($remoteFilePath,$binData) {
+		return CkSFtp_DownloadBd($this->_cPtr,$remoteFilePath,$binData);
+	}
+
+	function DownloadBdAsync($remoteFilePath,$binData) {
+		$r=CkSFtp_DownloadBdAsync($this->_cPtr,$remoteFilePath,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
 	}
 
 	function DownloadFile($handle,$toFilename) {
@@ -749,12 +759,26 @@ class CkSFtp {
 		return $r;
 	}
 
+	function DownloadSb($remoteFilePath,$charset,$sb) {
+		return CkSFtp_DownloadSb($this->_cPtr,$remoteFilePath,$charset,$sb);
+	}
+
+	function DownloadSbAsync($remoteFilePath,$charset,$sb) {
+		$r=CkSFtp_DownloadSbAsync($this->_cPtr,$remoteFilePath,$charset,$sb);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function Eof($handle) {
 		return CkSFtp_Eof($this->_cPtr,$handle);
 	}
 
-	function GetFileCreateDt($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileCreateDt($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileCreateDt($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileCreateDt($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -763,8 +787,8 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileCreateDtAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileCreateDtAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileCreateDtAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileCreateDtAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -773,20 +797,20 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileCreateTime($filenameOrHandle,$bFollowLinks,$bIsHandle,$outSysTime) {
-		return CkSFtp_GetFileCreateTime($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle,$outSysTime);
+	function GetFileCreateTime($pathOrHandle,$bFollowLinks,$bIsHandle,$outSysTime) {
+		return CkSFtp_GetFileCreateTime($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle,$outSysTime);
 	}
 
-	function getFileCreateTimeStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_getFileCreateTimeStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function getFileCreateTimeStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_getFileCreateTimeStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function fileCreateTimeStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_fileCreateTimeStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function fileCreateTimeStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_fileCreateTimeStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFileCreateTimeStrAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileCreateTimeStrAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileCreateTimeStrAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileCreateTimeStrAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -795,16 +819,16 @@ class CkSFtp {
 		return $r;
 	}
 
-	function getFileGroup($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_getFileGroup($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function getFileGroup($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_getFileGroup($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function fileGroup($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_fileGroup($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function fileGroup($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_fileGroup($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFileGroupAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileGroupAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileGroupAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileGroupAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -813,12 +837,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileLastAccess($filenameOrHandle,$bFollowLinks,$bIsHandle,$outSysTime) {
-		return CkSFtp_GetFileLastAccess($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle,$outSysTime);
+	function GetFileLastAccess($pathOrHandle,$bFollowLinks,$bIsHandle,$outSysTime) {
+		return CkSFtp_GetFileLastAccess($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle,$outSysTime);
 	}
 
-	function GetFileLastAccessDt($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileLastAccessDt($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileLastAccessDt($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileLastAccessDt($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -827,8 +851,8 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileLastAccessDtAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileLastAccessDtAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileLastAccessDtAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileLastAccessDtAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -837,16 +861,16 @@ class CkSFtp {
 		return $r;
 	}
 
-	function getFileLastAccessStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_getFileLastAccessStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function getFileLastAccessStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_getFileLastAccessStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function fileLastAccessStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_fileLastAccessStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function fileLastAccessStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_fileLastAccessStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFileLastAccessStrAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileLastAccessStrAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileLastAccessStrAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileLastAccessStrAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -855,12 +879,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileLastModified($filenameOrHandle,$bFollowLinks,$bIsHandle,$outSysTime) {
-		return CkSFtp_GetFileLastModified($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle,$outSysTime);
+	function GetFileLastModified($pathOrHandle,$bFollowLinks,$bIsHandle,$outSysTime) {
+		return CkSFtp_GetFileLastModified($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle,$outSysTime);
 	}
 
-	function GetFileLastModifiedDt($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileLastModifiedDt($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileLastModifiedDt($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileLastModifiedDt($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -869,8 +893,8 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileLastModifiedDtAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileLastModifiedDtAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileLastModifiedDtAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileLastModifiedDtAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -879,16 +903,16 @@ class CkSFtp {
 		return $r;
 	}
 
-	function getFileLastModifiedStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_getFileLastModifiedStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function getFileLastModifiedStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_getFileLastModifiedStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function fileLastModifiedStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_fileLastModifiedStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function fileLastModifiedStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_fileLastModifiedStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFileLastModifiedStrAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileLastModifiedStrAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileLastModifiedStrAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileLastModifiedStrAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -897,16 +921,16 @@ class CkSFtp {
 		return $r;
 	}
 
-	function getFileOwner($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_getFileOwner($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function getFileOwner($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_getFileOwner($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function fileOwner($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_fileOwner($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function fileOwner($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_fileOwner($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFileOwnerAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFileOwnerAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileOwnerAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFileOwnerAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -915,12 +939,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFilePermissions($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_GetFilePermissions($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFilePermissions($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_GetFilePermissions($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFilePermissionsAsync($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		$r=CkSFtp_GetFilePermissionsAsync($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFilePermissionsAsync($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		$r=CkSFtp_GetFilePermissionsAsync($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -929,20 +953,20 @@ class CkSFtp {
 		return $r;
 	}
 
-	function GetFileSize32($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_GetFileSize32($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileSize32($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_GetFileSize32($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function GetFileSize64($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_GetFileSize64($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function GetFileSize64($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_GetFileSize64($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function getFileSizeStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_getFileSizeStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function getFileSizeStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_getFileSizeStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
-	function fileSizeStr($filenameOrHandle,$bFollowLinks,$bIsHandle) {
-		return CkSFtp_fileSizeStr($this->_cPtr,$filenameOrHandle,$bFollowLinks,$bIsHandle);
+	function fileSizeStr($pathOrHandle,$bFollowLinks,$bIsHandle) {
+		return CkSFtp_fileSizeStr($this->_cPtr,$pathOrHandle,$bFollowLinks,$bIsHandle);
 	}
 
 	function InitializeSftp() {
@@ -981,12 +1005,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function openFile($remoteFilePath,$access,$createDisp) {
-		return CkSFtp_openFile($this->_cPtr,$remoteFilePath,$access,$createDisp);
+	function openFile($remotePath,$access,$createDisposition) {
+		return CkSFtp_openFile($this->_cPtr,$remotePath,$access,$createDisposition);
 	}
 
-	function OpenFileAsync($remoteFilePath,$access,$createDisp) {
-		$r=CkSFtp_OpenFileAsync($this->_cPtr,$remoteFilePath,$access,$createDisp);
+	function OpenFileAsync($remotePath,$access,$createDisposition) {
+		$r=CkSFtp_OpenFileAsync($this->_cPtr,$remotePath,$access,$createDisposition);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1033,12 +1057,12 @@ class CkSFtp {
 		return CkSFtp_ReadFileBytes32($this->_cPtr,$handle,$offset,$numBytes,$outBytes);
 	}
 
-	function ReadFileBytes64($handle,$offset64,$numBytes,$outBytes) {
-		return CkSFtp_ReadFileBytes64($this->_cPtr,$handle,$offset64,$numBytes,$outBytes);
+	function ReadFileBytes64($handle,$offset,$numBytes,$outBytes) {
+		return CkSFtp_ReadFileBytes64($this->_cPtr,$handle,$offset,$numBytes,$outBytes);
 	}
 
-	function ReadFileBytes64s($handle,$offset64,$numBytes,$outBytes) {
-		return CkSFtp_ReadFileBytes64s($this->_cPtr,$handle,$offset64,$numBytes,$outBytes);
+	function ReadFileBytes64s($handle,$offset,$numBytes,$outBytes) {
+		return CkSFtp_ReadFileBytes64s($this->_cPtr,$handle,$offset,$numBytes,$outBytes);
 	}
 
 	function readFileText($handle,$numBytes,$charset) {
@@ -1055,16 +1079,16 @@ class CkSFtp {
 		return $r;
 	}
 
-	function readFileText32($handle,$offset32,$numBytes,$charset) {
-		return CkSFtp_readFileText32($this->_cPtr,$handle,$offset32,$numBytes,$charset);
+	function readFileText32($handle,$offset,$numBytes,$charset) {
+		return CkSFtp_readFileText32($this->_cPtr,$handle,$offset,$numBytes,$charset);
 	}
 
-	function readFileText64($handle,$offset64,$numBytes,$charset) {
-		return CkSFtp_readFileText64($this->_cPtr,$handle,$offset64,$numBytes,$charset);
+	function readFileText64($handle,$offset,$numBytes,$charset) {
+		return CkSFtp_readFileText64($this->_cPtr,$handle,$offset,$numBytes,$charset);
 	}
 
-	function readFileText64s($handle,$offset64,$numBytes,$charset) {
-		return CkSFtp_readFileText64s($this->_cPtr,$handle,$offset64,$numBytes,$charset);
+	function readFileText64s($handle,$offset,$numBytes,$charset) {
+		return CkSFtp_readFileText64s($this->_cPtr,$handle,$offset,$numBytes,$charset);
 	}
 
 	function realPath($originalPath,$composePath) {
@@ -1151,12 +1175,16 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetCreateDt($pathOrHandle,$bIsHandle,$createTime) {
-		return CkSFtp_SetCreateDt($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SaveLastError($path) {
+		return CkSFtp_SaveLastError($this->_cPtr,$path);
 	}
 
-	function SetCreateDtAsync($pathOrHandle,$bIsHandle,$createTime) {
-		$r=CkSFtp_SetCreateDtAsync($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SendIgnore() {
+		return CkSFtp_SendIgnore($this->_cPtr);
+	}
+
+	function SendIgnoreAsync() {
+		$r=CkSFtp_SendIgnoreAsync($this->_cPtr);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1165,8 +1193,22 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetCreateTime($pathOrHandle,$bIsHandle,$createTime) {
-		return CkSFtp_SetCreateTime($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetCreateDt($pathOrHandle,$isHandle,$createDateTime) {
+		return CkSFtp_SetCreateDt($this->_cPtr,$pathOrHandle,$isHandle,$createDateTime);
+	}
+
+	function SetCreateDtAsync($pathOrHandle,$isHandle,$createDateTime) {
+		$r=CkSFtp_SetCreateDtAsync($this->_cPtr,$pathOrHandle,$isHandle,$createDateTime);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function SetCreateTime($pathOrHandle,$isHandle,$createDateTime) {
+		return CkSFtp_SetCreateTime($this->_cPtr,$pathOrHandle,$isHandle,$createDateTime);
 	}
 
 	function SetCreateTimeStr($pathOrHandle,$bIsHandle,$dateTimeStr) {
@@ -1183,12 +1225,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetLastAccessDt($pathOrHandle,$bIsHandle,$createTime) {
-		return CkSFtp_SetLastAccessDt($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetLastAccessDt($pathOrHandle,$isHandle,$accessDateTime) {
+		return CkSFtp_SetLastAccessDt($this->_cPtr,$pathOrHandle,$isHandle,$accessDateTime);
 	}
 
-	function SetLastAccessDtAsync($pathOrHandle,$bIsHandle,$createTime) {
-		$r=CkSFtp_SetLastAccessDtAsync($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetLastAccessDtAsync($pathOrHandle,$isHandle,$accessDateTime) {
+		$r=CkSFtp_SetLastAccessDtAsync($this->_cPtr,$pathOrHandle,$isHandle,$accessDateTime);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1197,8 +1239,8 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetLastAccessTime($pathOrHandle,$bIsHandle,$createTime) {
-		return CkSFtp_SetLastAccessTime($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetLastAccessTime($pathOrHandle,$isHandle,$accessDateTime) {
+		return CkSFtp_SetLastAccessTime($this->_cPtr,$pathOrHandle,$isHandle,$accessDateTime);
 	}
 
 	function SetLastAccessTimeStr($pathOrHandle,$bIsHandle,$dateTimeStr) {
@@ -1215,12 +1257,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetLastModifiedDt($pathOrHandle,$bIsHandle,$createTime) {
-		return CkSFtp_SetLastModifiedDt($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetLastModifiedDt($pathOrHandle,$isHandle,$modifiedDateTime) {
+		return CkSFtp_SetLastModifiedDt($this->_cPtr,$pathOrHandle,$isHandle,$modifiedDateTime);
 	}
 
-	function SetLastModifiedDtAsync($pathOrHandle,$bIsHandle,$createTime) {
-		$r=CkSFtp_SetLastModifiedDtAsync($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetLastModifiedDtAsync($pathOrHandle,$isHandle,$modifiedDateTime) {
+		$r=CkSFtp_SetLastModifiedDtAsync($this->_cPtr,$pathOrHandle,$isHandle,$modifiedDateTime);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1229,8 +1271,8 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetLastModifiedTime($pathOrHandle,$bIsHandle,$createTime) {
-		return CkSFtp_SetLastModifiedTime($this->_cPtr,$pathOrHandle,$bIsHandle,$createTime);
+	function SetLastModifiedTime($pathOrHandle,$isHandle,$modifiedDateTime) {
+		return CkSFtp_SetLastModifiedTime($this->_cPtr,$pathOrHandle,$isHandle,$modifiedDateTime);
 	}
 
 	function SetLastModifiedTimeStr($pathOrHandle,$bIsHandle,$dateTimeStr) {
@@ -1247,12 +1289,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetOwnerAndGroup($pathOrHandle,$bIsHandle,$owner,$group) {
-		return CkSFtp_SetOwnerAndGroup($this->_cPtr,$pathOrHandle,$bIsHandle,$owner,$group);
+	function SetOwnerAndGroup($pathOrHandle,$isHandle,$owner,$group) {
+		return CkSFtp_SetOwnerAndGroup($this->_cPtr,$pathOrHandle,$isHandle,$owner,$group);
 	}
 
-	function SetOwnerAndGroupAsync($pathOrHandle,$bIsHandle,$owner,$group) {
-		$r=CkSFtp_SetOwnerAndGroupAsync($this->_cPtr,$pathOrHandle,$bIsHandle,$owner,$group);
+	function SetOwnerAndGroupAsync($pathOrHandle,$isHandle,$owner,$group) {
+		$r=CkSFtp_SetOwnerAndGroupAsync($this->_cPtr,$pathOrHandle,$isHandle,$owner,$group);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1261,12 +1303,12 @@ class CkSFtp {
 		return $r;
 	}
 
-	function SetPermissions($pathOrHandle,$bIsHandle,$perm) {
-		return CkSFtp_SetPermissions($this->_cPtr,$pathOrHandle,$bIsHandle,$perm);
+	function SetPermissions($pathOrHandle,$isHandle,$permissions) {
+		return CkSFtp_SetPermissions($this->_cPtr,$pathOrHandle,$isHandle,$permissions);
 	}
 
-	function SetPermissionsAsync($pathOrHandle,$bIsHandle,$perm) {
-		$r=CkSFtp_SetPermissionsAsync($this->_cPtr,$pathOrHandle,$bIsHandle,$perm);
+	function SetPermissionsAsync($pathOrHandle,$isHandle,$permissions) {
+		$r=CkSFtp_SetPermissionsAsync($this->_cPtr,$pathOrHandle,$isHandle,$permissions);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1307,12 +1349,26 @@ class CkSFtp {
 		return CkSFtp_UnlockComponent($this->_cPtr,$unlockCode);
 	}
 
-	function UploadFile($handle,$localFilePath) {
-		return CkSFtp_UploadFile($this->_cPtr,$handle,$localFilePath);
+	function UploadBd($binData,$remoteFilePath) {
+		return CkSFtp_UploadBd($this->_cPtr,$binData,$remoteFilePath);
 	}
 
-	function UploadFileAsync($handle,$localFilePath) {
-		$r=CkSFtp_UploadFileAsync($this->_cPtr,$handle,$localFilePath);
+	function UploadBdAsync($binData,$remoteFilePath) {
+		$r=CkSFtp_UploadBdAsync($this->_cPtr,$binData,$remoteFilePath);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function UploadFile($handle,$fromFilename) {
+		return CkSFtp_UploadFile($this->_cPtr,$handle,$fromFilename);
+	}
+
+	function UploadFileAsync($handle,$fromFilename) {
+		$r=CkSFtp_UploadFileAsync($this->_cPtr,$handle,$fromFilename);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1335,12 +1391,26 @@ class CkSFtp {
 		return $r;
 	}
 
-	function WriteFileBytes($handle,$data) {
-		return CkSFtp_WriteFileBytes($this->_cPtr,$handle,$data);
+	function UploadSb($sb,$remoteFilePath,$charset,$includeBom) {
+		return CkSFtp_UploadSb($this->_cPtr,$sb,$remoteFilePath,$charset,$includeBom);
 	}
 
-	function WriteFileBytesAsync($handle,$data) {
-		$r=CkSFtp_WriteFileBytesAsync($this->_cPtr,$handle,$data);
+	function UploadSbAsync($sb,$remoteFilePath,$charset,$includeBom) {
+		$r=CkSFtp_UploadSbAsync($this->_cPtr,$sb,$remoteFilePath,$charset,$includeBom);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function WriteFileBytes($handle,$byteData) {
+		return CkSFtp_WriteFileBytes($this->_cPtr,$handle,$byteData);
+	}
+
+	function WriteFileBytesAsync($handle,$byteData) {
+		$r=CkSFtp_WriteFileBytesAsync($this->_cPtr,$handle,$byteData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);

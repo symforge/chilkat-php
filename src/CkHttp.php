@@ -39,68 +39,12 @@ class CkHttp {
 		CkHttp_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkHttp_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkHttp_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkHttp_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkHttp_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkHttp_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkHttp_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkHttp_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkHttp_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkHttp_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkHttp_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkHttp_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkHttp_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkHttp_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkHttp_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkHttp_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkHttp_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkHttp_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkHttp_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_Accept($str) {
@@ -145,6 +89,14 @@ class CkHttp {
 
 	function put_AllowGzip($newVal) {
 		CkHttp_put_AllowGzip($this->_cPtr,$newVal);
+	}
+
+	function get_AllowHeaderFolding() {
+		return CkHttp_get_AllowHeaderFolding($this->_cPtr);
+	}
+
+	function put_AllowHeaderFolding($newVal) {
+		CkHttp_put_AllowHeaderFolding($this->_cPtr,$newVal);
 	}
 
 	function get_AutoAddHostHeader() {
@@ -303,14 +255,6 @@ class CkHttp {
 		return CkHttp_get_ConnectFailReason($this->_cPtr);
 	}
 
-	function get_ConnectTimeout() {
-		return CkHttp_get_ConnectTimeout($this->_cPtr);
-	}
-
-	function put_ConnectTimeout($newVal) {
-		CkHttp_put_ConnectTimeout($this->_cPtr,$newVal);
-	}
-
 	function get_Connection($str) {
 		CkHttp_get_Connection($this->_cPtr,$str);
 	}
@@ -323,6 +267,14 @@ class CkHttp {
 		CkHttp_put_Connection($this->_cPtr,$newVal);
 	}
 
+	function get_ConnectTimeout() {
+		return CkHttp_get_ConnectTimeout($this->_cPtr);
+	}
+
+	function put_ConnectTimeout($newVal) {
+		CkHttp_put_ConnectTimeout($this->_cPtr,$newVal);
+	}
+
 	function get_CookieDir($str) {
 		CkHttp_get_CookieDir($this->_cPtr,$str);
 	}
@@ -333,6 +285,18 @@ class CkHttp {
 
 	function put_CookieDir($newVal) {
 		CkHttp_put_CookieDir($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkHttp_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkHttp_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkHttp_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_DefaultFreshPeriod() {
@@ -427,14 +391,6 @@ class CkHttp {
 		CkHttp_put_KeepResponseBody($this->_cPtr,$newVal);
 	}
 
-	function get_LMFactor() {
-		return CkHttp_get_LMFactor($this->_cPtr);
-	}
-
-	function put_LMFactor($newVal) {
-		CkHttp_put_LMFactor($this->_cPtr,$newVal);
-	}
-
 	function get_LastContentType($str) {
 		CkHttp_get_LastContentType($this->_cPtr,$str);
 	}
@@ -443,12 +399,44 @@ class CkHttp {
 		return CkHttp_lastContentType($this->_cPtr);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkHttp_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkHttp_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkHttp_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkHttp_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkHttp_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkHttp_lastErrorXml($this->_cPtr);
+	}
+
 	function get_LastHeader($str) {
 		CkHttp_get_LastHeader($this->_cPtr,$str);
 	}
 
 	function lastHeader() {
 		return CkHttp_lastHeader($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkHttp_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkHttp_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastModDate($str) {
@@ -477,6 +465,14 @@ class CkHttp {
 
 	function get_LastStatus() {
 		return CkHttp_get_LastStatus($this->_cPtr);
+	}
+
+	function get_LMFactor() {
+		return CkHttp_get_LMFactor($this->_cPtr);
+	}
+
+	function put_LMFactor($newVal) {
+		CkHttp_put_LMFactor($this->_cPtr,$newVal);
 	}
 
 	function get_Login($str) {
@@ -819,14 +815,6 @@ class CkHttp {
 		CkHttp_put_Referer($this->_cPtr,$newVal);
 	}
 
-	function get_RequireSslCertVerify() {
-		return CkHttp_get_RequireSslCertVerify($this->_cPtr);
-	}
-
-	function put_RequireSslCertVerify($newVal) {
-		CkHttp_put_RequireSslCertVerify($this->_cPtr,$newVal);
-	}
-
 	function get_RequiredContentType($str) {
 		CkHttp_get_RequiredContentType($this->_cPtr,$str);
 	}
@@ -837,6 +825,14 @@ class CkHttp {
 
 	function put_RequiredContentType($newVal) {
 		CkHttp_put_RequiredContentType($this->_cPtr,$newVal);
+	}
+
+	function get_RequireSslCertVerify() {
+		return CkHttp_get_RequireSslCertVerify($this->_cPtr);
+	}
+
+	function put_RequireSslCertVerify($newVal) {
+		CkHttp_put_RequireSslCertVerify($this->_cPtr,$newVal);
 	}
 
 	function get_S3Ssl() {
@@ -881,22 +877,6 @@ class CkHttp {
 
 	function put_SessionLogFilename($newVal) {
 		CkHttp_put_SessionLogFilename($this->_cPtr,$newVal);
-	}
-
-	function get_SoRcvBuf() {
-		return CkHttp_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkHttp_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkHttp_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkHttp_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_SocksHostname($str) {
@@ -949,6 +929,22 @@ class CkHttp {
 
 	function put_SocksVersion($newVal) {
 		CkHttp_put_SocksVersion($this->_cPtr,$newVal);
+	}
+
+	function get_SoRcvBuf() {
+		return CkHttp_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkHttp_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkHttp_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkHttp_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_SslAllowedCiphers($str) {
@@ -1051,24 +1047,32 @@ class CkHttp {
 		CkHttp_put_UserAgent($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkHttp_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkHttp_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkHttp_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkHttp_version($this->_cPtr);
+	}
+
 	function get_WasRedirected() {
 		return CkHttp_get_WasRedirected($this->_cPtr);
-	}
-
-	function get_AbortCurrent() {
-		return CkHttp_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkHttp_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function AddCacheRoot($dir) {
 		CkHttp_AddCacheRoot($this->_cPtr,$dir);
 	}
 
-	function AddQuickHeader($name,$value) {
-		return CkHttp_AddQuickHeader($this->_cPtr,$name,$value);
+	function AddQuickHeader($headerFieldName,$headerFieldValue) {
+		return CkHttp_AddQuickHeader($this->_cPtr,$headerFieldName,$headerFieldValue);
 	}
 
 	function BgResponseObject() {
@@ -1111,12 +1115,12 @@ class CkHttp {
 		CkHttp_DnsCacheClear($this->_cPtr);
 	}
 
-	function Download($url,$filename) {
-		return CkHttp_Download($this->_cPtr,$url,$filename);
+	function Download($url,$localFilePath) {
+		return CkHttp_Download($this->_cPtr,$url,$localFilePath);
 	}
 
-	function DownloadAsync($url,$filename) {
-		$r=CkHttp_DownloadAsync($this->_cPtr,$url,$filename);
+	function DownloadAsync($url,$localFilePath) {
+		$r=CkHttp_DownloadAsync($this->_cPtr,$url,$localFilePath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1139,12 +1143,40 @@ class CkHttp {
 		return $r;
 	}
 
+	function DownloadBd($url,$binData) {
+		return CkHttp_DownloadBd($this->_cPtr,$url,$binData);
+	}
+
+	function DownloadBdAsync($url,$binData) {
+		$r=CkHttp_DownloadBdAsync($this->_cPtr,$url,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function downloadHash($url,$hashAlgorithm,$encoding) {
 		return CkHttp_downloadHash($this->_cPtr,$url,$hashAlgorithm,$encoding);
 	}
 
 	function DownloadHashAsync($url,$hashAlgorithm,$encoding) {
 		$r=CkHttp_DownloadHashAsync($this->_cPtr,$url,$hashAlgorithm,$encoding);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function DownloadSb($url,$charset,$sb) {
+		return CkHttp_DownloadSb($this->_cPtr,$url,$charset,$sb);
+	}
+
+	function DownloadSbAsync($url,$charset,$sb) {
+		$r=CkHttp_DownloadSbAsync($this->_cPtr,$url,$charset,$sb);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1161,8 +1193,8 @@ class CkHttp {
 		return CkHttp_eventLogValue($this->_cPtr,$index);
 	}
 
-	function extractMetaRefreshUrl($html) {
-		return CkHttp_extractMetaRefreshUrl($this->_cPtr,$html);
+	function extractMetaRefreshUrl($htmlContent) {
+		return CkHttp_extractMetaRefreshUrl($this->_cPtr,$htmlContent);
 	}
 
 	function g_SvcOauthAccessToken($iss,$scope,$subEmail,$numSec,$cert) {
@@ -1305,26 +1337,6 @@ class CkHttp {
 		return $r;
 	}
 
-	function PText($verb,$url,$textData,$charset,$contentType,$md5,$gzip) {
-		$r=CkHttp_PText($this->_cPtr,$verb,$url,$textData,$charset,$contentType,$md5,$gzip);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkHttpResponse($r);
-		}
-		return $r;
-	}
-
-	function PTextAsync($verb,$url,$textData,$charset,$contentType,$md5,$gzip) {
-		$r=CkHttp_PTextAsync($this->_cPtr,$verb,$url,$textData,$charset,$contentType,$md5,$gzip);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkTask($r);
-		}
-		return $r;
-	}
-
 	function postBinary($url,$byteData,$contentType,$md5,$gzip) {
 		return CkHttp_postBinary($this->_cPtr,$url,$byteData,$contentType,$md5,$gzip);
 	}
@@ -1399,8 +1411,8 @@ class CkHttp {
 		return $r;
 	}
 
-	function PostXml($url,$xmlDoc,$charset) {
-		$r=CkHttp_PostXml($this->_cPtr,$url,$xmlDoc,$charset);
+	function PostXml($endpointUrl,$xmlContent,$xmlCharset) {
+		$r=CkHttp_PostXml($this->_cPtr,$endpointUrl,$xmlContent,$xmlCharset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1409,8 +1421,28 @@ class CkHttp {
 		return $r;
 	}
 
-	function PostXmlAsync($url,$xmlDoc,$charset) {
-		$r=CkHttp_PostXmlAsync($this->_cPtr,$url,$xmlDoc,$charset);
+	function PostXmlAsync($endpointUrl,$xmlContent,$xmlCharset) {
+		$r=CkHttp_PostXmlAsync($this->_cPtr,$endpointUrl,$xmlContent,$xmlCharset);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function PText($verb,$url,$textData,$charset,$contentType,$md5,$gzip) {
+		$r=CkHttp_PText($this->_cPtr,$verb,$url,$textData,$charset,$contentType,$md5,$gzip);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkHttpResponse($r);
+		}
+		return $r;
+	}
+
+	function PTextAsync($verb,$url,$textData,$charset,$contentType,$md5,$gzip) {
+		$r=CkHttp_PTextAsync($this->_cPtr,$verb,$url,$textData,$charset,$contentType,$md5,$gzip);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1475,6 +1507,20 @@ class CkHttp {
 		return $r;
 	}
 
+	function QuickGetBd($url,$binData) {
+		return CkHttp_QuickGetBd($this->_cPtr,$url,$binData);
+	}
+
+	function QuickGetBdAsync($url,$binData) {
+		$r=CkHttp_QuickGetBdAsync($this->_cPtr,$url,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function QuickGetObj($url) {
 		$r=CkHttp_QuickGetObj($this->_cPtr,$url);
 		if (is_resource($r)) {
@@ -1487,6 +1533,20 @@ class CkHttp {
 
 	function QuickGetObjAsync($url) {
 		$r=CkHttp_QuickGetObjAsync($this->_cPtr,$url);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function QuickGetSb($url,$sbContent) {
+		return CkHttp_QuickGetSb($this->_cPtr,$url,$sbContent);
+	}
+
+	function QuickGetSbAsync($url,$sbContent) {
+		$r=CkHttp_QuickGetSbAsync($this->_cPtr,$url,$sbContent);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1523,8 +1583,8 @@ class CkHttp {
 		return $r;
 	}
 
-	function RemoveQuickHeader($name) {
-		return CkHttp_RemoveQuickHeader($this->_cPtr,$name);
+	function RemoveQuickHeader($headerFieldName) {
+		return CkHttp_RemoveQuickHeader($this->_cPtr,$headerFieldName);
 	}
 
 	function RemoveRequestHeader($name) {
@@ -1535,12 +1595,12 @@ class CkHttp {
 		return CkHttp_renderGet($this->_cPtr,$url);
 	}
 
-	function ResumeDownload($url,$filename) {
-		return CkHttp_ResumeDownload($this->_cPtr,$url,$filename);
+	function ResumeDownload($url,$targetFilename) {
+		return CkHttp_ResumeDownload($this->_cPtr,$url,$targetFilename);
 	}
 
-	function ResumeDownloadAsync($url,$filename) {
-		$r=CkHttp_ResumeDownloadAsync($this->_cPtr,$url,$filename);
+	function ResumeDownloadAsync($url,$targetFilename) {
+		$r=CkHttp_ResumeDownloadAsync($this->_cPtr,$url,$targetFilename);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1549,12 +1609,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_CreateBucket($bucketName) {
-		return CkHttp_S3_CreateBucket($this->_cPtr,$bucketName);
+	function S3_CreateBucket($bucketPath) {
+		return CkHttp_S3_CreateBucket($this->_cPtr,$bucketPath);
 	}
 
-	function S3_CreateBucketAsync($bucketName) {
-		$r=CkHttp_S3_CreateBucketAsync($this->_cPtr,$bucketName);
+	function S3_CreateBucketAsync($bucketPath) {
+		$r=CkHttp_S3_CreateBucketAsync($this->_cPtr,$bucketPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1563,12 +1623,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_DeleteBucket($bucketName) {
-		return CkHttp_S3_DeleteBucket($this->_cPtr,$bucketName);
+	function S3_DeleteBucket($bucketPath) {
+		return CkHttp_S3_DeleteBucket($this->_cPtr,$bucketPath);
 	}
 
-	function S3_DeleteBucketAsync($bucketName) {
-		$r=CkHttp_S3_DeleteBucketAsync($this->_cPtr,$bucketName);
+	function S3_DeleteBucketAsync($bucketPath) {
+		$r=CkHttp_S3_DeleteBucketAsync($this->_cPtr,$bucketPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1597,12 +1657,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_DeleteObject($bucketName,$objectName) {
-		return CkHttp_S3_DeleteObject($this->_cPtr,$bucketName,$objectName);
+	function S3_DeleteObject($bucketPath,$objectName) {
+		return CkHttp_S3_DeleteObject($this->_cPtr,$bucketPath,$objectName);
 	}
 
-	function S3_DeleteObjectAsync($bucketName,$objectName) {
-		$r=CkHttp_S3_DeleteObjectAsync($this->_cPtr,$bucketName,$objectName);
+	function S3_DeleteObjectAsync($bucketPath,$objectName) {
+		$r=CkHttp_S3_DeleteObjectAsync($this->_cPtr,$bucketPath,$objectName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1611,12 +1671,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_DownloadBytes($bucketName,$objectName,$outBytes) {
-		return CkHttp_S3_DownloadBytes($this->_cPtr,$bucketName,$objectName,$outBytes);
+	function S3_DownloadBytes($bucketPath,$objectName,$outBytes) {
+		return CkHttp_S3_DownloadBytes($this->_cPtr,$bucketPath,$objectName,$outBytes);
 	}
 
-	function S3_DownloadBytesAsync($bucketName,$objectName) {
-		$r=CkHttp_S3_DownloadBytesAsync($this->_cPtr,$bucketName,$objectName);
+	function S3_DownloadBytesAsync($bucketPath,$objectName) {
+		$r=CkHttp_S3_DownloadBytesAsync($this->_cPtr,$bucketPath,$objectName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1625,12 +1685,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_DownloadFile($bucketName,$objectName,$localFilePath) {
-		return CkHttp_S3_DownloadFile($this->_cPtr,$bucketName,$objectName,$localFilePath);
+	function S3_DownloadFile($bucketPath,$objectName,$localFilePath) {
+		return CkHttp_S3_DownloadFile($this->_cPtr,$bucketPath,$objectName,$localFilePath);
 	}
 
-	function S3_DownloadFileAsync($bucketName,$objectName,$localFilePath) {
-		$r=CkHttp_S3_DownloadFileAsync($this->_cPtr,$bucketName,$objectName,$localFilePath);
+	function S3_DownloadFileAsync($bucketPath,$objectName,$localFilePath) {
+		$r=CkHttp_S3_DownloadFileAsync($this->_cPtr,$bucketPath,$objectName,$localFilePath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1639,12 +1699,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function s3_DownloadString($bucketName,$objectName,$charset) {
-		return CkHttp_s3_DownloadString($this->_cPtr,$bucketName,$objectName,$charset);
+	function s3_DownloadString($bucketPath,$objectName,$charset) {
+		return CkHttp_s3_DownloadString($this->_cPtr,$bucketPath,$objectName,$charset);
 	}
 
-	function S3_DownloadStringAsync($bucketName,$objectName,$charset) {
-		$r=CkHttp_S3_DownloadStringAsync($this->_cPtr,$bucketName,$objectName,$charset);
+	function S3_DownloadStringAsync($bucketPath,$objectName,$charset) {
+		$r=CkHttp_S3_DownloadStringAsync($this->_cPtr,$bucketPath,$objectName,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1653,12 +1713,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_FileExists($bucketName,$objectName) {
-		return CkHttp_S3_FileExists($this->_cPtr,$bucketName,$objectName);
+	function S3_FileExists($bucketPath,$objectName) {
+		return CkHttp_S3_FileExists($this->_cPtr,$bucketPath,$objectName);
 	}
 
-	function S3_FileExistsAsync($bucketName,$objectName) {
-		$r=CkHttp_S3_FileExistsAsync($this->_cPtr,$bucketName,$objectName);
+	function S3_FileExistsAsync($bucketPath,$objectName) {
+		$r=CkHttp_S3_FileExistsAsync($this->_cPtr,$bucketPath,$objectName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1671,12 +1731,16 @@ class CkHttp {
 		return CkHttp_s3_GenerateUrl($this->_cPtr,$bucket,$path,$expire);
 	}
 
-	function s3_ListBucketObjects($bucketName) {
-		return CkHttp_s3_ListBucketObjects($this->_cPtr,$bucketName);
+	function s3_GenerateUrlV4($useHttps,$bucketName,$path,$numSecondsValid,$awsService) {
+		return CkHttp_s3_GenerateUrlV4($this->_cPtr,$useHttps,$bucketName,$path,$numSecondsValid,$awsService);
 	}
 
-	function S3_ListBucketObjectsAsync($bucketName) {
-		$r=CkHttp_S3_ListBucketObjectsAsync($this->_cPtr,$bucketName);
+	function s3_ListBucketObjects($bucketPath) {
+		return CkHttp_s3_ListBucketObjects($this->_cPtr,$bucketPath);
+	}
+
+	function S3_ListBucketObjectsAsync($bucketPath) {
+		$r=CkHttp_S3_ListBucketObjectsAsync($this->_cPtr,$bucketPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1699,12 +1763,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_UploadBytes($objectContent,$contentType,$bucketName,$objectName) {
-		return CkHttp_S3_UploadBytes($this->_cPtr,$objectContent,$contentType,$bucketName,$objectName);
+	function S3_UploadBytes($contentBytes,$contentType,$bucketPath,$objectName) {
+		return CkHttp_S3_UploadBytes($this->_cPtr,$contentBytes,$contentType,$bucketPath,$objectName);
 	}
 
-	function S3_UploadBytesAsync($objectContent,$contentType,$bucketName,$objectName) {
-		$r=CkHttp_S3_UploadBytesAsync($this->_cPtr,$objectContent,$contentType,$bucketName,$objectName);
+	function S3_UploadBytesAsync($contentBytes,$contentType,$bucketPath,$objectName) {
+		$r=CkHttp_S3_UploadBytesAsync($this->_cPtr,$contentBytes,$contentType,$bucketPath,$objectName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1713,12 +1777,12 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_UploadFile($localFilePath,$contentType,$bucketName,$ObjectName) {
-		return CkHttp_S3_UploadFile($this->_cPtr,$localFilePath,$contentType,$bucketName,$ObjectName);
+	function S3_UploadFile($localFilePath,$contentType,$bucketPath,$objectName) {
+		return CkHttp_S3_UploadFile($this->_cPtr,$localFilePath,$contentType,$bucketPath,$objectName);
 	}
 
-	function S3_UploadFileAsync($localFilePath,$contentType,$bucketName,$ObjectName) {
-		$r=CkHttp_S3_UploadFileAsync($this->_cPtr,$localFilePath,$contentType,$bucketName,$ObjectName);
+	function S3_UploadFileAsync($localFilePath,$contentType,$bucketPath,$objectName) {
+		$r=CkHttp_S3_UploadFileAsync($this->_cPtr,$localFilePath,$contentType,$bucketPath,$objectName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1727,18 +1791,22 @@ class CkHttp {
 		return $r;
 	}
 
-	function S3_UploadString($objectContent,$charset,$contentType,$bucketName,$ObjectName) {
-		return CkHttp_S3_UploadString($this->_cPtr,$objectContent,$charset,$contentType,$bucketName,$ObjectName);
+	function S3_UploadString($objectContent,$charset,$contentType,$bucketPath,$objectName) {
+		return CkHttp_S3_UploadString($this->_cPtr,$objectContent,$charset,$contentType,$bucketPath,$objectName);
 	}
 
-	function S3_UploadStringAsync($objectContent,$charset,$contentType,$bucketName,$ObjectName) {
-		$r=CkHttp_S3_UploadStringAsync($this->_cPtr,$objectContent,$charset,$contentType,$bucketName,$ObjectName);
+	function S3_UploadStringAsync($objectContent,$charset,$contentType,$bucketPath,$objectName) {
+		$r=CkHttp_S3_UploadStringAsync($this->_cPtr,$objectContent,$charset,$contentType,$bucketPath,$objectName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkHttp_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetCookieXml($domain,$cookieXml) {
@@ -1749,20 +1817,20 @@ class CkHttp {
 		return CkHttp_SetOAuthRsaKey($this->_cPtr,$privKey);
 	}
 
-	function SetRequestHeader($name,$value) {
-		CkHttp_SetRequestHeader($this->_cPtr,$name,$value);
+	function SetRequestHeader($headerFieldName,$headerFieldValue) {
+		CkHttp_SetRequestHeader($this->_cPtr,$headerFieldName,$headerFieldValue);
 	}
 
 	function SetSslClientCert($cert) {
 		return CkHttp_SetSslClientCert($this->_cPtr,$cert);
 	}
 
-	function SetSslClientCertPem($pemDataOrFilename,$pemPassword) {
-		return CkHttp_SetSslClientCertPem($this->_cPtr,$pemDataOrFilename,$pemPassword);
+	function SetSslClientCertPem($pemDataOrPath,$pemPassword) {
+		return CkHttp_SetSslClientCertPem($this->_cPtr,$pemDataOrPath,$pemPassword);
 	}
 
-	function SetSslClientCertPfx($pfxFilename,$pfxPassword) {
-		return CkHttp_SetSslClientCertPfx($this->_cPtr,$pfxFilename,$pfxPassword);
+	function SetSslClientCertPfx($pfxPath,$pfxPassword) {
+		return CkHttp_SetSslClientCertPfx($this->_cPtr,$pfxPath,$pfxPassword);
 	}
 
 	function SleepMs($millisec) {

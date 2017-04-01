@@ -35,8 +35,40 @@ class CkTask {
 		CkTask_put_Utf8($this->_cPtr,$b);
 	}
 
-	function put_EventCallbackObject($progress) {
-		CkTask_put_EventCallbackObject($this->_cPtr,$progress);
+	function get_DebugLogFilePath($str) {
+		CkTask_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkTask_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkTask_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_Finished() {
+		return CkTask_get_Finished($this->_cPtr);
+	}
+
+	function get_HeartbeatMs() {
+		return CkTask_get_HeartbeatMs($this->_cPtr);
+	}
+
+	function put_HeartbeatMs($newVal) {
+		CkTask_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
+	function get_Inert() {
+		return CkTask_get_Inert($this->_cPtr);
+	}
+
+	function get_KeepProgressLog() {
+		return CkTask_get_KeepProgressLog($this->_cPtr);
+	}
+
+	function put_KeepProgressLog($newVal) {
+		CkTask_put_KeepProgressLog($this->_cPtr,$newVal);
 	}
 
 	function get_LastErrorHtml($str) {
@@ -63,68 +95,12 @@ class CkTask {
 		return CkTask_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkTask_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkTask_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkTask_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkTask_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkTask_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkTask_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkTask_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkTask_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkTask_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkTask_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_Finished() {
-		return CkTask_get_Finished($this->_cPtr);
-	}
-
-	function get_HeartbeatMs() {
-		return CkTask_get_HeartbeatMs($this->_cPtr);
-	}
-
-	function put_HeartbeatMs($newVal) {
-		CkTask_put_HeartbeatMs($this->_cPtr,$newVal);
-	}
-
-	function get_Inert() {
-		return CkTask_get_Inert($this->_cPtr);
-	}
-
-	function get_KeepProgressLog() {
-		return CkTask_get_KeepProgressLog($this->_cPtr);
-	}
-
-	function put_KeepProgressLog($newVal) {
-		CkTask_put_KeepProgressLog($this->_cPtr,$newVal);
 	}
 
 	function get_Live() {
@@ -187,6 +163,22 @@ class CkTask {
 		CkTask_put_UserData($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkTask_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkTask_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkTask_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkTask_version($this->_cPtr);
+	}
+
 	function Cancel() {
 		return CkTask_Cancel($this->_cPtr);
 	}
@@ -237,6 +229,10 @@ class CkTask {
 
 	function RunSynchronously() {
 		return CkTask_RunSynchronously($this->_cPtr);
+	}
+
+	function SaveLastError($path) {
+		return CkTask_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SleepMs($numMs) {

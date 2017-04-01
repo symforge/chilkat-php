@@ -35,6 +35,50 @@ class CkCharset {
 		CkCharset_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_AltToCharset($str) {
+		CkCharset_get_AltToCharset($this->_cPtr,$str);
+	}
+
+	function altToCharset() {
+		return CkCharset_altToCharset($this->_cPtr);
+	}
+
+	function put_AltToCharset($newVal) {
+		CkCharset_put_AltToCharset($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkCharset_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCharset_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCharset_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_ErrorAction() {
+		return CkCharset_get_ErrorAction($this->_cPtr);
+	}
+
+	function put_ErrorAction($newVal) {
+		CkCharset_put_ErrorAction($this->_cPtr,$newVal);
+	}
+
+	function get_FromCharset($str) {
+		CkCharset_get_FromCharset($this->_cPtr,$str);
+	}
+
+	function fromCharset() {
+		return CkCharset_fromCharset($this->_cPtr);
+	}
+
+	function put_FromCharset($newVal) {
+		CkCharset_put_FromCharset($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkCharset_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,78 +103,6 @@ class CkCharset {
 		return CkCharset_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkCharset_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCharset_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCharset_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCharset_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCharset_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCharset_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCharset_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkCharset_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkCharset_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCharset_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AltToCharset($str) {
-		CkCharset_get_AltToCharset($this->_cPtr,$str);
-	}
-
-	function altToCharset() {
-		return CkCharset_altToCharset($this->_cPtr);
-	}
-
-	function put_AltToCharset($newVal) {
-		CkCharset_put_AltToCharset($this->_cPtr,$newVal);
-	}
-
-	function get_ErrorAction() {
-		return CkCharset_get_ErrorAction($this->_cPtr);
-	}
-
-	function put_ErrorAction($newVal) {
-		CkCharset_put_ErrorAction($this->_cPtr,$newVal);
-	}
-
-	function get_FromCharset($str) {
-		CkCharset_get_FromCharset($this->_cPtr,$str);
-	}
-
-	function fromCharset() {
-		return CkCharset_fromCharset($this->_cPtr);
-	}
-
-	function put_FromCharset($newVal) {
-		CkCharset_put_FromCharset($this->_cPtr,$newVal);
-	}
-
 	function get_LastInputAsHex($str) {
 		CkCharset_get_LastInputAsHex($this->_cPtr,$str);
 	}
@@ -145,6 +117,14 @@ class CkCharset {
 
 	function lastInputAsQP() {
 		return CkCharset_lastInputAsQP($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkCharset_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkCharset_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastOutputAsHex($str) {
@@ -183,6 +163,22 @@ class CkCharset {
 		CkCharset_put_ToCharset($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkCharset_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCharset_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCharset_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCharset_version($this->_cPtr);
+	}
+
 	function CharsetToCodePage($charsetName) {
 		return CkCharset_CharsetToCodePage($this->_cPtr,$charsetName);
 	}
@@ -195,12 +191,12 @@ class CkCharset {
 		return CkCharset_ConvertData($this->_cPtr,$inData,$outData);
 	}
 
-	function ConvertFile($srcPath,$destPath) {
-		return CkCharset_ConvertFile($this->_cPtr,$srcPath,$destPath);
+	function ConvertFile($inPath,$destPath) {
+		return CkCharset_ConvertFile($this->_cPtr,$inPath,$destPath);
 	}
 
-	function ConvertFileNoPreamble($srcPath,$destPath) {
-		return CkCharset_ConvertFileNoPreamble($this->_cPtr,$srcPath,$destPath);
+	function ConvertFileNoPreamble($inPath,$destPath) {
+		return CkCharset_ConvertFileNoPreamble($this->_cPtr,$inPath,$destPath);
 	}
 
 	function ConvertFromUnicode($inData,$outBytes) {
@@ -215,8 +211,8 @@ class CkCharset {
 		return CkCharset_ConvertHtml($this->_cPtr,$inData,$outHtml);
 	}
 
-	function ConvertHtmlFile($srcPath,$destPath) {
-		return CkCharset_ConvertHtmlFile($this->_cPtr,$srcPath,$destPath);
+	function ConvertHtmlFile($inPath,$destPath) {
+		return CkCharset_ConvertHtmlFile($this->_cPtr,$inPath,$destPath);
 	}
 
 	function convertToUnicode($inData) {
@@ -243,12 +239,12 @@ class CkCharset {
 		return CkCharset_htmlCharset($this->_cPtr,$inData);
 	}
 
-	function getHtmlFileCharset($htmlFilename) {
-		return CkCharset_getHtmlFileCharset($this->_cPtr,$htmlFilename);
+	function getHtmlFileCharset($htmlFilePath) {
+		return CkCharset_getHtmlFileCharset($this->_cPtr,$htmlFilePath);
 	}
 
-	function htmlFileCharset($htmlFilename) {
-		return CkCharset_htmlFileCharset($this->_cPtr,$htmlFilename);
+	function htmlFileCharset($htmlFilePath) {
+		return CkCharset_htmlFileCharset($this->_cPtr,$htmlFilePath);
 	}
 
 	function htmlDecodeToStr($inStr) {
@@ -259,8 +255,8 @@ class CkCharset {
 		return CkCharset_HtmlEntityDecode($this->_cPtr,$inHtml,$outData);
 	}
 
-	function HtmlEntityDecodeFile($inFilename,$destPath) {
-		return CkCharset_HtmlEntityDecodeFile($this->_cPtr,$inFilename,$destPath);
+	function HtmlEntityDecodeFile($inPath,$destPath) {
+		return CkCharset_HtmlEntityDecodeFile($this->_cPtr,$inPath,$destPath);
 	}
 
 	function IsUnlocked() {
@@ -271,12 +267,16 @@ class CkCharset {
 		return CkCharset_lowerCase($this->_cPtr,$inStr);
 	}
 
-	function ReadFile($filename,$outData) {
-		return CkCharset_ReadFile($this->_cPtr,$filename,$outData);
+	function ReadFile($path,$outData) {
+		return CkCharset_ReadFile($this->_cPtr,$path,$outData);
 	}
 
-	function readFileToString($filename,$srcCharset) {
-		return CkCharset_readFileToString($this->_cPtr,$filename,$srcCharset);
+	function readFileToString($path,$charset) {
+		return CkCharset_readFileToString($this->_cPtr,$path,$charset);
+	}
+
+	function SaveLastError($path) {
+		return CkCharset_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetErrorBytes($data) {
@@ -303,16 +303,16 @@ class CkCharset {
 		return CkCharset_VerifyData($this->_cPtr,$charset,$inData);
 	}
 
-	function VerifyFile($charset,$filename) {
-		return CkCharset_VerifyFile($this->_cPtr,$charset,$filename);
+	function VerifyFile($charset,$path) {
+		return CkCharset_VerifyFile($this->_cPtr,$charset,$path);
 	}
 
-	function WriteFile($filename,$fileData) {
-		return CkCharset_WriteFile($this->_cPtr,$filename,$fileData);
+	function WriteFile($path,$byteData) {
+		return CkCharset_WriteFile($this->_cPtr,$path,$byteData);
 	}
 
-	function WriteStringToFile($str,$filename,$charset) {
-		return CkCharset_WriteStringToFile($this->_cPtr,$str,$filename,$charset);
+	function WriteStringToFile($textData,$path,$charset) {
+		return CkCharset_WriteStringToFile($this->_cPtr,$textData,$path,$charset);
 	}
 }
 

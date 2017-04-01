@@ -35,70 +35,6 @@ class CkMime {
 		CkMime_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkMime_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkMime_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkMime_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkMime_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkMime_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkMime_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkMime_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkMime_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkMime_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkMime_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkMime_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkMime_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkMime_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkMime_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkMime_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkMime_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Boundary($str) {
 		CkMime_get_Boundary($this->_cPtr,$str);
 	}
@@ -143,6 +79,18 @@ class CkMime {
 		return CkMime_currentDateTime($this->_cPtr);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkMime_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkMime_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkMime_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_Disposition($str) {
 		CkMime_get_Disposition($this->_cPtr,$str);
 	}
@@ -177,6 +125,38 @@ class CkMime {
 
 	function put_Filename($newVal) {
 		CkMime_put_Filename($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkMime_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkMime_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkMime_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkMime_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkMime_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkMime_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkMime_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkMime_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_Micalg($str) {
@@ -287,6 +267,22 @@ class CkMime {
 		CkMime_put_UseXPkcs7($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkMime_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkMime_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkMime_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkMime_version($this->_cPtr);
+	}
+
 	function AddContentLength() {
 		CkMime_AddContentLength($this->_cPtr);
 	}
@@ -319,8 +315,8 @@ class CkMime {
 		return CkMime_AddHeaderField($this->_cPtr,$name,$value);
 	}
 
-	function AddPfxSourceData($pfxData,$password) {
-		return CkMime_AddPfxSourceData($this->_cPtr,$pfxData,$password);
+	function AddPfxSourceData($pfxFileData,$pfxPassword) {
+		return CkMime_AddPfxSourceData($this->_cPtr,$pfxFileData,$pfxPassword);
 	}
 
 	function AddPfxSourceFile($pfxFilePath,$password) {
@@ -387,8 +383,8 @@ class CkMime {
 		return CkMime_DecryptUsingPfxData($this->_cPtr,$pfxData,$password);
 	}
 
-	function DecryptUsingPfxFile($pfxFilePath,$password) {
-		return CkMime_DecryptUsingPfxFile($this->_cPtr,$pfxFilePath,$password);
+	function DecryptUsingPfxFile($pfxFilePath,$pfxPassword) {
+		return CkMime_DecryptUsingPfxFile($this->_cPtr,$pfxFilePath,$pfxPassword);
 	}
 
 	function Encrypt($cert) {
@@ -465,12 +461,12 @@ class CkMime {
 		return CkMime_entireHead($this->_cPtr);
 	}
 
-	function getHeaderField($name) {
-		return CkMime_getHeaderField($this->_cPtr,$name);
+	function getHeaderField($fieldName) {
+		return CkMime_getHeaderField($this->_cPtr,$fieldName);
 	}
 
-	function headerField($name) {
-		return CkMime_headerField($this->_cPtr,$name);
+	function headerField($fieldName) {
+		return CkMime_headerField($this->_cPtr,$fieldName);
 	}
 
 	function getHeaderFieldAttribute($name,$attrName) {
@@ -505,8 +501,16 @@ class CkMime {
 		return CkMime_mime($this->_cPtr);
 	}
 
+	function GetMimeBd($bindat) {
+		return CkMime_GetMimeBd($this->_cPtr,$bindat);
+	}
+
 	function GetMimeBytes($outBytes) {
 		return CkMime_GetMimeBytes($this->_cPtr,$outBytes);
+	}
+
+	function GetMimeSb($sb) {
+		return CkMime_GetMimeSb($this->_cPtr,$sb);
 	}
 
 	function GetPart($index) {
@@ -549,6 +553,14 @@ class CkMime {
 			return new CkCertChain($r);
 		}
 		return $r;
+	}
+
+	function getStructure($fmt) {
+		return CkMime_getStructure($this->_cPtr,$fmt);
+	}
+
+	function structure($fmt) {
+		return CkMime_structure($this->_cPtr,$fmt);
 	}
 
 	function getXml() {
@@ -631,12 +643,20 @@ class CkMime {
 		return CkMime_LoadMime($this->_cPtr,$mimeMsg);
 	}
 
+	function LoadMimeBd($bindat) {
+		return CkMime_LoadMimeBd($this->_cPtr,$bindat);
+	}
+
 	function LoadMimeBytes($binData) {
 		return CkMime_LoadMimeBytes($this->_cPtr,$binData);
 	}
 
 	function LoadMimeFile($fileName) {
 		return CkMime_LoadMimeFile($this->_cPtr,$fileName);
+	}
+
+	function LoadMimeSb($sb) {
+		return CkMime_LoadMimeSb($this->_cPtr,$sb);
 	}
 
 	function LoadXml($xml) {
@@ -663,8 +683,8 @@ class CkMime {
 		return CkMime_NewMultipartRelated($this->_cPtr);
 	}
 
-	function RemoveHeaderField($name,$bAllOccurances) {
-		CkMime_RemoveHeaderField($this->_cPtr,$name,$bAllOccurances);
+	function RemoveHeaderField($fieldName,$bAllOccurrences) {
+		CkMime_RemoveHeaderField($this->_cPtr,$fieldName,$bAllOccurrences);
 	}
 
 	function RemovePart($index) {
@@ -673,6 +693,10 @@ class CkMime {
 
 	function SaveBody($filename) {
 		return CkMime_SaveBody($this->_cPtr,$filename);
+	}
+
+	function SaveLastError($path) {
+		return CkMime_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveMime($filename) {
@@ -737,14 +761,6 @@ class CkMime {
 
 	function Verify() {
 		return CkMime_Verify($this->_cPtr);
-	}
-
-	function getStructure($fmt) {
-		return CkMime_getStructure($this->_cPtr,$fmt);
-	}
-
-	function structure($fmt) {
-		return CkMime_structure($this->_cPtr,$fmt);
 	}
 }
 

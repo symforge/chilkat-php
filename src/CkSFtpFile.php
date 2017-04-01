@@ -47,20 +47,20 @@ class CkSFtpFile {
 		return CkSFtpFile_createTimeStr($this->_cPtr);
 	}
 
-	function get_FileType($str) {
-		CkSFtpFile_get_FileType($this->_cPtr,$str);
-	}
-
-	function fileType() {
-		return CkSFtpFile_fileType($this->_cPtr);
-	}
-
 	function get_Filename($str) {
 		CkSFtpFile_get_Filename($this->_cPtr,$str);
 	}
 
 	function filename() {
 		return CkSFtpFile_filename($this->_cPtr);
+	}
+
+	function get_FileType($str) {
+		CkSFtpFile_get_FileType($this->_cPtr,$str);
+	}
+
+	function fileType() {
+		return CkSFtpFile_fileType($this->_cPtr);
 	}
 
 	function get_Gid() {
@@ -141,6 +141,14 @@ class CkSFtpFile {
 
 	function lastAccessTimeStr() {
 		return CkSFtpFile_lastAccessTimeStr($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkSFtpFile_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSFtpFile_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastModifiedTime($outSysTime) {

@@ -47,8 +47,16 @@ class CkMessageSet {
 		CkMessageSet_put_HasUids($this->_cPtr,$newVal);
 	}
 
-	function ContainsId($id) {
-		return CkMessageSet_ContainsId($this->_cPtr,$id);
+	function get_LastMethodSuccess() {
+		return CkMessageSet_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkMessageSet_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
+	function ContainsId($msgId) {
+		return CkMessageSet_ContainsId($this->_cPtr,$msgId);
 	}
 
 	function FromCompactString($str) {

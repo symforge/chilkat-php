@@ -39,70 +39,6 @@ class CkMailMan {
 		CkMailMan_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkMailMan_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkMailMan_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkMailMan_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkMailMan_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkMailMan_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkMailMan_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkMailMan_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkMailMan_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkMailMan_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkMailMan_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkMailMan_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkMailMan_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkMailMan_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkMailMan_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkMailMan_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkMailMan_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AbortCurrent() {
 		return CkMailMan_get_AbortCurrent($this->_cPtr);
 	}
@@ -173,6 +109,18 @@ class CkMailMan {
 
 	function put_ConnectTimeout($newVal) {
 		CkMailMan_put_ConnectTimeout($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkMailMan_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkMailMan_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkMailMan_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_DsnEnvid($str) {
@@ -343,12 +291,36 @@ class CkMailMan {
 		return CkMailMan_get_IsSmtpConnected($this->_cPtr);
 	}
 
-	function get_LastSendQFilename($str) {
-		CkMailMan_get_LastSendQFilename($this->_cPtr,$str);
+	function get_LastErrorHtml($str) {
+		CkMailMan_get_LastErrorHtml($this->_cPtr,$str);
 	}
 
-	function lastSendQFilename() {
-		return CkMailMan_lastSendQFilename($this->_cPtr);
+	function lastErrorHtml() {
+		return CkMailMan_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkMailMan_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkMailMan_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkMailMan_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkMailMan_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkMailMan_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkMailMan_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastSmtpStatus() {
@@ -471,14 +443,6 @@ class CkMailMan {
 		CkMailMan_put_PercentDoneScale($this->_cPtr,$newVal);
 	}
 
-	function get_Pop3SPA() {
-		return CkMailMan_get_Pop3SPA($this->_cPtr);
-	}
-
-	function put_Pop3SPA($newVal) {
-		CkMailMan_put_Pop3SPA($this->_cPtr,$newVal);
-	}
-
 	function get_Pop3SessionId() {
 		return CkMailMan_get_Pop3SessionId($this->_cPtr);
 	}
@@ -489,6 +453,14 @@ class CkMailMan {
 
 	function pop3SessionLog() {
 		return CkMailMan_pop3SessionLog($this->_cPtr);
+	}
+
+	function get_Pop3SPA() {
+		return CkMailMan_get_Pop3SPA($this->_cPtr);
+	}
+
+	function put_Pop3SPA($newVal) {
+		CkMailMan_put_Pop3SPA($this->_cPtr,$newVal);
 	}
 
 	function get_Pop3SslServerCertVerified() {
@@ -707,22 +679,6 @@ class CkMailMan {
 		CkMailMan_put_SmtpUsername($this->_cPtr,$newVal);
 	}
 
-	function get_SoRcvBuf() {
-		return CkMailMan_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkMailMan_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkMailMan_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkMailMan_put_SoSndBuf($this->_cPtr,$newVal);
-	}
-
 	function get_SocksHostname($str) {
 		CkMailMan_get_SocksHostname($this->_cPtr,$str);
 	}
@@ -773,6 +729,22 @@ class CkMailMan {
 
 	function put_SocksVersion($newVal) {
 		CkMailMan_put_SocksVersion($this->_cPtr,$newVal);
+	}
+
+	function get_SoRcvBuf() {
+		return CkMailMan_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkMailMan_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkMailMan_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkMailMan_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_SslAllowedCiphers($str) {
@@ -843,6 +815,22 @@ class CkMailMan {
 		CkMailMan_put_UseApop($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkMailMan_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkMailMan_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkMailMan_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkMailMan_version($this->_cPtr);
+	}
+
 	function AddPfxSourceData($pfxData,$password) {
 		return CkMailMan_AddPfxSourceData($this->_cPtr,$pfxData,$password);
 	}
@@ -911,12 +899,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function DeleteBundle($bundle) {
-		return CkMailMan_DeleteBundle($this->_cPtr,$bundle);
+	function DeleteBundle($emailBundle) {
+		return CkMailMan_DeleteBundle($this->_cPtr,$emailBundle);
 	}
 
-	function DeleteBundleAsync($bundle) {
-		$r=CkMailMan_DeleteBundleAsync($this->_cPtr,$bundle);
+	function DeleteBundleAsync($emailBundle) {
+		$r=CkMailMan_DeleteBundleAsync($this->_cPtr,$emailBundle);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1109,8 +1097,8 @@ class CkMailMan {
 		return $r;
 	}
 
-	function FetchSingleHeader($numBodyLines,$index) {
-		$r=CkMailMan_FetchSingleHeader($this->_cPtr,$numBodyLines,$index);
+	function FetchSingleHeader($numBodyLines,$messageNumber) {
+		$r=CkMailMan_FetchSingleHeader($this->_cPtr,$numBodyLines,$messageNumber);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1119,8 +1107,8 @@ class CkMailMan {
 		return $r;
 	}
 
-	function FetchSingleHeaderAsync($numBodyLines,$index) {
-		$r=CkMailMan_FetchSingleHeaderAsync($this->_cPtr,$numBodyLines,$index);
+	function FetchSingleHeaderAsync($numBodyLines,$messageNumber) {
+		$r=CkMailMan_FetchSingleHeaderAsync($this->_cPtr,$numBodyLines,$messageNumber);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1575,8 +1563,20 @@ class CkMailMan {
 		return CkMailMan_renderToMime($this->_cPtr,$email);
 	}
 
+	function RenderToMimeBd($email,$renderedMime) {
+		return CkMailMan_RenderToMimeBd($this->_cPtr,$email,$renderedMime);
+	}
+
 	function RenderToMimeBytes($email,$outBytes) {
 		return CkMailMan_RenderToMimeBytes($this->_cPtr,$email,$outBytes);
+	}
+
+	function RenderToMimeSb($email,$renderedMime) {
+		return CkMailMan_RenderToMimeSb($this->_cPtr,$email,$renderedMime);
+	}
+
+	function SaveLastError($path) {
+		return CkMailMan_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SendBundle($bundle) {
@@ -1607,12 +1607,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function SendMime($from,$recipients,$mimeText) {
-		return CkMailMan_SendMime($this->_cPtr,$from,$recipients,$mimeText);
+	function SendMime($fromAddr,$recipients,$mimeSource) {
+		return CkMailMan_SendMime($this->_cPtr,$fromAddr,$recipients,$mimeSource);
 	}
 
-	function SendMimeAsync($from,$recipients,$mimeText) {
-		$r=CkMailMan_SendMimeAsync($this->_cPtr,$from,$recipients,$mimeText);
+	function SendMimeAsync($fromAddr,$recipients,$mimeSource) {
+		$r=CkMailMan_SendMimeAsync($this->_cPtr,$fromAddr,$recipients,$mimeSource);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1621,12 +1621,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function SendMimeBytes($from,$recipients,$mimeData) {
-		return CkMailMan_SendMimeBytes($this->_cPtr,$from,$recipients,$mimeData);
+	function SendMimeBytes($fromAddr,$recipients,$mimeSource) {
+		return CkMailMan_SendMimeBytes($this->_cPtr,$fromAddr,$recipients,$mimeSource);
 	}
 
-	function SendMimeBytesAsync($from,$recipients,$mimeData) {
-		$r=CkMailMan_SendMimeBytesAsync($this->_cPtr,$from,$recipients,$mimeData);
+	function SendMimeBytesAsync($fromAddr,$recipients,$mimeSource) {
+		$r=CkMailMan_SendMimeBytesAsync($this->_cPtr,$fromAddr,$recipients,$mimeSource);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1635,12 +1635,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function SendMimeToList($from,$distListFile,$mimeText) {
-		return CkMailMan_SendMimeToList($this->_cPtr,$from,$distListFile,$mimeText);
+	function SendMimeToList($fromAddr,$distListFilename,$mimeSource) {
+		return CkMailMan_SendMimeToList($this->_cPtr,$fromAddr,$distListFilename,$mimeSource);
 	}
 
-	function SendMimeToListAsync($from,$distListFile,$mimeText) {
-		$r=CkMailMan_SendMimeToListAsync($this->_cPtr,$from,$distListFile,$mimeText);
+	function SendMimeToListAsync($fromAddr,$distListFilename,$mimeSource) {
+		$r=CkMailMan_SendMimeToListAsync($this->_cPtr,$fromAddr,$distListFilename,$mimeSource);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1649,12 +1649,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function SendToDistributionList($email,$sa) {
-		return CkMailMan_SendToDistributionList($this->_cPtr,$email,$sa);
+	function SendToDistributionList($emailObj,$recipientList) {
+		return CkMailMan_SendToDistributionList($this->_cPtr,$emailObj,$recipientList);
 	}
 
-	function SendToDistributionListAsync($email,$sa) {
-		$r=CkMailMan_SendToDistributionListAsync($this->_cPtr,$email,$sa);
+	function SendToDistributionListAsync($emailObj,$recipientList) {
+		$r=CkMailMan_SendToDistributionListAsync($this->_cPtr,$emailObj,$recipientList);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1667,8 +1667,8 @@ class CkMailMan {
 		return CkMailMan_SetDecryptCert($this->_cPtr,$cert);
 	}
 
-	function SetDecryptCert2($cert,$key) {
-		return CkMailMan_SetDecryptCert2($this->_cPtr,$cert,$key);
+	function SetDecryptCert2($cert,$privateKey) {
+		return CkMailMan_SetDecryptCert2($this->_cPtr,$cert,$privateKey);
 	}
 
 	function SetSslClientCert($cert) {
@@ -1753,12 +1753,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function SshAuthenticatePk($sshLogin,$privateKey) {
-		return CkMailMan_SshAuthenticatePk($this->_cPtr,$sshLogin,$privateKey);
+	function SshAuthenticatePk($bSmtp,$sshUsername) {
+		return CkMailMan_SshAuthenticatePk($this->_cPtr,$bSmtp,$sshUsername);
 	}
 
-	function SshAuthenticatePkAsync($sshLogin,$privateKey) {
-		$r=CkMailMan_SshAuthenticatePkAsync($this->_cPtr,$sshLogin,$privateKey);
+	function SshAuthenticatePkAsync($bSmtp,$sshUsername) {
+		$r=CkMailMan_SshAuthenticatePkAsync($this->_cPtr,$bSmtp,$sshUsername);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1767,12 +1767,12 @@ class CkMailMan {
 		return $r;
 	}
 
-	function SshAuthenticatePw($sshLogin,$sshPassword) {
-		return CkMailMan_SshAuthenticatePw($this->_cPtr,$sshLogin,$sshPassword);
+	function SshAuthenticatePw($bSmtp,$sshLogin) {
+		return CkMailMan_SshAuthenticatePw($this->_cPtr,$bSmtp,$sshLogin);
 	}
 
-	function SshAuthenticatePwAsync($sshLogin,$sshPassword) {
-		$r=CkMailMan_SshAuthenticatePwAsync($this->_cPtr,$sshLogin,$sshPassword);
+	function SshAuthenticatePwAsync($bSmtp,$sshLogin) {
+		$r=CkMailMan_SshAuthenticatePwAsync($this->_cPtr,$bSmtp,$sshLogin);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);

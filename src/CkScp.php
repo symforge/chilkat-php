@@ -39,6 +39,34 @@ class CkScp {
 		CkScp_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_AbortCurrent() {
+		return CkScp_get_AbortCurrent($this->_cPtr);
+	}
+
+	function put_AbortCurrent($newVal) {
+		CkScp_put_AbortCurrent($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkScp_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkScp_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkScp_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_HeartbeatMs() {
+		return CkScp_get_HeartbeatMs($this->_cPtr);
+	}
+
+	function put_HeartbeatMs($newVal) {
+		CkScp_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkScp_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,34 +91,6 @@ class CkScp {
 		return CkScp_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkScp_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkScp_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkScp_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkScp_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkScp_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkScp_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkScp_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkScp_get_LastMethodSuccess($this->_cPtr);
 	}
@@ -99,32 +99,24 @@ class CkScp {
 		CkScp_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function SaveLastError($path) {
-		return CkScp_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AbortCurrent() {
-		return CkScp_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkScp_put_AbortCurrent($this->_cPtr,$newVal);
-	}
-
-	function get_HeartbeatMs() {
-		return CkScp_get_HeartbeatMs($this->_cPtr);
-	}
-
-	function put_HeartbeatMs($newVal) {
-		CkScp_put_HeartbeatMs($this->_cPtr,$newVal);
-	}
-
 	function get_PercentDoneScale() {
 		return CkScp_get_PercentDoneScale($this->_cPtr);
 	}
 
 	function put_PercentDoneScale($newVal) {
 		CkScp_put_PercentDoneScale($this->_cPtr,$newVal);
+	}
+
+	function get_SyncedFiles($str) {
+		CkScp_get_SyncedFiles($this->_cPtr,$str);
+	}
+
+	function syncedFiles() {
+		return CkScp_syncedFiles($this->_cPtr);
+	}
+
+	function put_SyncedFiles($newVal) {
+		CkScp_put_SyncedFiles($this->_cPtr,$newVal);
 	}
 
 	function get_SyncMustMatch($str) {
@@ -175,16 +167,20 @@ class CkScp {
 		CkScp_put_SyncMustNotMatchDir($this->_cPtr,$newVal);
 	}
 
-	function get_SyncedFiles($str) {
-		CkScp_get_SyncedFiles($this->_cPtr,$str);
+	function get_VerboseLogging() {
+		return CkScp_get_VerboseLogging($this->_cPtr);
 	}
 
-	function syncedFiles() {
-		return CkScp_syncedFiles($this->_cPtr);
+	function put_VerboseLogging($newVal) {
+		CkScp_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function put_SyncedFiles($newVal) {
-		CkScp_put_SyncedFiles($this->_cPtr,$newVal);
+	function get_Version($str) {
+		CkScp_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkScp_version($this->_cPtr);
 	}
 
 	function DownloadBinary($remotePath,$outBytes) {
@@ -241,6 +237,10 @@ class CkScp {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkScp_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SyncTreeDownload($remoteRoot,$localRoot,$mode,$bRecurse) {

@@ -35,6 +35,26 @@ class CkJwt {
 		CkJwt_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_AutoCompact() {
+		return CkJwt_get_AutoCompact($this->_cPtr);
+	}
+
+	function put_AutoCompact($newVal) {
+		CkJwt_put_AutoCompact($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkJwt_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkJwt_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkJwt_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkJwt_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +79,12 @@ class CkJwt {
 		return CkJwt_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkJwt_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkJwt_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkJwt_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkJwt_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkJwt_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkJwt_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkJwt_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,24 +95,12 @@ class CkJwt {
 		CkJwt_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkJwt_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkJwt_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkJwt_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkJwt_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AutoCompact() {
-		return CkJwt_get_AutoCompact($this->_cPtr);
-	}
-
-	function put_AutoCompact($newVal) {
-		CkJwt_put_AutoCompact($this->_cPtr,$newVal);
+	function version() {
+		return CkJwt_version($this->_cPtr);
 	}
 
 	function createJwt($header,$payload,$password) {
@@ -137,6 +133,10 @@ class CkJwt {
 
 	function IsTimeValid($jwt,$leeway) {
 		return CkJwt_IsTimeValid($this->_cPtr,$jwt,$leeway);
+	}
+
+	function SaveLastError($path) {
+		return CkJwt_SaveLastError($this->_cPtr,$path);
 	}
 
 	function VerifyJwt($token,$password) {

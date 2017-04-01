@@ -35,14 +35,6 @@ class CkByteData {
 		CkByteData_put_Utf8($this->_cPtr,$b);
 	}
 
-	function getRange($index,$numBytes) {
-		return CkByteData_getRange($this->_cPtr,$index,$numBytes);
-	}
-
-	function getRangeStr($index,$numAnsiChars) {
-		return CkByteData_getRangeStr($this->_cPtr,$index,$numAnsiChars);
-	}
-
 	function to_s() {
 		return CkByteData_to_s($this->_cPtr);
 	}
@@ -133,6 +125,14 @@ class CkByteData {
 
 	function getEncoded($encoding) {
 		return CkByteData_getEncoded($this->_cPtr,$encoding);
+	}
+
+	function getRange($index,$numBytes) {
+		return CkByteData_getRange($this->_cPtr,$index,$numBytes);
+	}
+
+	function getRangeStr($index,$numAnsiChars) {
+		return CkByteData_getRangeStr($this->_cPtr,$index,$numAnsiChars);
 	}
 
 	function append2($data,$numBytes) {

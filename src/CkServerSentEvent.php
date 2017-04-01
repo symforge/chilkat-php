@@ -59,6 +59,14 @@ class CkServerSentEvent {
 		return CkServerSentEvent_lastEventId($this->_cPtr);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkServerSentEvent_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkServerSentEvent_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_Retry() {
 		return CkServerSentEvent_get_Retry($this->_cPtr);
 	}
@@ -68,7 +76,5 @@ class CkServerSentEvent {
 	}
 }
 
-
-?>
 
 ?>

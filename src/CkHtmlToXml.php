@@ -35,6 +35,38 @@ class CkHtmlToXml {
 		CkHtmlToXml_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkHtmlToXml_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkHtmlToXml_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkHtmlToXml_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_DropCustomTags() {
+		return CkHtmlToXml_get_DropCustomTags($this->_cPtr);
+	}
+
+	function put_DropCustomTags($newVal) {
+		CkHtmlToXml_put_DropCustomTags($this->_cPtr,$newVal);
+	}
+
+	function get_Html($str) {
+		CkHtmlToXml_get_Html($this->_cPtr,$str);
+	}
+
+	function html() {
+		return CkHtmlToXml_html($this->_cPtr);
+	}
+
+	function put_Html($newVal) {
+		CkHtmlToXml_put_Html($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkHtmlToXml_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +91,20 @@ class CkHtmlToXml {
 		return CkHtmlToXml_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkHtmlToXml_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkHtmlToXml_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkHtmlToXml_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkHtmlToXml_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkHtmlToXml_get_DebugLogFilePath($this->_cPtr,$str);
+	function get_Nbsp() {
+		return CkHtmlToXml_get_Nbsp($this->_cPtr);
 	}
 
-	function debugLogFilePath() {
-		return CkHtmlToXml_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkHtmlToXml_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_Nbsp($newVal) {
+		CkHtmlToXml_put_Nbsp($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,44 +115,12 @@ class CkHtmlToXml {
 		CkHtmlToXml_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkHtmlToXml_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkHtmlToXml_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkHtmlToXml_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkHtmlToXml_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_DropCustomTags() {
-		return CkHtmlToXml_get_DropCustomTags($this->_cPtr);
-	}
-
-	function put_DropCustomTags($newVal) {
-		CkHtmlToXml_put_DropCustomTags($this->_cPtr,$newVal);
-	}
-
-	function get_Html($str) {
-		CkHtmlToXml_get_Html($this->_cPtr,$str);
-	}
-
-	function html() {
-		return CkHtmlToXml_html($this->_cPtr);
-	}
-
-	function put_Html($newVal) {
-		CkHtmlToXml_put_Html($this->_cPtr,$newVal);
-	}
-
-	function get_Nbsp() {
-		return CkHtmlToXml_get_Nbsp($this->_cPtr);
-	}
-
-	function put_Nbsp($newVal) {
-		CkHtmlToXml_put_Nbsp($this->_cPtr,$newVal);
+	function version() {
+		return CkHtmlToXml_version($this->_cPtr);
 	}
 
 	function get_XmlCharset($str) {
@@ -163,6 +159,10 @@ class CkHtmlToXml {
 		return CkHtmlToXml_readFileToString($this->_cPtr,$filename,$srcCharset);
 	}
 
+	function SaveLastError($path) {
+		return CkHtmlToXml_SaveLastError($this->_cPtr,$path);
+	}
+
 	function SetHtmlBytes($inData) {
 		CkHtmlToXml_SetHtmlBytes($this->_cPtr,$inData);
 	}
@@ -191,8 +191,8 @@ class CkHtmlToXml {
 		return CkHtmlToXml_WriteFile($this->_cPtr,$path,$fileData);
 	}
 
-	function WriteStringToFile($str,$filename,$charset) {
-		return CkHtmlToXml_WriteStringToFile($this->_cPtr,$str,$filename,$charset);
+	function WriteStringToFile($stringToWrite,$filename,$charset) {
+		return CkHtmlToXml_WriteStringToFile($this->_cPtr,$stringToWrite,$filename,$charset);
 	}
 
 	function xml() {

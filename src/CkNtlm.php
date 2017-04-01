@@ -35,36 +35,16 @@ class CkNtlm {
 		CkNtlm_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkNtlm_get_LastErrorHtml($this->_cPtr,$str);
+	function get_ClientChallenge($str) {
+		CkNtlm_get_ClientChallenge($this->_cPtr,$str);
 	}
 
-	function lastErrorHtml() {
-		return CkNtlm_lastErrorHtml($this->_cPtr);
+	function clientChallenge() {
+		return CkNtlm_clientChallenge($this->_cPtr);
 	}
 
-	function get_LastErrorText($str) {
-		CkNtlm_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkNtlm_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkNtlm_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkNtlm_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkNtlm_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkNtlm_version($this->_cPtr);
+	function put_ClientChallenge($newVal) {
+		CkNtlm_put_ClientChallenge($this->_cPtr,$newVal);
 	}
 
 	function get_DebugLogFilePath($str) {
@@ -77,38 +57,6 @@ class CkNtlm {
 
 	function put_DebugLogFilePath($newVal) {
 		CkNtlm_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkNtlm_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkNtlm_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkNtlm_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkNtlm_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkNtlm_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_ClientChallenge($str) {
-		CkNtlm_get_ClientChallenge($this->_cPtr,$str);
-	}
-
-	function clientChallenge() {
-		return CkNtlm_clientChallenge($this->_cPtr);
-	}
-
-	function put_ClientChallenge($newVal) {
-		CkNtlm_put_ClientChallenge($this->_cPtr,$newVal);
 	}
 
 	function get_DnsComputerName($str) {
@@ -169,6 +117,38 @@ class CkNtlm {
 
 	function put_Flags($newVal) {
 		CkNtlm_put_Flags($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkNtlm_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkNtlm_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkNtlm_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkNtlm_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkNtlm_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkNtlm_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkNtlm_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkNtlm_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_NetBiosComputerName($str) {
@@ -259,6 +239,22 @@ class CkNtlm {
 		CkNtlm_put_UserName($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkNtlm_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkNtlm_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkNtlm_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkNtlm_version($this->_cPtr);
+	}
+
 	function get_Workstation($str) {
 		CkNtlm_get_Workstation($this->_cPtr,$str);
 	}
@@ -301,6 +297,10 @@ class CkNtlm {
 
 	function parseType3($type3Msg) {
 		return CkNtlm_parseType3($this->_cPtr,$type3Msg);
+	}
+
+	function SaveLastError($path) {
+		return CkNtlm_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetFlag($flagLetter,$onOrOff) {

@@ -35,6 +35,18 @@ class CkLog {
 		CkLog_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkLog_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkLog_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkLog_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkLog_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +71,12 @@ class CkLog {
 		return CkLog_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkLog_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkLog_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkLog_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkLog_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkLog_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkLog_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkLog_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,16 +87,12 @@ class CkLog {
 		CkLog_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkLog_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkLog_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkLog_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkLog_SaveLastError($this->_cPtr,$path);
+	function version() {
+		return CkLog_version($this->_cPtr);
 	}
 
 	function Clear($initialTag) {
@@ -149,6 +145,10 @@ class CkLog {
 
 	function LogTimestamp($tag) {
 		CkLog_LogTimestamp($this->_cPtr,$tag);
+	}
+
+	function SaveLastError($path) {
+		return CkLog_SaveLastError($this->_cPtr,$path);
 	}
 }
 

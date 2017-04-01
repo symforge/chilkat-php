@@ -35,36 +35,12 @@ class CkGlobal {
 		CkGlobal_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkGlobal_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AnsiCodePage() {
+		return CkGlobal_get_AnsiCodePage($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkGlobal_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkGlobal_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkGlobal_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkGlobal_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkGlobal_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkGlobal_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkGlobal_version($this->_cPtr);
+	function put_AnsiCodePage($newVal) {
+		CkGlobal_put_AnsiCodePage($this->_cPtr,$newVal);
 	}
 
 	function get_DebugLogFilePath($str) {
@@ -77,34 +53,6 @@ class CkGlobal {
 
 	function put_DebugLogFilePath($newVal) {
 		CkGlobal_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkGlobal_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkGlobal_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkGlobal_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkGlobal_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkGlobal_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AnsiCodePage() {
-		return CkGlobal_get_AnsiCodePage($this->_cPtr);
-	}
-
-	function put_AnsiCodePage($newVal) {
-		CkGlobal_put_AnsiCodePage($this->_cPtr,$newVal);
 	}
 
 	function get_DefaultNtlmVersion() {
@@ -139,6 +87,38 @@ class CkGlobal {
 		CkGlobal_put_EnableDnsCaching($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkGlobal_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkGlobal_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkGlobal_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkGlobal_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkGlobal_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkGlobal_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkGlobal_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkGlobal_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_MaxThreads() {
 		return CkGlobal_get_MaxThreads($this->_cPtr);
 	}
@@ -159,12 +139,36 @@ class CkGlobal {
 		CkGlobal_put_ThreadPoolLogPath($this->_cPtr,$newVal);
 	}
 
+	function get_UnlockStatus() {
+		return CkGlobal_get_UnlockStatus($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkGlobal_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkGlobal_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkGlobal_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkGlobal_version($this->_cPtr);
+	}
+
 	function DnsClearCache() {
 		return CkGlobal_DnsClearCache($this->_cPtr);
 	}
 
 	function FinalizeThreadPool() {
 		return CkGlobal_FinalizeThreadPool($this->_cPtr);
+	}
+
+	function SaveLastError($path) {
+		return CkGlobal_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UnlockBundle($bundleUnlockCode) {

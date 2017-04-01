@@ -39,68 +39,12 @@ class CkSshTunnel {
 		CkSshTunnel_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkSshTunnel_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkSshTunnel_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkSshTunnel_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkSshTunnel_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkSshTunnel_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkSshTunnel_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkSshTunnel_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkSshTunnel_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkSshTunnel_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkSshTunnel_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkSshTunnel_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkSshTunnel_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkSshTunnel_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkSshTunnel_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkSshTunnel_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkSshTunnel_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkSshTunnel_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkSshTunnel_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_AcceptLog($str) {
@@ -135,6 +79,18 @@ class CkSshTunnel {
 		CkSshTunnel_put_ConnectTimeoutMs($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkSshTunnel_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkSshTunnel_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkSshTunnel_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_DestHostname($str) {
 		CkSshTunnel_get_DestHostname($this->_cPtr,$str);
 	}
@@ -161,6 +117,14 @@ class CkSshTunnel {
 
 	function put_DynamicPortForwarding($newVal) {
 		CkSshTunnel_put_DynamicPortForwarding($this->_cPtr,$newVal);
+	}
+
+	function get_HostKeyFingerprint($str) {
+		CkSshTunnel_get_HostKeyFingerprint($this->_cPtr,$str);
+	}
+
+	function hostKeyFingerprint() {
+		return CkSshTunnel_hostKeyFingerprint($this->_cPtr);
 	}
 
 	function get_HttpProxyAuthMethod($str) {
@@ -283,6 +247,38 @@ class CkSshTunnel {
 		CkSshTunnel_put_KeepTunnelLog($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkSshTunnel_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkSshTunnel_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkSshTunnel_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkSshTunnel_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkSshTunnel_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkSshTunnel_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkSshTunnel_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSshTunnel_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_ListenBindIpAddress($str) {
 		CkSshTunnel_get_ListenBindIpAddress($this->_cPtr,$str);
 	}
@@ -317,22 +313,6 @@ class CkSshTunnel {
 
 	function put_OutboundBindPort($newVal) {
 		CkSshTunnel_put_OutboundBindPort($this->_cPtr,$newVal);
-	}
-
-	function get_SoRcvBuf() {
-		return CkSshTunnel_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkSshTunnel_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkSshTunnel_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkSshTunnel_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_SocksHostname($str) {
@@ -387,6 +367,22 @@ class CkSshTunnel {
 		CkSshTunnel_put_SocksVersion($this->_cPtr,$newVal);
 	}
 
+	function get_SoRcvBuf() {
+		return CkSshTunnel_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkSshTunnel_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkSshTunnel_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkSshTunnel_put_SoSndBuf($this->_cPtr,$newVal);
+	}
+
 	function get_TcpNoDelay() {
 		return CkSshTunnel_get_TcpNoDelay($this->_cPtr);
 	}
@@ -419,20 +415,20 @@ class CkSshTunnel {
 		CkSshTunnel_put_TunnelLogPath($this->_cPtr,$newVal);
 	}
 
-	function get_HostKeyFingerprint($str) {
-		CkSshTunnel_get_HostKeyFingerprint($this->_cPtr,$str);
+	function get_VerboseLogging() {
+		return CkSshTunnel_get_VerboseLogging($this->_cPtr);
 	}
 
-	function hostKeyFingerprint() {
-		return CkSshTunnel_hostKeyFingerprint($this->_cPtr);
+	function put_VerboseLogging($newVal) {
+		CkSshTunnel_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkSshTunnel_get_AbortCurrent($this->_cPtr);
+	function get_Version($str) {
+		CkSshTunnel_get_Version($this->_cPtr,$str);
 	}
 
-	function put_AbortCurrent($newVal) {
-		CkSshTunnel_put_AbortCurrent($this->_cPtr,$newVal);
+	function version() {
+		return CkSshTunnel_version($this->_cPtr);
 	}
 
 	function AuthenticatePk($username,$privateKey) {
@@ -509,18 +505,6 @@ class CkSshTunnel {
 		return $r;
 	}
 
-	function DisconnectAllClients($waitForThreads) {
-		return CkSshTunnel_DisconnectAllClients($this->_cPtr,$waitForThreads);
-	}
-
-	function StopAccepting($waitForThread) {
-		return CkSshTunnel_StopAccepting($this->_cPtr,$waitForThread);
-	}
-
-	function UnlockComponent($unlockCode) {
-		return CkSshTunnel_UnlockComponent($this->_cPtr,$unlockCode);
-	}
-
 	function ConnectThroughSsh($ssh,$hostname,$port) {
 		return CkSshTunnel_ConnectThroughSsh($this->_cPtr,$ssh,$hostname,$port);
 	}
@@ -533,6 +517,34 @@ class CkSshTunnel {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function DisconnectAllClients($waitForThreads) {
+		return CkSshTunnel_DisconnectAllClients($this->_cPtr,$waitForThreads);
+	}
+
+	function getCurrentState() {
+		return CkSshTunnel_getCurrentState($this->_cPtr);
+	}
+
+	function currentState() {
+		return CkSshTunnel_currentState($this->_cPtr);
+	}
+
+	function IsSshConnected() {
+		return CkSshTunnel_IsSshConnected($this->_cPtr);
+	}
+
+	function SaveLastError($path) {
+		return CkSshTunnel_SaveLastError($this->_cPtr,$path);
+	}
+
+	function StopAccepting($waitForThread) {
+		return CkSshTunnel_StopAccepting($this->_cPtr,$waitForThread);
+	}
+
+	function UnlockComponent($unlockCode) {
+		return CkSshTunnel_UnlockComponent($this->_cPtr,$unlockCode);
 	}
 }
 

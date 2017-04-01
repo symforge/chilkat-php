@@ -35,6 +35,18 @@ class CkEcc {
 		CkEcc_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkEcc_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkEcc_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkEcc_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkEcc_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +71,12 @@ class CkEcc {
 		return CkEcc_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkEcc_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkEcc_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkEcc_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkEcc_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkEcc_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkEcc_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkEcc_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,16 +87,12 @@ class CkEcc {
 		CkEcc_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkEcc_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkEcc_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkEcc_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkEcc_SaveLastError($this->_cPtr,$path);
+	function version() {
+		return CkEcc_version($this->_cPtr);
 	}
 
 	function GenEccKey($curveName,$prng) {
@@ -109,6 +105,20 @@ class CkEcc {
 		return $r;
 	}
 
+	function GenEccKey2($curveName,$encodedK,$encoding) {
+		$r=CkEcc_GenEccKey2($this->_cPtr,$curveName,$encodedK,$encoding);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkPrivateKey($r);
+		}
+		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkEcc_SaveLastError($this->_cPtr,$path);
+	}
+
 	function sharedSecretENC($privKey,$pubKey,$encoding) {
 		return CkEcc_sharedSecretENC($this->_cPtr,$privKey,$pubKey,$encoding);
 	}
@@ -119,16 +129,6 @@ class CkEcc {
 
 	function VerifyHashENC($encodedHash,$encodedSig,$encoding,$pubkey) {
 		return CkEcc_VerifyHashENC($this->_cPtr,$encodedHash,$encodedSig,$encoding,$pubkey);
-	}
-
-	function GenEccKey2($curveName,$encodedK,$encoding) {
-		$r=CkEcc_GenEccKey2($this->_cPtr,$curveName,$encodedK,$encoding);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkPrivateKey($r);
-		}
-		return $r;
 	}
 }
 

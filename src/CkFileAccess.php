@@ -35,6 +35,42 @@ class CkFileAccess {
 		CkFileAccess_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_CurrentDir($str) {
+		CkFileAccess_get_CurrentDir($this->_cPtr,$str);
+	}
+
+	function currentDir() {
+		return CkFileAccess_currentDir($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkFileAccess_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkFileAccess_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkFileAccess_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_EndOfFile() {
+		return CkFileAccess_get_EndOfFile($this->_cPtr);
+	}
+
+	function get_FileOpenError() {
+		return CkFileAccess_get_FileOpenError($this->_cPtr);
+	}
+
+	function get_FileOpenErrorMsg($str) {
+		CkFileAccess_get_FileOpenErrorMsg($this->_cPtr,$str);
+	}
+
+	function fileOpenErrorMsg() {
+		return CkFileAccess_fileOpenErrorMsg($this->_cPtr);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkFileAccess_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +95,12 @@ class CkFileAccess {
 		return CkFileAccess_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkFileAccess_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkFileAccess_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkFileAccess_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkFileAccess_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkFileAccess_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkFileAccess_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkFileAccess_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,48 +111,20 @@ class CkFileAccess {
 		CkFileAccess_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkFileAccess_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkFileAccess_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkFileAccess_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkFileAccess_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_CurrentDir($str) {
-		CkFileAccess_get_CurrentDir($this->_cPtr,$str);
-	}
-
-	function currentDir() {
-		return CkFileAccess_currentDir($this->_cPtr);
-	}
-
-	function get_EndOfFile() {
-		return CkFileAccess_get_EndOfFile($this->_cPtr);
-	}
-
-	function get_FileOpenError() {
-		return CkFileAccess_get_FileOpenError($this->_cPtr);
-	}
-
-	function get_FileOpenErrorMsg($str) {
-		CkFileAccess_get_FileOpenErrorMsg($this->_cPtr,$str);
-	}
-
-	function fileOpenErrorMsg() {
-		return CkFileAccess_fileOpenErrorMsg($this->_cPtr);
+	function version() {
+		return CkFileAccess_version($this->_cPtr);
 	}
 
 	function AppendAnsi($text) {
 		return CkFileAccess_AppendAnsi($this->_cPtr,$text);
 	}
 
-	function AppendText($text,$charset) {
-		return CkFileAccess_AppendText($this->_cPtr,$text,$charset);
+	function AppendText($str,$charset) {
+		return CkFileAccess_AppendText($this->_cPtr,$str,$charset);
 	}
 
 	function AppendUnicodeBOM() {
@@ -139,16 +135,16 @@ class CkFileAccess {
 		return CkFileAccess_AppendUtf8BOM($this->_cPtr);
 	}
 
-	function DirAutoCreate($path) {
-		return CkFileAccess_DirAutoCreate($this->_cPtr,$path);
+	function DirAutoCreate($dirPath) {
+		return CkFileAccess_DirAutoCreate($this->_cPtr,$dirPath);
 	}
 
-	function DirCreate($path) {
-		return CkFileAccess_DirCreate($this->_cPtr,$path);
+	function DirCreate($dirPath) {
+		return CkFileAccess_DirCreate($this->_cPtr,$dirPath);
 	}
 
-	function DirDelete($path) {
-		return CkFileAccess_DirDelete($this->_cPtr,$path);
+	function DirDelete($dirPath) {
+		return CkFileAccess_DirDelete($this->_cPtr,$dirPath);
 	}
 
 	function DirEnsureExists($filePath) {
@@ -159,64 +155,114 @@ class CkFileAccess {
 		CkFileAccess_FileClose($this->_cPtr);
 	}
 
-	function FileContentsEqual($path1,$path2) {
-		return CkFileAccess_FileContentsEqual($this->_cPtr,$path1,$path2);
+	function FileContentsEqual($filePath1,$filePath2) {
+		return CkFileAccess_FileContentsEqual($this->_cPtr,$filePath1,$filePath2);
 	}
 
-	function FileCopy($existing,$newFilename,$failIfExists) {
-		return CkFileAccess_FileCopy($this->_cPtr,$existing,$newFilename,$failIfExists);
+	function FileCopy($existingFilepath,$newFilepath,$failIfExists) {
+		return CkFileAccess_FileCopy($this->_cPtr,$existingFilepath,$newFilepath,$failIfExists);
 	}
 
-	function FileDelete($filename) {
-		return CkFileAccess_FileDelete($this->_cPtr,$filename);
+	function FileDelete($filePath) {
+		return CkFileAccess_FileDelete($this->_cPtr,$filePath);
 	}
 
-	function FileExists($path) {
-		return CkFileAccess_FileExists($this->_cPtr,$path);
+	function FileExists($filePath) {
+		return CkFileAccess_FileExists($this->_cPtr,$filePath);
 	}
 
 	function FileExists3($path) {
 		return CkFileAccess_FileExists3($this->_cPtr,$path);
 	}
 
-	function FileOpen($filename,$accessMode,$shareMode,$createDisp,$attr) {
-		return CkFileAccess_FileOpen($this->_cPtr,$filename,$accessMode,$shareMode,$createDisp,$attr);
+	function FileOpen($filePath,$accessMode,$shareMode,$createDisposition,$attributes) {
+		return CkFileAccess_FileOpen($this->_cPtr,$filePath,$accessMode,$shareMode,$createDisposition,$attributes);
 	}
 
-	function FileRead($numBytes,$outBytes) {
-		return CkFileAccess_FileRead($this->_cPtr,$numBytes,$outBytes);
+	function FileRead($maxNumBytes,$outBytes) {
+		return CkFileAccess_FileRead($this->_cPtr,$maxNumBytes,$outBytes);
 	}
 
-	function FileRename($existing,$newFilename) {
-		return CkFileAccess_FileRename($this->_cPtr,$existing,$newFilename);
+	function FileReadBd($maxNumBytes,$binData) {
+		return CkFileAccess_FileReadBd($this->_cPtr,$maxNumBytes,$binData);
+	}
+
+	function FileRename($existingFilepath,$newFilepath) {
+		return CkFileAccess_FileRename($this->_cPtr,$existingFilepath,$newFilepath);
 	}
 
 	function FileSeek($offset,$origin) {
 		return CkFileAccess_FileSeek($this->_cPtr,$offset,$origin);
 	}
 
-	function FileSize($filename) {
-		return CkFileAccess_FileSize($this->_cPtr,$filename);
+	function FileSize($filePath) {
+		return CkFileAccess_FileSize($this->_cPtr,$filePath);
 	}
 
 	function FileWrite($data) {
 		return CkFileAccess_FileWrite($this->_cPtr,$data);
 	}
 
+	function FileWriteBd($binData,$offset,$numBytes) {
+		return CkFileAccess_FileWriteBd($this->_cPtr,$binData,$offset,$numBytes);
+	}
+
 	function genBlockId($index,$length,$encoding) {
 		return CkFileAccess_genBlockId($this->_cPtr,$index,$length,$encoding);
+	}
+
+	function getDirectoryName($path) {
+		return CkFileAccess_getDirectoryName($this->_cPtr,$path);
+	}
+
+	function directoryName($path) {
+		return CkFileAccess_directoryName($this->_cPtr,$path);
+	}
+
+	function getExtension($path) {
+		return CkFileAccess_getExtension($this->_cPtr,$path);
+	}
+
+	function extension($path) {
+		return CkFileAccess_extension($this->_cPtr,$path);
+	}
+
+	function getFileName($path) {
+		return CkFileAccess_getFileName($this->_cPtr,$path);
+	}
+
+	function fileName($path) {
+		return CkFileAccess_fileName($this->_cPtr,$path);
+	}
+
+	function getFileNameWithoutExtension($path) {
+		return CkFileAccess_getFileNameWithoutExtension($this->_cPtr,$path);
+	}
+
+	function fileNameWithoutExtension($path) {
+		return CkFileAccess_fileNameWithoutExtension($this->_cPtr,$path);
+	}
+
+	function GetLastModified($path) {
+		$r=CkFileAccess_GetLastModified($this->_cPtr,$path);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkDateTime($r);
+		}
+		return $r;
 	}
 
 	function GetNumBlocks($blockSize) {
 		return CkFileAccess_GetNumBlocks($this->_cPtr,$blockSize);
 	}
 
-	function getTempFilename($dirName,$prefix) {
-		return CkFileAccess_getTempFilename($this->_cPtr,$dirName,$prefix);
+	function getTempFilename($dirPath,$prefix) {
+		return CkFileAccess_getTempFilename($this->_cPtr,$dirPath,$prefix);
 	}
 
-	function tempFilename($dirName,$prefix) {
-		return CkFileAccess_tempFilename($this->_cPtr,$dirName,$prefix);
+	function tempFilename($dirPath,$prefix) {
+		return CkFileAccess_tempFilename($this->_cPtr,$dirPath,$prefix);
 	}
 
 	function OpenForAppend($filePath) {
@@ -235,40 +281,44 @@ class CkFileAccess {
 		return CkFileAccess_OpenForWrite($this->_cPtr,$filePath);
 	}
 
-	function readBinaryToEncoded($filename,$encoding) {
-		return CkFileAccess_readBinaryToEncoded($this->_cPtr,$filename,$encoding);
+	function readBinaryToEncoded($filePath,$encoding) {
+		return CkFileAccess_readBinaryToEncoded($this->_cPtr,$filePath,$encoding);
 	}
 
 	function ReadBlock($blockIndex,$blockSize,$outBytes) {
 		return CkFileAccess_ReadBlock($this->_cPtr,$blockIndex,$blockSize,$outBytes);
 	}
 
-	function ReadEntireFile($filename,$outBytes) {
-		return CkFileAccess_ReadEntireFile($this->_cPtr,$filename,$outBytes);
+	function ReadEntireFile($filePath,$outBytes) {
+		return CkFileAccess_ReadEntireFile($this->_cPtr,$filePath,$outBytes);
 	}
 
-	function readEntireTextFile($filename,$charset) {
-		return CkFileAccess_readEntireTextFile($this->_cPtr,$filename,$charset);
+	function readEntireTextFile($filePath,$charset) {
+		return CkFileAccess_readEntireTextFile($this->_cPtr,$filePath,$charset);
 	}
 
 	function ReassembleFile($partsDirPath,$partPrefix,$partExtension,$reassembledFilename) {
 		return CkFileAccess_ReassembleFile($this->_cPtr,$partsDirPath,$partPrefix,$partExtension,$reassembledFilename);
 	}
 
-	function ReplaceStrings($path,$charset,$existingString,$replacementString) {
-		return CkFileAccess_ReplaceStrings($this->_cPtr,$path,$charset,$existingString,$replacementString);
+	function ReplaceStrings($filePath,$charset,$existingString,$replacementString) {
+		return CkFileAccess_ReplaceStrings($this->_cPtr,$filePath,$charset,$existingString,$replacementString);
 	}
 
-	function SetCurrentDir($path) {
-		return CkFileAccess_SetCurrentDir($this->_cPtr,$path);
+	function SaveLastError($path) {
+		return CkFileAccess_SaveLastError($this->_cPtr,$path);
 	}
 
-	function SetFileTimes($path,$create,$lastAccess,$lastModified) {
-		return CkFileAccess_SetFileTimes($this->_cPtr,$path,$create,$lastAccess,$lastModified);
+	function SetCurrentDir($dirPath) {
+		return CkFileAccess_SetCurrentDir($this->_cPtr,$dirPath);
 	}
 
-	function SetLastModified($path,$lastModified) {
-		return CkFileAccess_SetLastModified($this->_cPtr,$path,$lastModified);
+	function SetFileTimes($filePath,$createTime,$lastAccessTime,$lastModTime) {
+		return CkFileAccess_SetFileTimes($this->_cPtr,$filePath,$createTime,$lastAccessTime,$lastModTime);
+	}
+
+	function SetLastModified($filePath,$lastModified) {
+		return CkFileAccess_SetLastModified($this->_cPtr,$filePath,$lastModified);
 	}
 
 	function SplitFile($fileToSplit,$partPrefix,$partExtension,$partSize,$destDir) {
@@ -279,12 +329,12 @@ class CkFileAccess {
 		return CkFileAccess_TreeDelete($this->_cPtr,$path);
 	}
 
-	function WriteEntireFile($filename,$fileData) {
-		return CkFileAccess_WriteEntireFile($this->_cPtr,$filename,$fileData);
+	function WriteEntireFile($filePath,$fileData) {
+		return CkFileAccess_WriteEntireFile($this->_cPtr,$filePath,$fileData);
 	}
 
-	function WriteEntireTextFile($filename,$fileData,$charset,$includePreamble) {
-		return CkFileAccess_WriteEntireTextFile($this->_cPtr,$filename,$fileData,$charset,$includePreamble);
+	function WriteEntireTextFile($filePath,$textData,$charset,$includedPreamble) {
+		return CkFileAccess_WriteEntireTextFile($this->_cPtr,$filePath,$textData,$charset,$includedPreamble);
 	}
 }
 

@@ -35,6 +35,42 @@ class CkAuthAzureStorage {
 		CkAuthAzureStorage_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_AccessKey($str) {
+		CkAuthAzureStorage_get_AccessKey($this->_cPtr,$str);
+	}
+
+	function accessKey() {
+		return CkAuthAzureStorage_accessKey($this->_cPtr);
+	}
+
+	function put_AccessKey($newVal) {
+		CkAuthAzureStorage_put_AccessKey($this->_cPtr,$newVal);
+	}
+
+	function get_Account($str) {
+		CkAuthAzureStorage_get_Account($this->_cPtr,$str);
+	}
+
+	function account() {
+		return CkAuthAzureStorage_account($this->_cPtr);
+	}
+
+	function put_Account($newVal) {
+		CkAuthAzureStorage_put_Account($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkAuthAzureStorage_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkAuthAzureStorage_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkAuthAzureStorage_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkAuthAzureStorage_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,68 +95,12 @@ class CkAuthAzureStorage {
 		return CkAuthAzureStorage_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkAuthAzureStorage_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkAuthAzureStorage_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkAuthAzureStorage_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkAuthAzureStorage_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkAuthAzureStorage_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkAuthAzureStorage_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkAuthAzureStorage_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkAuthAzureStorage_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkAuthAzureStorage_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkAuthAzureStorage_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AccessKey($str) {
-		CkAuthAzureStorage_get_AccessKey($this->_cPtr,$str);
-	}
-
-	function accessKey() {
-		return CkAuthAzureStorage_accessKey($this->_cPtr);
-	}
-
-	function put_AccessKey($newVal) {
-		CkAuthAzureStorage_put_AccessKey($this->_cPtr,$newVal);
-	}
-
-	function get_Account($str) {
-		CkAuthAzureStorage_get_Account($this->_cPtr,$str);
-	}
-
-	function account() {
-		return CkAuthAzureStorage_account($this->_cPtr);
-	}
-
-	function put_Account($newVal) {
-		CkAuthAzureStorage_put_Account($this->_cPtr,$newVal);
 	}
 
 	function get_Scheme($str) {
@@ -147,6 +127,22 @@ class CkAuthAzureStorage {
 		CkAuthAzureStorage_put_Service($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkAuthAzureStorage_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkAuthAzureStorage_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkAuthAzureStorage_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkAuthAzureStorage_version($this->_cPtr);
+	}
+
 	function get_XMsVersion($str) {
 		CkAuthAzureStorage_get_XMsVersion($this->_cPtr,$str);
 	}
@@ -157,6 +153,10 @@ class CkAuthAzureStorage {
 
 	function put_XMsVersion($newVal) {
 		CkAuthAzureStorage_put_XMsVersion($this->_cPtr,$newVal);
+	}
+
+	function SaveLastError($path) {
+		return CkAuthAzureStorage_SaveLastError($this->_cPtr,$path);
 	}
 }
 

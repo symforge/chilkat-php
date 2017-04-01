@@ -35,6 +35,18 @@ class CkXmlCertVault {
 		CkXmlCertVault_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkXmlCertVault_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkXmlCertVault_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkXmlCertVault_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkXmlCertVault_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,44 +71,12 @@ class CkXmlCertVault {
 		return CkXmlCertVault_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkXmlCertVault_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkXmlCertVault_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkXmlCertVault_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkXmlCertVault_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkXmlCertVault_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkXmlCertVault_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkXmlCertVault_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkXmlCertVault_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkXmlCertVault_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkXmlCertVault_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_MasterPassword($str) {
@@ -109,6 +89,22 @@ class CkXmlCertVault {
 
 	function put_MasterPassword($newVal) {
 		CkXmlCertVault_put_MasterPassword($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkXmlCertVault_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkXmlCertVault_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkXmlCertVault_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkXmlCertVault_version($this->_cPtr);
 	}
 
 	function AddCert($cert) {
@@ -169,6 +165,10 @@ class CkXmlCertVault {
 
 	function LoadXmlFile($path) {
 		return CkXmlCertVault_LoadXmlFile($this->_cPtr,$path);
+	}
+
+	function SaveLastError($path) {
+		return CkXmlCertVault_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveXml($path) {

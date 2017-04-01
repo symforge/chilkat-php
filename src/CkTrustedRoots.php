@@ -39,6 +39,18 @@ class CkTrustedRoots {
 		CkTrustedRoots_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkTrustedRoots_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkTrustedRoots_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkTrustedRoots_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkTrustedRoots_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,44 +75,12 @@ class CkTrustedRoots {
 		return CkTrustedRoots_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkTrustedRoots_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkTrustedRoots_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkTrustedRoots_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkTrustedRoots_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkTrustedRoots_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkTrustedRoots_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkTrustedRoots_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkTrustedRoots_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkTrustedRoots_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkTrustedRoots_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_NumCerts() {
@@ -113,6 +93,22 @@ class CkTrustedRoots {
 
 	function put_TrustSystemCaRoots($newVal) {
 		CkTrustedRoots_put_TrustSystemCaRoots($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkTrustedRoots_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkTrustedRoots_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkTrustedRoots_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkTrustedRoots_version($this->_cPtr);
 	}
 
 	function Activate() {
@@ -163,6 +159,10 @@ class CkTrustedRoots {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkTrustedRoots_SaveLastError($this->_cPtr,$path);
 	}
 }
 

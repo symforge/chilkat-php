@@ -35,6 +35,30 @@ class CkStringArray {
 		CkStringArray_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_Count() {
+		return CkStringArray_get_Count($this->_cPtr);
+	}
+
+	function get_Crlf() {
+		return CkStringArray_get_Crlf($this->_cPtr);
+	}
+
+	function put_Crlf($newVal) {
+		CkStringArray_put_Crlf($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkStringArray_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkStringArray_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkStringArray_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkStringArray_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,56 +83,12 @@ class CkStringArray {
 		return CkStringArray_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkStringArray_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkStringArray_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkStringArray_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkStringArray_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkStringArray_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkStringArray_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkStringArray_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkStringArray_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkStringArray_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkStringArray_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_Count() {
-		return CkStringArray_get_Count($this->_cPtr);
-	}
-
-	function get_Crlf() {
-		return CkStringArray_get_Crlf($this->_cPtr);
-	}
-
-	function put_Crlf($newVal) {
-		CkStringArray_put_Crlf($this->_cPtr,$newVal);
 	}
 
 	function get_Length() {
@@ -131,6 +111,22 @@ class CkStringArray {
 		CkStringArray_put_Unique($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkStringArray_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkStringArray_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkStringArray_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkStringArray_version($this->_cPtr);
+	}
+
 	function Append($str) {
 		return CkStringArray_Append($this->_cPtr,$str);
 	}
@@ -147,12 +143,12 @@ class CkStringArray {
 		return CkStringArray_Contains($this->_cPtr,$str);
 	}
 
-	function Find($str,$firstIndex) {
-		return CkStringArray_Find($this->_cPtr,$str,$firstIndex);
+	function Find($findStr,$startIndex) {
+		return CkStringArray_Find($this->_cPtr,$findStr,$startIndex);
 	}
 
-	function FindFirstMatch($str,$firstIndex) {
-		return CkStringArray_FindFirstMatch($this->_cPtr,$str,$firstIndex);
+	function FindFirstMatch($matchPattern,$startIndex) {
+		return CkStringArray_FindFirstMatch($this->_cPtr,$matchPattern,$startIndex);
 	}
 
 	function getString($index) {
@@ -175,12 +171,12 @@ class CkStringArray {
 		return CkStringArray_lastString($this->_cPtr);
 	}
 
-	function LoadFromFile($filename) {
-		return CkStringArray_LoadFromFile($this->_cPtr,$filename);
+	function LoadFromFile($path) {
+		return CkStringArray_LoadFromFile($this->_cPtr,$path);
 	}
 
-	function LoadFromFile2($filename,$charset) {
-		return CkStringArray_LoadFromFile2($this->_cPtr,$filename,$charset);
+	function LoadFromFile2($path,$charset) {
+		return CkStringArray_LoadFromFile2($this->_cPtr,$path,$charset);
 	}
 
 	function LoadFromText($str) {
@@ -211,16 +207,20 @@ class CkStringArray {
 		CkStringArray_ReplaceAt($this->_cPtr,$index,$str);
 	}
 
-	function SaveNthToFile($index,$filename) {
-		return CkStringArray_SaveNthToFile($this->_cPtr,$index,$filename);
+	function SaveLastError($path) {
+		return CkStringArray_SaveLastError($this->_cPtr,$path);
 	}
 
-	function SaveToFile($filename) {
-		return CkStringArray_SaveToFile($this->_cPtr,$filename);
+	function SaveNthToFile($index,$saveToPath) {
+		return CkStringArray_SaveNthToFile($this->_cPtr,$index,$saveToPath);
 	}
 
-	function SaveToFile2($filename,$charset) {
-		return CkStringArray_SaveToFile2($this->_cPtr,$filename,$charset);
+	function SaveToFile($path) {
+		return CkStringArray_SaveToFile($this->_cPtr,$path);
+	}
+
+	function SaveToFile2($saveToPath,$charset) {
+		return CkStringArray_SaveToFile2($this->_cPtr,$saveToPath,$charset);
 	}
 
 	function saveToText() {
@@ -243,12 +243,12 @@ class CkStringArray {
 		return CkStringArray_strAt($this->_cPtr,$index);
 	}
 
-	function Subtract($sa) {
-		CkStringArray_Subtract($this->_cPtr,$sa);
+	function Subtract($stringArrayObj) {
+		CkStringArray_Subtract($this->_cPtr,$stringArrayObj);
 	}
 
-	function Union($sa) {
-		CkStringArray_Union($this->_cPtr,$sa);
+	function Union($stringArrayObj) {
+		CkStringArray_Union($this->_cPtr,$stringArrayObj);
 	}
 }
 

@@ -35,6 +35,18 @@ class CkJavaKeyStore {
 		CkJavaKeyStore_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkJavaKeyStore_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkJavaKeyStore_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkJavaKeyStore_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkJavaKeyStore_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,34 +71,6 @@ class CkJavaKeyStore {
 		return CkJavaKeyStore_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkJavaKeyStore_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkJavaKeyStore_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkJavaKeyStore_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkJavaKeyStore_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkJavaKeyStore_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkJavaKeyStore_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkJavaKeyStore_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkJavaKeyStore_get_LastMethodSuccess($this->_cPtr);
 	}
@@ -95,12 +79,12 @@ class CkJavaKeyStore {
 		CkJavaKeyStore_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function SaveLastError($path) {
-		return CkJavaKeyStore_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_NumPrivateKeys() {
 		return CkJavaKeyStore_get_NumPrivateKeys($this->_cPtr);
+	}
+
+	function get_NumSecretKeys() {
+		return CkJavaKeyStore_get_NumSecretKeys($this->_cPtr);
 	}
 
 	function get_NumTrustedCerts() {
@@ -115,6 +99,14 @@ class CkJavaKeyStore {
 		CkJavaKeyStore_put_RequireCompleteChain($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkJavaKeyStore_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkJavaKeyStore_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
 	function get_VerifyKeyedDigest() {
 		return CkJavaKeyStore_get_VerifyKeyedDigest($this->_cPtr);
 	}
@@ -123,12 +115,24 @@ class CkJavaKeyStore {
 		CkJavaKeyStore_put_VerifyKeyedDigest($this->_cPtr,$newVal);
 	}
 
+	function get_Version($str) {
+		CkJavaKeyStore_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkJavaKeyStore_version($this->_cPtr);
+	}
+
 	function AddPfx($pfx,$alias,$password) {
 		return CkJavaKeyStore_AddPfx($this->_cPtr,$pfx,$alias,$password);
 	}
 
 	function AddPrivateKey($cert,$alias,$password) {
 		return CkJavaKeyStore_AddPrivateKey($this->_cPtr,$cert,$alias,$password);
+	}
+
+	function AddSecretKey($encodedKeyBytes,$encoding,$algorithm,$alias,$password) {
+		return CkJavaKeyStore_AddSecretKey($this->_cPtr,$encodedKeyBytes,$encoding,$algorithm,$alias,$password);
 	}
 
 	function AddTrustedCert($cert,$alias) {
@@ -197,6 +201,22 @@ class CkJavaKeyStore {
 		return CkJavaKeyStore_privateKeyAlias($this->_cPtr,$index);
 	}
 
+	function getSecretKey($password,$index,$encoding) {
+		return CkJavaKeyStore_getSecretKey($this->_cPtr,$password,$index,$encoding);
+	}
+
+	function secretKey($password,$index,$encoding) {
+		return CkJavaKeyStore_secretKey($this->_cPtr,$password,$index,$encoding);
+	}
+
+	function getSecretKeyAlias($index) {
+		return CkJavaKeyStore_getSecretKeyAlias($this->_cPtr,$index);
+	}
+
+	function secretKeyAlias($index) {
+		return CkJavaKeyStore_secretKeyAlias($this->_cPtr,$index);
+	}
+
 	function GetTrustedCert($index) {
 		$r=CkJavaKeyStore_GetTrustedCert($this->_cPtr,$index);
 		if (is_resource($r)) {
@@ -227,8 +247,16 @@ class CkJavaKeyStore {
 		return CkJavaKeyStore_LoadFile($this->_cPtr,$password,$path);
 	}
 
+	function LoadJwkSet($password,$jwkSet) {
+		return CkJavaKeyStore_LoadJwkSet($this->_cPtr,$password,$jwkSet);
+	}
+
 	function RemoveEntry($entryType,$index) {
 		return CkJavaKeyStore_RemoveEntry($this->_cPtr,$entryType,$index);
+	}
+
+	function SaveLastError($path) {
+		return CkJavaKeyStore_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetAlias($entryType,$index,$alias) {
@@ -245,6 +273,10 @@ class CkJavaKeyStore {
 
 	function ToFile($password,$path) {
 		return CkJavaKeyStore_ToFile($this->_cPtr,$password,$path);
+	}
+
+	function ToJwkSet($password,$sbJwkSet) {
+		return CkJavaKeyStore_ToJwkSet($this->_cPtr,$password,$sbJwkSet);
 	}
 
 	function ToPem($password) {

@@ -35,70 +35,6 @@ class CkHttpResponse {
 		CkHttpResponse_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkHttpResponse_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkHttpResponse_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkHttpResponse_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkHttpResponse_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkHttpResponse_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkHttpResponse_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkHttpResponse_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkHttpResponse_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkHttpResponse_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkHttpResponse_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkHttpResponse_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkHttpResponse_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkHttpResponse_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkHttpResponse_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkHttpResponse_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkHttpResponse_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Body($outBytes) {
 		CkHttpResponse_get_Body($this->_cPtr,$outBytes);
 	}
@@ -143,6 +79,18 @@ class CkHttpResponse {
 		return CkHttpResponse_dateStr($this->_cPtr);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkHttpResponse_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkHttpResponse_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkHttpResponse_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_Domain($str) {
 		CkHttpResponse_get_Domain($this->_cPtr,$str);
 	}
@@ -175,6 +123,38 @@ class CkHttpResponse {
 		return CkHttpResponse_header($this->_cPtr);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkHttpResponse_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkHttpResponse_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkHttpResponse_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkHttpResponse_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkHttpResponse_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkHttpResponse_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkHttpResponse_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkHttpResponse_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_NumCookies() {
 		return CkHttpResponse_get_NumCookies($this->_cPtr);
 	}
@@ -201,6 +181,30 @@ class CkHttpResponse {
 
 	function statusText() {
 		return CkHttpResponse_statusText($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkHttpResponse_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkHttpResponse_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkHttpResponse_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkHttpResponse_version($this->_cPtr);
+	}
+
+	function GetBodyBd($binData) {
+		return CkHttpResponse_GetBodyBd($this->_cPtr,$binData);
+	}
+
+	function GetBodySb($sb) {
+		return CkHttpResponse_GetBodySb($this->_cPtr,$sb);
 	}
 
 	function getCookieDomain($index) {
@@ -291,8 +295,12 @@ class CkHttpResponse {
 		return CkHttpResponse_SaveBodyText($this->_cPtr,$bCrlf,$path);
 	}
 
-	function urlEncParamValue($encodedParams,$paramName) {
-		return CkHttpResponse_urlEncParamValue($this->_cPtr,$encodedParams,$paramName);
+	function SaveLastError($path) {
+		return CkHttpResponse_SaveLastError($this->_cPtr,$path);
+	}
+
+	function urlEncParamValue($encodedParamString,$paramName) {
+		return CkHttpResponse_urlEncParamValue($this->_cPtr,$encodedParamString,$paramName);
 	}
 }
 

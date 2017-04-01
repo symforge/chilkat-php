@@ -35,6 +35,26 @@ class CkCertStore {
 		CkCertStore_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_AvoidWindowsPkAccess() {
+		return CkCertStore_get_AvoidWindowsPkAccess($this->_cPtr);
+	}
+
+	function put_AvoidWindowsPkAccess($newVal) {
+		CkCertStore_put_AvoidWindowsPkAccess($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkCertStore_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCertStore_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCertStore_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkCertStore_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +79,16 @@ class CkCertStore {
 		return CkCertStore_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkCertStore_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkCertStore_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkCertStore_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkCertStore_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkCertStore_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCertStore_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCertStore_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function get_NumCertificates() {
+		return CkCertStore_get_NumCertificates($this->_cPtr);
 	}
 
 	function get_VerboseLogging() {
@@ -87,28 +99,12 @@ class CkCertStore {
 		CkCertStore_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkCertStore_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkCertStore_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkCertStore_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCertStore_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AvoidWindowsPkAccess() {
-		return CkCertStore_get_AvoidWindowsPkAccess($this->_cPtr);
-	}
-
-	function put_AvoidWindowsPkAccess($newVal) {
-		CkCertStore_put_AvoidWindowsPkAccess($this->_cPtr,$newVal);
-	}
-
-	function get_NumCertificates() {
-		return CkCertStore_get_NumCertificates($this->_cPtr);
+	function version() {
+		return CkCertStore_version($this->_cPtr);
 	}
 
 	function FindCertByRfc822Name($name) {
@@ -215,6 +211,10 @@ class CkCertStore {
 
 	function LoadPfxFile($pfxFilename,$password) {
 		return CkCertStore_LoadPfxFile($this->_cPtr,$pfxFilename,$password);
+	}
+
+	function SaveLastError($path) {
+		return CkCertStore_SaveLastError($this->_cPtr,$path);
 	}
 }
 

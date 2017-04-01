@@ -39,6 +39,34 @@ class CkPem {
 		CkPem_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_AppendMode() {
+		return CkPem_get_AppendMode($this->_cPtr);
+	}
+
+	function put_AppendMode($newVal) {
+		CkPem_put_AppendMode($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkPem_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkPem_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkPem_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_HeartbeatMs() {
+		return CkPem_get_HeartbeatMs($this->_cPtr);
+	}
+
+	function put_HeartbeatMs($newVal) {
+		CkPem_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkPem_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,60 +91,12 @@ class CkPem {
 		return CkPem_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkPem_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkPem_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkPem_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkPem_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkPem_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkPem_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkPem_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkPem_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkPem_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkPem_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AppendMode() {
-		return CkPem_get_AppendMode($this->_cPtr);
-	}
-
-	function put_AppendMode($newVal) {
-		CkPem_put_AppendMode($this->_cPtr,$newVal);
-	}
-
-	function get_HeartbeatMs() {
-		return CkPem_get_HeartbeatMs($this->_cPtr);
-	}
-
-	function put_HeartbeatMs($newVal) {
-		CkPem_put_HeartbeatMs($this->_cPtr,$newVal);
 	}
 
 	function get_NumCerts() {
@@ -159,8 +139,28 @@ class CkPem {
 		CkPem_put_PublicKeyFormat($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkPem_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkPem_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkPem_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkPem_version($this->_cPtr);
+	}
+
 	function AddCert($cert,$includeChain) {
 		return CkPem_AddCert($this->_cPtr,$cert,$includeChain);
+	}
+
+	function AddItem($itemType,$encoding,$itemData) {
+		return CkPem_AddItem($this->_cPtr,$itemType,$encoding,$itemData);
 	}
 
 	function AddPrivateKey($privateKey) {
@@ -279,6 +279,10 @@ class CkPem {
 
 	function RemovePrivateKey($index) {
 		return CkPem_RemovePrivateKey($this->_cPtr,$index);
+	}
+
+	function SaveLastError($path) {
+		return CkPem_SaveLastError($this->_cPtr,$path);
 	}
 
 	function ToJks($alias,$password) {

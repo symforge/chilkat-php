@@ -35,70 +35,6 @@ class CkXml {
 		CkXml_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkXml_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkXml_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkXml_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkXml_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkXml_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkXml_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkXml_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkXml_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkXml_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkXml_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkXml_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkXml_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkXml_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkXml_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkXml_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkXml_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Cdata() {
 		return CkXml_get_Cdata($this->_cPtr);
 	}
@@ -127,6 +63,18 @@ class CkXml {
 		CkXml_put_ContentInt($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkXml_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkXml_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkXml_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_DocType($str) {
 		CkXml_get_DocType($this->_cPtr,$str);
 	}
@@ -147,6 +95,14 @@ class CkXml {
 		CkXml_put_EmitBom($this->_cPtr,$newVal);
 	}
 
+	function get_EmitCompact() {
+		return CkXml_get_EmitCompact($this->_cPtr);
+	}
+
+	function put_EmitCompact($newVal) {
+		CkXml_put_EmitCompact($this->_cPtr,$newVal);
+	}
+
 	function get_EmitXmlDecl() {
 		return CkXml_get_EmitXmlDecl($this->_cPtr);
 	}
@@ -165,6 +121,62 @@ class CkXml {
 
 	function put_Encoding($newVal) {
 		CkXml_put_Encoding($this->_cPtr,$newVal);
+	}
+
+	function get_I() {
+		return CkXml_get_I($this->_cPtr);
+	}
+
+	function put_I($newVal) {
+		CkXml_put_I($this->_cPtr,$newVal);
+	}
+
+	function get_J() {
+		return CkXml_get_J($this->_cPtr);
+	}
+
+	function put_J($newVal) {
+		CkXml_put_J($this->_cPtr,$newVal);
+	}
+
+	function get_K() {
+		return CkXml_get_K($this->_cPtr);
+	}
+
+	function put_K($newVal) {
+		CkXml_put_K($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkXml_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkXml_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkXml_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkXml_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkXml_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkXml_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkXml_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkXml_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_NumAttributes() {
@@ -205,6 +217,22 @@ class CkXml {
 
 	function get_TreeId() {
 		return CkXml_get_TreeId($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkXml_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkXml_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkXml_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkXml_version($this->_cPtr);
 	}
 
 	function accumulateTagContent($tag,$skipTags) {
@@ -255,8 +283,8 @@ class CkXml {
 		return CkXml_BEncodeContent($this->_cPtr,$charset,$inData);
 	}
 
-	function ChildContentMatches($tag,$pattern,$caseSensitive) {
-		return CkXml_ChildContentMatches($this->_cPtr,$tag,$pattern,$caseSensitive);
+	function ChildContentMatches($tagPath,$pattern,$caseSensitive) {
+		return CkXml_ChildContentMatches($this->_cPtr,$tagPath,$pattern,$caseSensitive);
 	}
 
 	function chilkatPath($pathCmd) {
@@ -275,8 +303,8 @@ class CkXml {
 		CkXml_Copy($this->_cPtr,$node);
 	}
 
-	function CopyRef($node) {
-		CkXml_CopyRef($this->_cPtr,$node);
+	function CopyRef($copyFromNode) {
+		CkXml_CopyRef($this->_cPtr,$copyFromNode);
 	}
 
 	function DecodeContent($outData) {
@@ -305,8 +333,8 @@ class CkXml {
 		return $r;
 	}
 
-	function ExtractChildByName($tag,$attrName,$attrValue) {
-		$r=CkXml_ExtractChildByName($this->_cPtr,$tag,$attrName,$attrValue);
+	function ExtractChildByName($tagPath,$attrName,$attrValue) {
+		$r=CkXml_ExtractChildByName($this->_cPtr,$tagPath,$attrName,$attrValue);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -315,8 +343,8 @@ class CkXml {
 		return $r;
 	}
 
-	function FindChild($tag) {
-		$r=CkXml_FindChild($this->_cPtr,$tag);
+	function FindChild($tagPath) {
+		$r=CkXml_FindChild($this->_cPtr,$tagPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -325,12 +353,12 @@ class CkXml {
 		return $r;
 	}
 
-	function FindChild2($tag) {
-		return CkXml_FindChild2($this->_cPtr,$tag);
+	function FindChild2($tagPath) {
+		return CkXml_FindChild2($this->_cPtr,$tagPath);
 	}
 
-	function FindNextRecord($tag,$contentPattern) {
-		$r=CkXml_FindNextRecord($this->_cPtr,$tag,$contentPattern);
+	function FindNextRecord($tagPath,$contentPattern) {
+		$r=CkXml_FindNextRecord($this->_cPtr,$tagPath,$contentPattern);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -339,8 +367,8 @@ class CkXml {
 		return $r;
 	}
 
-	function FindOrAddNewChild($tag) {
-		$r=CkXml_FindOrAddNewChild($this->_cPtr,$tag);
+	function FindOrAddNewChild($tagPath) {
+		$r=CkXml_FindOrAddNewChild($this->_cPtr,$tagPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -363,18 +391,6 @@ class CkXml {
 		return CkXml_FirstChild2($this->_cPtr);
 	}
 
-	function getAttrValue($name) {
-		return CkXml_getAttrValue($this->_cPtr,$name);
-	}
-
-	function attrValue($name) {
-		return CkXml_attrValue($this->_cPtr,$name);
-	}
-
-	function GetAttrValueInt($name) {
-		return CkXml_GetAttrValueInt($this->_cPtr,$name);
-	}
-
 	function getAttributeName($index) {
 		return CkXml_getAttributeName($this->_cPtr,$index);
 	}
@@ -395,6 +411,18 @@ class CkXml {
 		return CkXml_GetAttributeValueInt($this->_cPtr,$index);
 	}
 
+	function getAttrValue($name) {
+		return CkXml_getAttrValue($this->_cPtr,$name);
+	}
+
+	function attrValue($name) {
+		return CkXml_attrValue($this->_cPtr,$name);
+	}
+
+	function GetAttrValueInt($name) {
+		return CkXml_GetAttrValueInt($this->_cPtr,$name);
+	}
+
 	function GetBinaryContent($unzipFlag,$decryptFlag,$password,$outData) {
 		return CkXml_GetBinaryContent($this->_cPtr,$unzipFlag,$decryptFlag,$password,$outData);
 	}
@@ -413,16 +441,16 @@ class CkXml {
 		return CkXml_GetChild2($this->_cPtr,$index);
 	}
 
-	function GetChildBoolValue($tag) {
-		return CkXml_GetChildBoolValue($this->_cPtr,$tag);
+	function GetChildBoolValue($tagPath) {
+		return CkXml_GetChildBoolValue($this->_cPtr,$tagPath);
 	}
 
-	function getChildContent($tag) {
-		return CkXml_getChildContent($this->_cPtr,$tag);
+	function getChildContent($tagPath) {
+		return CkXml_getChildContent($this->_cPtr,$tagPath);
 	}
 
-	function childContent($tag) {
-		return CkXml_childContent($this->_cPtr,$tag);
+	function childContent($tagPath) {
+		return CkXml_childContent($this->_cPtr,$tagPath);
 	}
 
 	function getChildContentByIndex($index) {
@@ -443,8 +471,8 @@ class CkXml {
 		return $r;
 	}
 
-	function GetChildIntValue($tag) {
-		return CkXml_GetChildIntValue($this->_cPtr,$tag);
+	function GetChildIntValue($tagPath) {
+		return CkXml_GetChildIntValue($this->_cPtr,$tagPath);
 	}
 
 	function getChildTag($index) {
@@ -463,8 +491,8 @@ class CkXml {
 		return CkXml_childTagByIndex($this->_cPtr,$index);
 	}
 
-	function GetChildWithAttr($tag,$attrName,$attrValue) {
-		$r=CkXml_GetChildWithAttr($this->_cPtr,$tag,$attrName,$attrValue);
+	function GetChildWithAttr($tagPath,$attrName,$attrValue) {
+		$r=CkXml_GetChildWithAttr($this->_cPtr,$tagPath,$attrName,$attrValue);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -483,8 +511,8 @@ class CkXml {
 		return $r;
 	}
 
-	function GetChildWithTag($tag) {
-		$r=CkXml_GetChildWithTag($this->_cPtr,$tag);
+	function GetChildWithTag($tagPath) {
+		$r=CkXml_GetChildWithTag($this->_cPtr,$tagPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -553,24 +581,28 @@ class CkXml {
 		return CkXml_xml($this->_cPtr);
 	}
 
-	function HasAttrWithValue($name,$value) {
-		return CkXml_HasAttrWithValue($this->_cPtr,$name,$value);
+	function GetXmlSb($sb) {
+		return CkXml_GetXmlSb($this->_cPtr,$sb);
 	}
 
 	function HasAttribute($name) {
 		return CkXml_HasAttribute($this->_cPtr,$name);
 	}
 
+	function HasAttrWithValue($name,$value) {
+		return CkXml_HasAttrWithValue($this->_cPtr,$name,$value);
+	}
+
 	function HasChildWithContent($content) {
 		return CkXml_HasChildWithContent($this->_cPtr,$content);
 	}
 
-	function HasChildWithTag($tag) {
-		return CkXml_HasChildWithTag($this->_cPtr,$tag);
+	function HasChildWithTag($tagPath) {
+		return CkXml_HasChildWithTag($this->_cPtr,$tagPath);
 	}
 
-	function HasChildWithTagAndContent($tag,$content) {
-		return CkXml_HasChildWithTagAndContent($this->_cPtr,$tag,$content);
+	function HasChildWithTagAndContent($tagPath,$content) {
+		return CkXml_HasChildWithTagAndContent($this->_cPtr,$tagPath,$content);
 	}
 
 	function InsertChildTreeAfter($index,$tree) {
@@ -595,6 +627,10 @@ class CkXml {
 		return CkXml_LastChild2($this->_cPtr);
 	}
 
+	function LoadSb($sb,$autoTrim) {
+		return CkXml_LoadSb($this->_cPtr,$sb,$autoTrim);
+	}
+
 	function LoadXml($xmlData) {
 		return CkXml_LoadXml($this->_cPtr,$xmlData);
 	}
@@ -611,8 +647,8 @@ class CkXml {
 		return CkXml_LoadXmlFile2($this->_cPtr,$fileName,$autoTrim);
 	}
 
-	function NewChild($tag,$content) {
-		$r=CkXml_NewChild($this->_cPtr,$tag,$content);
+	function NewChild($tagPath,$content) {
+		$r=CkXml_NewChild($this->_cPtr,$tagPath,$content);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -621,8 +657,8 @@ class CkXml {
 		return $r;
 	}
 
-	function NewChild2($tag,$content) {
-		CkXml_NewChild2($this->_cPtr,$tag,$content);
+	function NewChild2($tagPath,$content) {
+		CkXml_NewChild2($this->_cPtr,$tagPath,$content);
 	}
 
 	function NewChildAfter($index,$tag,$content) {
@@ -645,8 +681,8 @@ class CkXml {
 		return $r;
 	}
 
-	function NewChildInt2($tag,$value) {
-		CkXml_NewChildInt2($this->_cPtr,$tag,$value);
+	function NewChildInt2($tagPath,$value) {
+		CkXml_NewChildInt2($this->_cPtr,$tagPath,$value);
 	}
 
 	function NextSibling() {
@@ -661,6 +697,10 @@ class CkXml {
 
 	function NextSibling2() {
 		return CkXml_NextSibling2($this->_cPtr);
+	}
+
+	function NumChildrenAt($tagPath) {
+		return CkXml_NumChildrenAt($this->_cPtr,$tagPath);
 	}
 
 	function NumChildrenHavingTag($tag) {
@@ -697,8 +737,8 @@ class CkXml {
 		return CkXml_RemoveAttribute($this->_cPtr,$name);
 	}
 
-	function RemoveChild($tag) {
-		CkXml_RemoveChild($this->_cPtr,$tag);
+	function RemoveChild($tagPath) {
+		CkXml_RemoveChild($this->_cPtr,$tagPath);
 	}
 
 	function RemoveChildByIndex($index) {
@@ -715,6 +755,10 @@ class CkXml {
 
 	function SaveBinaryContent($filename,$unzipFlag,$decryptFlag,$password) {
 		return CkXml_SaveBinaryContent($this->_cPtr,$filename,$unzipFlag,$decryptFlag,$password);
+	}
+
+	function SaveLastError($path) {
+		return CkXml_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveXml($fileName) {
@@ -821,8 +865,8 @@ class CkXml {
 		return CkXml_SwapTree($this->_cPtr,$tree);
 	}
 
-	function tagContent($tag) {
-		return CkXml_tagContent($this->_cPtr,$tag);
+	function tagContent($tagName) {
+		return CkXml_tagContent($this->_cPtr,$tagName);
 	}
 
 	function TagEquals($tag) {
@@ -837,6 +881,14 @@ class CkXml {
 		return CkXml_UnzipTree($this->_cPtr);
 	}
 
+	function UpdateAt($tagPath,$autoCreate,$value) {
+		return CkXml_UpdateAt($this->_cPtr,$tagPath,$autoCreate,$value);
+	}
+
+	function UpdateAttrAt($tagPath,$autoCreate,$attrName,$attrValue) {
+		return CkXml_UpdateAttrAt($this->_cPtr,$tagPath,$autoCreate,$attrName,$attrValue);
+	}
+
 	function UpdateAttribute($attrName,$attrValue) {
 		return CkXml_UpdateAttribute($this->_cPtr,$attrName,$attrValue);
 	}
@@ -845,12 +897,12 @@ class CkXml {
 		return CkXml_UpdateAttributeInt($this->_cPtr,$attrName,$value);
 	}
 
-	function UpdateChildContent($tag,$value) {
-		CkXml_UpdateChildContent($this->_cPtr,$tag,$value);
+	function UpdateChildContent($tagPath,$value) {
+		CkXml_UpdateChildContent($this->_cPtr,$tagPath,$value);
 	}
 
-	function UpdateChildContentInt($tag,$value) {
-		CkXml_UpdateChildContentInt($this->_cPtr,$tag,$value);
+	function UpdateChildContentInt($tagPath,$value) {
+		CkXml_UpdateChildContentInt($this->_cPtr,$tagPath,$value);
 	}
 
 	function ZipContent() {

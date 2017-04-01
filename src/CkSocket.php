@@ -39,70 +39,6 @@ class CkSocket {
 		CkSocket_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkSocket_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkSocket_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkSocket_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkSocket_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkSocket_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkSocket_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkSocket_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkSocket_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkSocket_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkSocket_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkSocket_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkSocket_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkSocket_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkSocket_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkSocket_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkSocket_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AbortCurrent() {
 		return CkSocket_get_AbortCurrent($this->_cPtr);
 	}
@@ -171,6 +107,18 @@ class CkSocket {
 		return CkSocket_get_AsyncDnsSuccess($this->_cPtr);
 	}
 
+	function get_AsyncReceivedBytes($outBytes) {
+		CkSocket_get_AsyncReceivedBytes($this->_cPtr,$outBytes);
+	}
+
+	function get_AsyncReceivedString($str) {
+		CkSocket_get_AsyncReceivedString($this->_cPtr,$str);
+	}
+
+	function asyncReceivedString() {
+		return CkSocket_asyncReceivedString($this->_cPtr);
+	}
+
 	function get_AsyncReceiveFinished() {
 		return CkSocket_get_AsyncReceiveFinished($this->_cPtr);
 	}
@@ -185,18 +133,6 @@ class CkSocket {
 
 	function get_AsyncReceiveSuccess() {
 		return CkSocket_get_AsyncReceiveSuccess($this->_cPtr);
-	}
-
-	function get_AsyncReceivedBytes($outBytes) {
-		CkSocket_get_AsyncReceivedBytes($this->_cPtr,$outBytes);
-	}
-
-	function get_AsyncReceivedString($str) {
-		CkSocket_get_AsyncReceivedString($this->_cPtr,$str);
-	}
-
-	function asyncReceivedString() {
-		return CkSocket_asyncReceivedString($this->_cPtr);
 	}
 
 	function get_AsyncSendFinished() {
@@ -277,6 +213,18 @@ class CkSocket {
 
 	function put_DebugDnsDelayMs($newVal) {
 		CkSocket_put_DebugDnsDelayMs($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkSocket_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkSocket_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkSocket_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_ElapsedSeconds() {
@@ -379,8 +327,40 @@ class CkSocket {
 		CkSocket_put_KeepSessionLog($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkSocket_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkSocket_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkSocket_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkSocket_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkSocket_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkSocket_lastErrorXml($this->_cPtr);
+	}
+
 	function get_LastMethodFailed() {
 		return CkSocket_get_LastMethodFailed($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkSocket_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSocket_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_ListenIpv6() {
@@ -389,6 +369,10 @@ class CkSocket {
 
 	function put_ListenIpv6($newVal) {
 		CkSocket_put_ListenIpv6($this->_cPtr,$newVal);
+	}
+
+	function get_ListenPort() {
+		return CkSocket_get_ListenPort($this->_cPtr);
 	}
 
 	function get_LocalIpAddress($str) {
@@ -459,18 +443,6 @@ class CkSocket {
 		CkSocket_put_PreferIpv6($this->_cPtr,$newVal);
 	}
 
-	function get_ReceiveFailReason() {
-		return CkSocket_get_ReceiveFailReason($this->_cPtr);
-	}
-
-	function get_ReceivePacketSize() {
-		return CkSocket_get_ReceivePacketSize($this->_cPtr);
-	}
-
-	function put_ReceivePacketSize($newVal) {
-		CkSocket_put_ReceivePacketSize($this->_cPtr,$newVal);
-	}
-
 	function get_ReceivedCount() {
 		return CkSocket_get_ReceivedCount($this->_cPtr);
 	}
@@ -485,6 +457,18 @@ class CkSocket {
 
 	function put_ReceivedInt($newVal) {
 		CkSocket_put_ReceivedInt($this->_cPtr,$newVal);
+	}
+
+	function get_ReceiveFailReason() {
+		return CkSocket_get_ReceiveFailReason($this->_cPtr);
+	}
+
+	function get_ReceivePacketSize() {
+		return CkSocket_get_ReceivePacketSize($this->_cPtr);
+	}
+
+	function put_ReceivePacketSize($newVal) {
+		CkSocket_put_ReceivePacketSize($this->_cPtr,$newVal);
 	}
 
 	function get_RemoteIpAddress($str) {
@@ -563,30 +547,6 @@ class CkSocket {
 		CkSocket_put_SessionLogEncoding($this->_cPtr,$newVal);
 	}
 
-	function get_SoRcvBuf() {
-		return CkSocket_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkSocket_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoReuseAddr() {
-		return CkSocket_get_SoReuseAddr($this->_cPtr);
-	}
-
-	function put_SoReuseAddr($newVal) {
-		CkSocket_put_SoReuseAddr($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkSocket_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkSocket_put_SoSndBuf($this->_cPtr,$newVal);
-	}
-
 	function get_SocksHostname($str) {
 		CkSocket_get_SocksHostname($this->_cPtr,$str);
 	}
@@ -637,6 +597,30 @@ class CkSocket {
 
 	function put_SocksVersion($newVal) {
 		CkSocket_put_SocksVersion($this->_cPtr,$newVal);
+	}
+
+	function get_SoRcvBuf() {
+		return CkSocket_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkSocket_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoReuseAddr() {
+		return CkSocket_get_SoReuseAddr($this->_cPtr);
+	}
+
+	function put_SoReuseAddr($newVal) {
+		CkSocket_put_SoReuseAddr($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkSocket_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkSocket_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_Ssl() {
@@ -731,6 +715,22 @@ class CkSocket {
 		CkSocket_put_UserData($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkSocket_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkSocket_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkSocket_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkSocket_version($this->_cPtr);
+	}
+
 	function AcceptNextConnection($maxWaitMs) {
 		$r=CkSocket_AcceptNextConnection($this->_cPtr,$maxWaitMs);
 		if (is_resource($r)) {
@@ -821,20 +821,20 @@ class CkSocket {
 		return CkSocket_AsyncSendByteData($this->_cPtr,$data);
 	}
 
-	function AsyncSendBytes($data) {
-		return CkSocket_AsyncSendBytes($this->_cPtr,$data);
+	function AsyncSendBytes($byteData) {
+		return CkSocket_AsyncSendBytes($this->_cPtr,$byteData);
 	}
 
-	function AsyncSendString($str) {
-		return CkSocket_AsyncSendString($this->_cPtr,$str);
+	function AsyncSendString($stringToSend) {
+		return CkSocket_AsyncSendString($this->_cPtr,$stringToSend);
 	}
 
-	function BindAndListen($port,$backlog) {
-		return CkSocket_BindAndListen($this->_cPtr,$port,$backlog);
+	function BindAndListen($port,$backLog) {
+		return CkSocket_BindAndListen($this->_cPtr,$port,$backLog);
 	}
 
-	function BindAndListenAsync($port,$backlog) {
-		$r=CkSocket_BindAndListenAsync($this->_cPtr,$port,$backlog);
+	function BindAndListenAsync($port,$backLog) {
+		$r=CkSocket_BindAndListenAsync($this->_cPtr,$port,$backLog);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1003,6 +1003,44 @@ class CkSocket {
 		return CkSocket_PollDataAvailable($this->_cPtr);
 	}
 
+	function PollDataAvailableAsync() {
+		$r=CkSocket_PollDataAvailableAsync($this->_cPtr);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function ReceiveBd($binData) {
+		return CkSocket_ReceiveBd($this->_cPtr,$binData);
+	}
+
+	function ReceiveBdAsync($binData) {
+		$r=CkSocket_ReceiveBdAsync($this->_cPtr,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function ReceiveBdN($numBytes,$binData) {
+		return CkSocket_ReceiveBdN($this->_cPtr,$numBytes,$binData);
+	}
+
+	function ReceiveBdNAsync($numBytes,$binData) {
+		$r=CkSocket_ReceiveBdNAsync($this->_cPtr,$numBytes,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function ReceiveByte($bUnsigned) {
 		return CkSocket_ReceiveByte($this->_cPtr,$bUnsigned);
 	}
@@ -1129,6 +1167,20 @@ class CkSocket {
 		return $r;
 	}
 
+	function ReceiveSb($sb) {
+		return CkSocket_ReceiveSb($this->_cPtr,$sb);
+	}
+
+	function ReceiveSbAsync($sb) {
+		$r=CkSocket_ReceiveSbAsync($this->_cPtr,$sb);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function receiveString() {
 		return CkSocket_receiveString($this->_cPtr);
 	}
@@ -1143,12 +1195,12 @@ class CkSocket {
 		return $r;
 	}
 
-	function receiveStringMaxN($maxBytes) {
-		return CkSocket_receiveStringMaxN($this->_cPtr,$maxBytes);
+	function receiveStringMaxN($maxByteCount) {
+		return CkSocket_receiveStringMaxN($this->_cPtr,$maxByteCount);
 	}
 
-	function ReceiveStringMaxNAsync($maxBytes) {
-		$r=CkSocket_ReceiveStringMaxNAsync($this->_cPtr,$maxBytes);
+	function ReceiveStringMaxNAsync($maxByteCount) {
+		$r=CkSocket_ReceiveStringMaxNAsync($this->_cPtr,$maxByteCount);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1157,12 +1209,12 @@ class CkSocket {
 		return $r;
 	}
 
-	function receiveStringUntilByte($byteValue) {
-		return CkSocket_receiveStringUntilByte($this->_cPtr,$byteValue);
+	function receiveStringUntilByte($lookForByte) {
+		return CkSocket_receiveStringUntilByte($this->_cPtr,$lookForByte);
 	}
 
-	function ReceiveStringUntilByteAsync($byteValue) {
-		$r=CkSocket_ReceiveStringUntilByteAsync($this->_cPtr,$byteValue);
+	function ReceiveStringUntilByteAsync($lookForByte) {
+		$r=CkSocket_ReceiveStringUntilByteAsync($this->_cPtr,$lookForByte);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1185,12 +1237,12 @@ class CkSocket {
 		return $r;
 	}
 
-	function ReceiveUntilByte($byteValue,$outBytes) {
-		return CkSocket_ReceiveUntilByte($this->_cPtr,$byteValue,$outBytes);
+	function ReceiveUntilByte($lookForByte,$outBytes) {
+		return CkSocket_ReceiveUntilByte($this->_cPtr,$lookForByte,$outBytes);
 	}
 
-	function ReceiveUntilByteAsync($byteValue) {
-		$r=CkSocket_ReceiveUntilByteAsync($this->_cPtr,$byteValue);
+	function ReceiveUntilByteAsync($lookForByte) {
+		$r=CkSocket_ReceiveUntilByteAsync($this->_cPtr,$lookForByte);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1213,6 +1265,10 @@ class CkSocket {
 		return $r;
 	}
 
+	function SaveLastError($path) {
+		return CkSocket_SaveLastError($this->_cPtr,$path);
+	}
+
 	function SelectForReading($timeoutMs) {
 		return CkSocket_SelectForReading($this->_cPtr,$timeoutMs);
 	}
@@ -1233,6 +1289,20 @@ class CkSocket {
 
 	function SelectForWritingAsync($timeoutMs) {
 		$r=CkSocket_SelectForWritingAsync($this->_cPtr,$timeoutMs);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function SendBd($binData,$offset,$numBytes) {
+		return CkSocket_SendBd($this->_cPtr,$binData,$offset,$numBytes);
+	}
+
+	function SendBdAsync($binData,$offset,$numBytes) {
+		$r=CkSocket_SendBdAsync($this->_cPtr,$binData,$offset,$numBytes);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1325,12 +1395,26 @@ class CkSocket {
 		return $r;
 	}
 
-	function SendString($str) {
-		return CkSocket_SendString($this->_cPtr,$str);
+	function SendSb($sb) {
+		return CkSocket_SendSb($this->_cPtr,$sb);
 	}
 
-	function SendStringAsync($str) {
-		$r=CkSocket_SendStringAsync($this->_cPtr,$str);
+	function SendSbAsync($sb) {
+		$r=CkSocket_SendSbAsync($this->_cPtr,$sb);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function SendString($stringToSend) {
+		return CkSocket_SendString($this->_cPtr,$stringToSend);
+	}
+
+	function SendStringAsync($stringToSend) {
+		$r=CkSocket_SendStringAsync($this->_cPtr,$stringToSend);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);

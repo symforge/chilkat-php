@@ -35,6 +35,26 @@ class CkPublicKey {
 		CkPublicKey_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkPublicKey_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkPublicKey_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkPublicKey_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_KeyType($str) {
+		CkPublicKey_get_KeyType($this->_cPtr,$str);
+	}
+
+	function keyType() {
+		return CkPublicKey_keyType($this->_cPtr);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkPublicKey_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +79,12 @@ class CkPublicKey {
 		return CkPublicKey_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkPublicKey_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkPublicKey_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkPublicKey_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkPublicKey_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkPublicKey_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkPublicKey_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkPublicKey_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,24 +95,40 @@ class CkPublicKey {
 		CkPublicKey_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkPublicKey_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkPublicKey_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkPublicKey_put_LastMethodSuccess($this->_cPtr,$newVal);
+	function version() {
+		return CkPublicKey_version($this->_cPtr);
 	}
 
-	function SaveLastError($path) {
-		return CkPublicKey_SaveLastError($this->_cPtr,$path);
+	function GetDer($preferPkcs1,$outBytes) {
+		return CkPublicKey_GetDer($this->_cPtr,$preferPkcs1,$outBytes);
 	}
 
-	function get_KeyType($str) {
-		CkPublicKey_get_KeyType($this->_cPtr,$str);
+	function getEncoded($preferPkcs1,$encoding) {
+		return CkPublicKey_getEncoded($this->_cPtr,$preferPkcs1,$encoding);
 	}
 
-	function keyType() {
-		return CkPublicKey_keyType($this->_cPtr);
+	function encoded($preferPkcs1,$encoding) {
+		return CkPublicKey_encoded($this->_cPtr,$preferPkcs1,$encoding);
+	}
+
+	function getJwk() {
+		return CkPublicKey_getJwk($this->_cPtr);
+	}
+
+	function jwk() {
+		return CkPublicKey_jwk($this->_cPtr);
+	}
+
+	function getJwkThumbprint($hashAlg) {
+		return CkPublicKey_getJwkThumbprint($this->_cPtr,$hashAlg);
+	}
+
+	function jwkThumbprint($hashAlg) {
+		return CkPublicKey_jwkThumbprint($this->_cPtr,$hashAlg);
 	}
 
 	function GetOpenSslDer($outData) {
@@ -117,6 +141,14 @@ class CkPublicKey {
 
 	function openSslPem() {
 		return CkPublicKey_openSslPem($this->_cPtr);
+	}
+
+	function getPem($preferPkcs1) {
+		return CkPublicKey_getPem($this->_cPtr,$preferPkcs1);
+	}
+
+	function pem($preferPkcs1) {
+		return CkPublicKey_pem($this->_cPtr,$preferPkcs1);
 	}
 
 	function getPkcs1ENC($encoding) {
@@ -149,6 +181,18 @@ class CkPublicKey {
 
 	function LoadBase64($keyStr) {
 		return CkPublicKey_LoadBase64($this->_cPtr,$keyStr);
+	}
+
+	function LoadFromBinary($keyBytes) {
+		return CkPublicKey_LoadFromBinary($this->_cPtr,$keyBytes);
+	}
+
+	function LoadFromFile($path) {
+		return CkPublicKey_LoadFromFile($this->_cPtr,$path);
+	}
+
+	function LoadFromString($keyString) {
+		return CkPublicKey_LoadFromString($this->_cPtr,$keyString);
 	}
 
 	function LoadOpenSslDer($data) {
@@ -187,6 +231,14 @@ class CkPublicKey {
 		return CkPublicKey_LoadXmlFile($this->_cPtr,$path);
 	}
 
+	function SaveDerFile($preferPkcs1,$path) {
+		return CkPublicKey_SaveDerFile($this->_cPtr,$preferPkcs1,$path);
+	}
+
+	function SaveLastError($path) {
+		return CkPublicKey_SaveLastError($this->_cPtr,$path);
+	}
+
 	function SaveOpenSslDerFile($path) {
 		return CkPublicKey_SaveOpenSslDerFile($this->_cPtr,$path);
 	}
@@ -195,52 +247,16 @@ class CkPublicKey {
 		return CkPublicKey_SaveOpenSslPemFile($this->_cPtr,$path);
 	}
 
+	function SavePemFile($preferPkcs1,$path) {
+		return CkPublicKey_SavePemFile($this->_cPtr,$preferPkcs1,$path);
+	}
+
 	function SaveRsaDerFile($path) {
 		return CkPublicKey_SaveRsaDerFile($this->_cPtr,$path);
 	}
 
 	function SaveXmlFile($path) {
 		return CkPublicKey_SaveXmlFile($this->_cPtr,$path);
-	}
-
-	function LoadFromBinary($keyBytes) {
-		return CkPublicKey_LoadFromBinary($this->_cPtr,$keyBytes);
-	}
-
-	function LoadFromString($keyString) {
-		return CkPublicKey_LoadFromString($this->_cPtr,$keyString);
-	}
-
-	function LoadFromFile($path) {
-		return CkPublicKey_LoadFromFile($this->_cPtr,$path);
-	}
-
-	function GetDer($preferPkcs1,$outBytes) {
-		return CkPublicKey_GetDer($this->_cPtr,$preferPkcs1,$outBytes);
-	}
-
-	function getPem($preferPkcs1) {
-		return CkPublicKey_getPem($this->_cPtr,$preferPkcs1);
-	}
-
-	function pem($preferPkcs1) {
-		return CkPublicKey_pem($this->_cPtr,$preferPkcs1);
-	}
-
-	function getEncoded($preferPkcs1,$encoding) {
-		return CkPublicKey_getEncoded($this->_cPtr,$preferPkcs1,$encoding);
-	}
-
-	function encoded($preferPkcs1,$encoding) {
-		return CkPublicKey_encoded($this->_cPtr,$preferPkcs1,$encoding);
-	}
-
-	function SaveDerFile($preferPkcs1,$path) {
-		return CkPublicKey_SaveDerFile($this->_cPtr,$preferPkcs1,$path);
-	}
-
-	function SavePemFile($preferPkcs1,$path) {
-		return CkPublicKey_SavePemFile($this->_cPtr,$preferPkcs1,$path);
 	}
 }
 

@@ -39,6 +39,34 @@ class CkUnixCompress {
 		CkUnixCompress_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_AbortCurrent() {
+		return CkUnixCompress_get_AbortCurrent($this->_cPtr);
+	}
+
+	function put_AbortCurrent($newVal) {
+		CkUnixCompress_put_AbortCurrent($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkUnixCompress_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkUnixCompress_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkUnixCompress_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_HeartbeatMs() {
+		return CkUnixCompress_get_HeartbeatMs($this->_cPtr);
+	}
+
+	function put_HeartbeatMs($newVal) {
+		CkUnixCompress_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkUnixCompress_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,24 +91,12 @@ class CkUnixCompress {
 		return CkUnixCompress_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkUnixCompress_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkUnixCompress_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkUnixCompress_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkUnixCompress_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkUnixCompress_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkUnixCompress_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkUnixCompress_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -91,32 +107,12 @@ class CkUnixCompress {
 		CkUnixCompress_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkUnixCompress_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkUnixCompress_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkUnixCompress_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkUnixCompress_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_HeartbeatMs() {
-		return CkUnixCompress_get_HeartbeatMs($this->_cPtr);
-	}
-
-	function put_HeartbeatMs($newVal) {
-		CkUnixCompress_put_HeartbeatMs($this->_cPtr,$newVal);
-	}
-
-	function get_AbortCurrent() {
-		return CkUnixCompress_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkUnixCompress_put_AbortCurrent($this->_cPtr,$newVal);
+	function version() {
+		return CkUnixCompress_version($this->_cPtr);
 	}
 
 	function CompressFile($inFilename,$destPath) {
@@ -147,12 +143,12 @@ class CkUnixCompress {
 		return $r;
 	}
 
-	function CompressMemToFile($inData,$destPath) {
-		return CkUnixCompress_CompressMemToFile($this->_cPtr,$inData,$destPath);
-	}
-
 	function CompressMemory($inData,$outData) {
 		return CkUnixCompress_CompressMemory($this->_cPtr,$inData,$outData);
+	}
+
+	function CompressMemToFile($inData,$destPath) {
+		return CkUnixCompress_CompressMemToFile($this->_cPtr,$inData,$destPath);
 	}
 
 	function CompressString($inStr,$charset,$outBytes) {
@@ -167,18 +163,8 @@ class CkUnixCompress {
 		return CkUnixCompress_IsUnlocked($this->_cPtr);
 	}
 
-	function UnTarZ($zFilename,$destDir,$bNoAbsolute) {
-		return CkUnixCompress_UnTarZ($this->_cPtr,$zFilename,$destDir,$bNoAbsolute);
-	}
-
-	function UnTarZAsync($zFilename,$destDir,$bNoAbsolute) {
-		$r=CkUnixCompress_UnTarZAsync($this->_cPtr,$zFilename,$destDir,$bNoAbsolute);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkTask($r);
-		}
-		return $r;
+	function SaveLastError($path) {
+		return CkUnixCompress_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UncompressFile($inFilename,$destPath) {
@@ -209,12 +195,12 @@ class CkUnixCompress {
 		return $r;
 	}
 
-	function uncompressFileToString($inFilename,$inCharset) {
-		return CkUnixCompress_uncompressFileToString($this->_cPtr,$inFilename,$inCharset);
+	function uncompressFileToString($zFilename,$charset) {
+		return CkUnixCompress_uncompressFileToString($this->_cPtr,$zFilename,$charset);
 	}
 
-	function UncompressFileToStringAsync($inFilename,$inCharset) {
-		$r=CkUnixCompress_UncompressFileToStringAsync($this->_cPtr,$inFilename,$inCharset);
+	function UncompressFileToStringAsync($zFilename,$charset) {
+		$r=CkUnixCompress_UncompressFileToStringAsync($this->_cPtr,$zFilename,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -223,20 +209,34 @@ class CkUnixCompress {
 		return $r;
 	}
 
-	function UncompressMemToFile($inData,$destPath) {
-		return CkUnixCompress_UncompressMemToFile($this->_cPtr,$inData,$destPath);
-	}
-
 	function UncompressMemory($inData,$outData) {
 		return CkUnixCompress_UncompressMemory($this->_cPtr,$inData,$outData);
 	}
 
-	function uncompressString($inData,$inCharset) {
-		return CkUnixCompress_uncompressString($this->_cPtr,$inData,$inCharset);
+	function UncompressMemToFile($inData,$destPath) {
+		return CkUnixCompress_UncompressMemToFile($this->_cPtr,$inData,$destPath);
+	}
+
+	function uncompressString($inCompressedData,$charset) {
+		return CkUnixCompress_uncompressString($this->_cPtr,$inCompressedData,$charset);
 	}
 
 	function UnlockComponent($unlockCode) {
 		return CkUnixCompress_UnlockComponent($this->_cPtr,$unlockCode);
+	}
+
+	function UnTarZ($zFilename,$destDir,$bNoAbsolute) {
+		return CkUnixCompress_UnTarZ($this->_cPtr,$zFilename,$destDir,$bNoAbsolute);
+	}
+
+	function UnTarZAsync($zFilename,$destDir,$bNoAbsolute) {
+		$r=CkUnixCompress_UnTarZAsync($this->_cPtr,$zFilename,$destDir,$bNoAbsolute);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
 	}
 }
 

@@ -39,70 +39,6 @@ class CkCompression {
 		CkCompression_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkCompression_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkCompression_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkCompression_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkCompression_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkCompression_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkCompression_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkCompression_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCompression_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCompression_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCompression_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCompression_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCompression_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCompression_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkCompression_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkCompression_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCompression_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Algorithm($str) {
 		CkCompression_get_Algorithm($this->_cPtr,$str);
 	}
@@ -127,6 +63,18 @@ class CkCompression {
 		CkCompression_put_Charset($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkCompression_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCompression_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCompression_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_EncodingMode($str) {
 		CkCompression_get_EncodingMode($this->_cPtr,$str);
 	}
@@ -145,6 +93,54 @@ class CkCompression {
 
 	function put_HeartbeatMs($newVal) {
 		CkCompression_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkCompression_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkCompression_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkCompression_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkCompression_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkCompression_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkCompression_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkCompression_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkCompression_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkCompression_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCompression_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCompression_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCompression_version($this->_cPtr);
 	}
 
 	function BeginCompressBytes($data,$outData) {
@@ -259,6 +255,20 @@ class CkCompression {
 		return $r;
 	}
 
+	function CompressBd($binData) {
+		return CkCompression_CompressBd($this->_cPtr,$binData);
+	}
+
+	function CompressBdAsync($binData) {
+		$r=CkCompression_CompressBdAsync($this->_cPtr,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function CompressBytes($data,$outData) {
 		return CkCompression_CompressBytes($this->_cPtr,$data,$outData);
 	}
@@ -343,6 +353,20 @@ class CkCompression {
 		return $r;
 	}
 
+	function DecompressBd($binData) {
+		return CkCompression_DecompressBd($this->_cPtr,$binData);
+	}
+
+	function DecompressBdAsync($binData) {
+		$r=CkCompression_DecompressBdAsync($this->_cPtr,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function DecompressBytes($data,$outData) {
 		return CkCompression_DecompressBytes($this->_cPtr,$data,$outData);
 	}
@@ -357,12 +381,12 @@ class CkCompression {
 		return $r;
 	}
 
-	function DecompressBytesENC($str,$outData) {
-		return CkCompression_DecompressBytesENC($this->_cPtr,$str,$outData);
+	function DecompressBytesENC($encodedCompressedData,$outData) {
+		return CkCompression_DecompressBytesENC($this->_cPtr,$encodedCompressedData,$outData);
 	}
 
-	function DecompressBytesENCAsync($str) {
-		$r=CkCompression_DecompressBytesENCAsync($this->_cPtr,$str);
+	function DecompressBytesENCAsync($encodedCompressedData) {
+		$r=CkCompression_DecompressBytesENCAsync($this->_cPtr,$encodedCompressedData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -413,12 +437,12 @@ class CkCompression {
 		return $r;
 	}
 
-	function decompressStringENC($str) {
-		return CkCompression_decompressStringENC($this->_cPtr,$str);
+	function decompressStringENC($encodedCompressedData) {
+		return CkCompression_decompressStringENC($this->_cPtr,$encodedCompressedData);
 	}
 
-	function DecompressStringENCAsync($str) {
-		$r=CkCompression_DecompressStringENCAsync($this->_cPtr,$str);
+	function DecompressStringENCAsync($encodedCompressedData) {
+		$r=CkCompression_DecompressStringENCAsync($this->_cPtr,$encodedCompressedData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -649,6 +673,10 @@ class CkCompression {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkCompression_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UnlockComponent($unlockCode) {

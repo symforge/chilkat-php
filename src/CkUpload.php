@@ -39,68 +39,12 @@ class CkUpload {
 		CkUpload_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkUpload_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkUpload_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkUpload_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkUpload_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkUpload_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkUpload_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkUpload_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkUpload_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkUpload_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkUpload_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkUpload_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkUpload_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkUpload_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkUpload_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkUpload_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkUpload_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkUpload_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkUpload_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_BandwidthThrottleUp() {
@@ -129,6 +73,18 @@ class CkUpload {
 
 	function put_ClientIpAddress($newVal) {
 		CkUpload_put_ClientIpAddress($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkUpload_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkUpload_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkUpload_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_Expect100Continue() {
@@ -165,6 +121,38 @@ class CkUpload {
 
 	function put_IdleTimeoutMs($newVal) {
 		CkUpload_put_IdleTimeoutMs($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkUpload_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkUpload_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkUpload_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkUpload_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkUpload_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkUpload_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkUpload_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkUpload_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_Login($str) {
@@ -303,30 +291,6 @@ class CkUpload {
 		CkUpload_put_Ssl($this->_cPtr,$newVal);
 	}
 
-	function get_TotalUploadSize() {
-		return CkUpload_get_TotalUploadSize($this->_cPtr);
-	}
-
-	function get_UploadInProgress() {
-		return CkUpload_get_UploadInProgress($this->_cPtr);
-	}
-
-	function get_UploadSuccess() {
-		return CkUpload_get_UploadSuccess($this->_cPtr);
-	}
-
-	function get_TlsPinSet($str) {
-		CkUpload_get_TlsPinSet($this->_cPtr,$str);
-	}
-
-	function tlsPinSet() {
-		return CkUpload_tlsPinSet($this->_cPtr);
-	}
-
-	function put_TlsPinSet($newVal) {
-		CkUpload_put_TlsPinSet($this->_cPtr,$newVal);
-	}
-
 	function get_SslAllowedCiphers($str) {
 		CkUpload_get_SslAllowedCiphers($this->_cPtr,$str);
 	}
@@ -351,12 +315,44 @@ class CkUpload {
 		CkUpload_put_SslProtocol($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkUpload_get_AbortCurrent($this->_cPtr);
+	function get_TlsPinSet($str) {
+		CkUpload_get_TlsPinSet($this->_cPtr,$str);
 	}
 
-	function put_AbortCurrent($newVal) {
-		CkUpload_put_AbortCurrent($this->_cPtr,$newVal);
+	function tlsPinSet() {
+		return CkUpload_tlsPinSet($this->_cPtr);
+	}
+
+	function put_TlsPinSet($newVal) {
+		CkUpload_put_TlsPinSet($this->_cPtr,$newVal);
+	}
+
+	function get_TotalUploadSize() {
+		return CkUpload_get_TotalUploadSize($this->_cPtr);
+	}
+
+	function get_UploadInProgress() {
+		return CkUpload_get_UploadInProgress($this->_cPtr);
+	}
+
+	function get_UploadSuccess() {
+		return CkUpload_get_UploadSuccess($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkUpload_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkUpload_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkUpload_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkUpload_version($this->_cPtr);
 	}
 
 	function AbortUpload() {
@@ -399,6 +395,10 @@ class CkUpload {
 
 	function ClearParams() {
 		CkUpload_ClearParams($this->_cPtr);
+	}
+
+	function SaveLastError($path) {
+		return CkUpload_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SleepMs($millisec) {

@@ -35,70 +35,6 @@ class CkOAuth1 {
 		CkOAuth1_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkOAuth1_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkOAuth1_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkOAuth1_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkOAuth1_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkOAuth1_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkOAuth1_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkOAuth1_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkOAuth1_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkOAuth1_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkOAuth1_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkOAuth1_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkOAuth1_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkOAuth1_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkOAuth1_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkOAuth1_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkOAuth1_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AuthorizationHeader($str) {
 		CkOAuth1_get_AuthorizationHeader($this->_cPtr,$str);
 	}
@@ -139,6 +75,18 @@ class CkOAuth1 {
 		CkOAuth1_put_ConsumerSecret($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkOAuth1_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkOAuth1_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkOAuth1_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_EncodedSignature($str) {
 		CkOAuth1_get_EncodedSignature($this->_cPtr,$str);
 	}
@@ -161,6 +109,38 @@ class CkOAuth1 {
 
 	function hmacKey() {
 		return CkOAuth1_hmacKey($this->_cPtr);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkOAuth1_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkOAuth1_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkOAuth1_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkOAuth1_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkOAuth1_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkOAuth1_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkOAuth1_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkOAuth1_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_Nonce($str) {
@@ -275,8 +255,28 @@ class CkOAuth1 {
 		CkOAuth1_put_TokenSecret($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkOAuth1_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkOAuth1_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkOAuth1_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkOAuth1_version($this->_cPtr);
+	}
+
 	function AddParam($name,$value) {
 		return CkOAuth1_AddParam($this->_cPtr,$name,$value);
+	}
+
+	function Generate() {
+		return CkOAuth1_Generate($this->_cPtr);
 	}
 
 	function GenNonce($numBytes) {
@@ -287,12 +287,16 @@ class CkOAuth1 {
 		return CkOAuth1_GenTimestamp($this->_cPtr);
 	}
 
-	function Generate() {
-		return CkOAuth1_Generate($this->_cPtr);
-	}
-
 	function RemoveParam($name) {
 		return CkOAuth1_RemoveParam($this->_cPtr,$name);
+	}
+
+	function SaveLastError($path) {
+		return CkOAuth1_SaveLastError($this->_cPtr,$path);
+	}
+
+	function SetRsaKey($privKey) {
+		return CkOAuth1_SetRsaKey($this->_cPtr,$privKey);
 	}
 }
 

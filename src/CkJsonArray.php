@@ -35,6 +35,34 @@ class CkJsonArray {
 		CkJsonArray_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkJsonArray_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkJsonArray_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkJsonArray_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_EmitCompact() {
+		return CkJsonArray_get_EmitCompact($this->_cPtr);
+	}
+
+	function put_EmitCompact($newVal) {
+		CkJsonArray_put_EmitCompact($this->_cPtr,$newVal);
+	}
+
+	function get_EmitCrlf() {
+		return CkJsonArray_get_EmitCrlf($this->_cPtr);
+	}
+
+	function put_EmitCrlf($newVal) {
+		CkJsonArray_put_EmitCrlf($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkJsonArray_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +87,16 @@ class CkJsonArray {
 		return CkJsonArray_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkJsonArray_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkJsonArray_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkJsonArray_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkJsonArray_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkJsonArray_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkJsonArray_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkJsonArray_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function get_Size() {
+		return CkJsonArray_get_Size($this->_cPtr);
 	}
 
 	function get_VerboseLogging() {
@@ -87,20 +107,12 @@ class CkJsonArray {
 		CkJsonArray_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkJsonArray_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkJsonArray_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkJsonArray_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkJsonArray_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_Size() {
-		return CkJsonArray_get_Size($this->_cPtr);
+	function version() {
+		return CkJsonArray_version($this->_cPtr);
 	}
 
 	function AddArrayAt($index) {
@@ -149,12 +161,28 @@ class CkJsonArray {
 		return CkJsonArray_DeleteAt($this->_cPtr,$index);
 	}
 
+	function emit() {
+		return CkJsonArray_emit($this->_cPtr);
+	}
+
+	function EmitSb($sb) {
+		return CkJsonArray_EmitSb($this->_cPtr,$sb);
+	}
+
 	function IntAt($index) {
 		return CkJsonArray_IntAt($this->_cPtr,$index);
 	}
 
 	function IsNullAt($index) {
 		return CkJsonArray_IsNullAt($this->_cPtr,$index);
+	}
+
+	function Load($jsonArray) {
+		return CkJsonArray_Load($this->_cPtr,$jsonArray);
+	}
+
+	function LoadSb($sb) {
+		return CkJsonArray_LoadSb($this->_cPtr,$sb);
 	}
 
 	function ObjectAt($index) {
@@ -165,6 +193,10 @@ class CkJsonArray {
 			return new CkJsonObject($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkJsonArray_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetBoolAt($index,$value) {
@@ -189,10 +221,6 @@ class CkJsonArray {
 
 	function stringAt($index) {
 		return CkJsonArray_stringAt($this->_cPtr,$index);
-	}
-
-	function emit() {
-		return CkJsonArray_emit($this->_cPtr);
 	}
 
 	function TypeAt($index) {

@@ -39,6 +39,14 @@ class CkMailboxes {
 		return CkMailboxes_get_Count($this->_cPtr);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkMailboxes_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkMailboxes_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function getFlags($index) {
 		return CkMailboxes_getFlags($this->_cPtr,$index);
 	}

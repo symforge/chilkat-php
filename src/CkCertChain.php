@@ -35,6 +35,18 @@ class CkCertChain {
 		CkCertChain_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkCertChain_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCertChain_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCertChain_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkCertChain_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,44 +71,12 @@ class CkCertChain {
 		return CkCertChain_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkCertChain_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCertChain_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCertChain_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCertChain_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCertChain_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCertChain_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCertChain_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkCertChain_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkCertChain_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCertChain_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_NumCerts() {
@@ -111,6 +91,22 @@ class CkCertChain {
 		return CkCertChain_get_ReachesRoot($this->_cPtr);
 	}
 
+	function get_VerboseLogging() {
+		return CkCertChain_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCertChain_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCertChain_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCertChain_version($this->_cPtr);
+	}
+
 	function GetCert($index) {
 		$r=CkCertChain_GetCert($this->_cPtr,$index);
 		if (is_resource($r)) {
@@ -123,6 +119,14 @@ class CkCertChain {
 
 	function IsRootTrusted($trustedRoots) {
 		return CkCertChain_IsRootTrusted($this->_cPtr,$trustedRoots);
+	}
+
+	function LoadX5C($jwk) {
+		return CkCertChain_LoadX5C($this->_cPtr,$jwk);
+	}
+
+	function SaveLastError($path) {
+		return CkCertChain_SaveLastError($this->_cPtr,$path);
 	}
 
 	function VerifyCertSignatures() {

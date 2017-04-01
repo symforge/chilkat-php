@@ -39,6 +39,34 @@ class CkBz2 {
 		CkBz2_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_AbortCurrent() {
+		return CkBz2_get_AbortCurrent($this->_cPtr);
+	}
+
+	function put_AbortCurrent($newVal) {
+		CkBz2_put_AbortCurrent($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkBz2_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkBz2_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkBz2_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_HeartbeatMs() {
+		return CkBz2_get_HeartbeatMs($this->_cPtr);
+	}
+
+	function put_HeartbeatMs($newVal) {
+		CkBz2_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkBz2_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,24 +91,12 @@ class CkBz2 {
 		return CkBz2_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkBz2_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkBz2_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkBz2_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkBz2_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkBz2_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkBz2_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkBz2_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -91,32 +107,12 @@ class CkBz2 {
 		CkBz2_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkBz2_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkBz2_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkBz2_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkBz2_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_HeartbeatMs() {
-		return CkBz2_get_HeartbeatMs($this->_cPtr);
-	}
-
-	function put_HeartbeatMs($newVal) {
-		CkBz2_put_HeartbeatMs($this->_cPtr,$newVal);
-	}
-
-	function get_AbortCurrent() {
-		return CkBz2_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkBz2_put_AbortCurrent($this->_cPtr,$newVal);
+	function version() {
+		return CkBz2_version($this->_cPtr);
 	}
 
 	function CompressFile($inFilename,$toPath) {
@@ -147,6 +143,20 @@ class CkBz2 {
 		return $r;
 	}
 
+	function CompressMemory($inData,$outBytes) {
+		return CkBz2_CompressMemory($this->_cPtr,$inData,$outBytes);
+	}
+
+	function CompressMemoryAsync($inData) {
+		$r=CkBz2_CompressMemoryAsync($this->_cPtr,$inData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function CompressMemToFile($inData,$toPath) {
 		return CkBz2_CompressMemToFile($this->_cPtr,$inData,$toPath);
 	}
@@ -161,18 +171,8 @@ class CkBz2 {
 		return $r;
 	}
 
-	function CompressMemory($inData,$outBytes) {
-		return CkBz2_CompressMemory($this->_cPtr,$inData,$outBytes);
-	}
-
-	function CompressMemoryAsync($inData) {
-		$r=CkBz2_CompressMemoryAsync($this->_cPtr,$inData);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkTask($r);
-		}
-		return $r;
+	function SaveLastError($path) {
+		return CkBz2_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UncompressFile($inFilename,$toPath) {
@@ -203,12 +203,12 @@ class CkBz2 {
 		return $r;
 	}
 
-	function UncompressMemToFile($inData,$toPath) {
-		return CkBz2_UncompressMemToFile($this->_cPtr,$inData,$toPath);
+	function UncompressMemory($inData,$outBytes) {
+		return CkBz2_UncompressMemory($this->_cPtr,$inData,$outBytes);
 	}
 
-	function UncompressMemToFileAsync($inData,$toPath) {
-		$r=CkBz2_UncompressMemToFileAsync($this->_cPtr,$inData,$toPath);
+	function UncompressMemoryAsync($inData) {
+		$r=CkBz2_UncompressMemoryAsync($this->_cPtr,$inData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -217,12 +217,12 @@ class CkBz2 {
 		return $r;
 	}
 
-	function UncompressMemory($inData,$outBytes) {
-		return CkBz2_UncompressMemory($this->_cPtr,$inData,$outBytes);
+	function UncompressMemToFile($inData,$toPath) {
+		return CkBz2_UncompressMemToFile($this->_cPtr,$inData,$toPath);
 	}
 
-	function UncompressMemoryAsync($inData) {
-		$r=CkBz2_UncompressMemoryAsync($this->_cPtr,$inData);
+	function UncompressMemToFileAsync($inData,$toPath) {
+		$r=CkBz2_UncompressMemToFileAsync($this->_cPtr,$inData,$toPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);

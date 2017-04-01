@@ -39,68 +39,12 @@ class CkSsh {
 		CkSsh_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkSsh_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkSsh_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkSsh_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkSsh_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkSsh_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkSsh_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkSsh_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkSsh_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkSsh_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkSsh_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkSsh_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkSsh_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkSsh_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkSsh_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkSsh_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkSsh_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkSsh_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkSsh_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_AuthFailReason() {
@@ -159,6 +103,18 @@ class CkSsh {
 		CkSsh_put_ConnectTimeoutMs($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkSsh_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkSsh_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkSsh_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_DisconnectCode() {
 		return CkSsh_get_DisconnectCode($this->_cPtr);
 	}
@@ -169,6 +125,14 @@ class CkSsh {
 
 	function disconnectReason() {
 		return CkSsh_disconnectReason($this->_cPtr);
+	}
+
+	function get_EnableCompression() {
+		return CkSsh_get_EnableCompression($this->_cPtr);
+	}
+
+	function put_EnableCompression($newVal) {
+		CkSsh_put_EnableCompression($this->_cPtr,$newVal);
 	}
 
 	function get_ForceCipher($str) {
@@ -299,6 +263,38 @@ class CkSsh {
 		CkSsh_put_KeepSessionLog($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkSsh_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkSsh_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkSsh_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkSsh_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkSsh_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkSsh_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkSsh_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSsh_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_MaxPacketSize() {
 		return CkSsh_get_MaxPacketSize($this->_cPtr);
 	}
@@ -349,22 +345,6 @@ class CkSsh {
 
 	function sessionLog() {
 		return CkSsh_sessionLog($this->_cPtr);
-	}
-
-	function get_SoRcvBuf() {
-		return CkSsh_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkSsh_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkSsh_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkSsh_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_SocksHostname($str) {
@@ -419,6 +399,22 @@ class CkSsh {
 		CkSsh_put_SocksVersion($this->_cPtr,$newVal);
 	}
 
+	function get_SoRcvBuf() {
+		return CkSsh_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkSsh_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkSsh_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkSsh_put_SoSndBuf($this->_cPtr,$newVal);
+	}
+
 	function get_StderrToStdout() {
 		return CkSsh_get_StderrToStdout($this->_cPtr);
 	}
@@ -447,20 +443,20 @@ class CkSsh {
 		CkSsh_put_UserAuthBanner($this->_cPtr,$newVal);
 	}
 
-	function get_EnableCompression() {
-		return CkSsh_get_EnableCompression($this->_cPtr);
+	function get_VerboseLogging() {
+		return CkSsh_get_VerboseLogging($this->_cPtr);
 	}
 
-	function put_EnableCompression($newVal) {
-		CkSsh_put_EnableCompression($this->_cPtr,$newVal);
+	function put_VerboseLogging($newVal) {
+		CkSsh_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkSsh_get_AbortCurrent($this->_cPtr);
+	function get_Version($str) {
+		CkSsh_get_Version($this->_cPtr,$str);
 	}
 
-	function put_AbortCurrent($newVal) {
-		CkSsh_put_AbortCurrent($this->_cPtr,$newVal);
+	function version() {
+		return CkSsh_version($this->_cPtr);
 	}
 
 	function AuthenticatePk($username,$privateKey) {
@@ -565,6 +561,18 @@ class CkSsh {
 		return $r;
 	}
 
+	function ChannelReceivedClose($channelNum) {
+		return CkSsh_ChannelReceivedClose($this->_cPtr,$channelNum);
+	}
+
+	function ChannelReceivedEof($channelNum) {
+		return CkSsh_ChannelReceivedEof($this->_cPtr,$channelNum);
+	}
+
+	function ChannelReceivedExitStatus($channelNum) {
+		return CkSsh_ChannelReceivedExitStatus($this->_cPtr,$channelNum);
+	}
+
 	function ChannelReceiveToClose($channelNum) {
 		return CkSsh_ChannelReceiveToClose($this->_cPtr,$channelNum);
 	}
@@ -607,18 +615,6 @@ class CkSsh {
 		return $r;
 	}
 
-	function ChannelReceivedClose($channelNum) {
-		return CkSsh_ChannelReceivedClose($this->_cPtr,$channelNum);
-	}
-
-	function ChannelReceivedEof($channelNum) {
-		return CkSsh_ChannelReceivedEof($this->_cPtr,$channelNum);
-	}
-
-	function ChannelReceivedExitStatus($channelNum) {
-		return CkSsh_ChannelReceivedExitStatus($this->_cPtr,$channelNum);
-	}
-
 	function ChannelRelease($channelNum) {
 		CkSsh_ChannelRelease($this->_cPtr,$channelNum);
 	}
@@ -637,12 +633,12 @@ class CkSsh {
 		return $r;
 	}
 
-	function ChannelSendData($channelNum,$data) {
-		return CkSsh_ChannelSendData($this->_cPtr,$channelNum,$data);
+	function ChannelSendData($channelNum,$byteData) {
+		return CkSsh_ChannelSendData($this->_cPtr,$channelNum,$byteData);
 	}
 
-	function ChannelSendDataAsync($channelNum,$data) {
-		$r=CkSsh_ChannelSendDataAsync($this->_cPtr,$channelNum,$data);
+	function ChannelSendDataAsync($channelNum,$byteData) {
+		$r=CkSsh_ChannelSendDataAsync($this->_cPtr,$channelNum,$byteData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -665,12 +661,12 @@ class CkSsh {
 		return $r;
 	}
 
-	function ChannelSendString($channelNum,$strData,$charset) {
-		return CkSsh_ChannelSendString($this->_cPtr,$channelNum,$strData,$charset);
+	function ChannelSendString($channelNum,$textData,$charset) {
+		return CkSsh_ChannelSendString($this->_cPtr,$channelNum,$textData,$charset);
 	}
 
-	function ChannelSendStringAsync($channelNum,$strData,$charset) {
-		$r=CkSsh_ChannelSendStringAsync($this->_cPtr,$channelNum,$strData,$charset);
+	function ChannelSendStringAsync($channelNum,$textData,$charset) {
+		$r=CkSsh_ChannelSendStringAsync($this->_cPtr,$channelNum,$textData,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -687,12 +683,12 @@ class CkSsh {
 		CkSsh_ClearTtyModes($this->_cPtr);
 	}
 
-	function Connect($hostname,$port) {
-		return CkSsh_Connect($this->_cPtr,$hostname,$port);
+	function Connect($domainName,$port) {
+		return CkSsh_Connect($this->_cPtr,$domainName,$port);
 	}
 
-	function ConnectAsync($hostname,$port) {
-		$r=CkSsh_ConnectAsync($this->_cPtr,$hostname,$port);
+	function ConnectAsync($domainName,$port) {
+		$r=CkSsh_ConnectAsync($this->_cPtr,$domainName,$port);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -753,8 +749,8 @@ class CkSsh {
 		return CkSsh_GetReceivedData($this->_cPtr,$channelNum,$outBytes);
 	}
 
-	function GetReceivedDataN($channelNum,$numBytes,$outBytes) {
-		return CkSsh_GetReceivedDataN($this->_cPtr,$channelNum,$numBytes,$outBytes);
+	function GetReceivedDataN($channelNum,$maxNumBytes,$outBytes) {
+		return CkSsh_GetReceivedDataN($this->_cPtr,$channelNum,$maxNumBytes,$outBytes);
 	}
 
 	function GetReceivedNumBytes($channelNum) {
@@ -803,12 +799,12 @@ class CkSsh {
 		return $r;
 	}
 
-	function OpenDirectTcpIpChannel($hostname,$port) {
-		return CkSsh_OpenDirectTcpIpChannel($this->_cPtr,$hostname,$port);
+	function OpenDirectTcpIpChannel($targetHostname,$targetPort) {
+		return CkSsh_OpenDirectTcpIpChannel($this->_cPtr,$targetHostname,$targetPort);
 	}
 
-	function OpenDirectTcpIpChannelAsync($hostname,$port) {
-		$r=CkSsh_OpenDirectTcpIpChannelAsync($this->_cPtr,$hostname,$port);
+	function OpenDirectTcpIpChannelAsync($targetHostname,$targetPort) {
+		$r=CkSsh_OpenDirectTcpIpChannelAsync($this->_cPtr,$targetHostname,$targetPort);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -835,6 +831,62 @@ class CkSsh {
 		return CkSsh_peekReceivedText($this->_cPtr,$channelNum,$charset);
 	}
 
+	function QuickCmdCheck($pollTimeoutMs) {
+		return CkSsh_QuickCmdCheck($this->_cPtr,$pollTimeoutMs);
+	}
+
+	function QuickCmdCheckAsync($pollTimeoutMs) {
+		$r=CkSsh_QuickCmdCheckAsync($this->_cPtr,$pollTimeoutMs);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function QuickCmdSend($command) {
+		return CkSsh_QuickCmdSend($this->_cPtr,$command);
+	}
+
+	function QuickCmdSendAsync($command) {
+		$r=CkSsh_QuickCmdSendAsync($this->_cPtr,$command);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function quickCommand($command,$charset) {
+		return CkSsh_quickCommand($this->_cPtr,$command,$charset);
+	}
+
+	function QuickCommandAsync($command,$charset) {
+		$r=CkSsh_QuickCommandAsync($this->_cPtr,$command,$charset);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function QuickShell() {
+		return CkSsh_QuickShell($this->_cPtr);
+	}
+
+	function QuickShellAsync() {
+		$r=CkSsh_QuickShellAsync($this->_cPtr);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function ReKey() {
 		return CkSsh_ReKey($this->_cPtr);
 	}
@@ -847,6 +899,10 @@ class CkSsh {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkSsh_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SendIgnore() {
@@ -863,12 +919,12 @@ class CkSsh {
 		return $r;
 	}
 
-	function SendReqExec($channelNum,$command) {
-		return CkSsh_SendReqExec($this->_cPtr,$channelNum,$command);
+	function SendReqExec($channelNum,$commandLine) {
+		return CkSsh_SendReqExec($this->_cPtr,$channelNum,$commandLine);
 	}
 
-	function SendReqExecAsync($channelNum,$command) {
-		$r=CkSsh_SendReqExecAsync($this->_cPtr,$channelNum,$command);
+	function SendReqExecAsync($channelNum,$commandLine) {
+		$r=CkSsh_SendReqExecAsync($this->_cPtr,$channelNum,$commandLine);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -877,12 +933,12 @@ class CkSsh {
 		return $r;
 	}
 
-	function SendReqPty($channelNum,$xTermEnvVar,$widthInChars,$heightInRows,$pixWidth,$pixHeight) {
-		return CkSsh_SendReqPty($this->_cPtr,$channelNum,$xTermEnvVar,$widthInChars,$heightInRows,$pixWidth,$pixHeight);
+	function SendReqPty($channelNum,$termType,$widthInChars,$heightInChars,$widthInPixels,$heightInPixels) {
+		return CkSsh_SendReqPty($this->_cPtr,$channelNum,$termType,$widthInChars,$heightInChars,$widthInPixels,$heightInPixels);
 	}
 
-	function SendReqPtyAsync($channelNum,$xTermEnvVar,$widthInChars,$heightInRows,$pixWidth,$pixHeight) {
-		$r=CkSsh_SendReqPtyAsync($this->_cPtr,$channelNum,$xTermEnvVar,$widthInChars,$heightInRows,$pixWidth,$pixHeight);
+	function SendReqPtyAsync($channelNum,$termType,$widthInChars,$heightInChars,$widthInPixels,$heightInPixels) {
+		$r=CkSsh_SendReqPtyAsync($this->_cPtr,$channelNum,$termType,$widthInChars,$heightInChars,$widthInPixels,$heightInPixels);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -989,8 +1045,8 @@ class CkSsh {
 		return $r;
 	}
 
-	function SetTtyMode($name,$value) {
-		return CkSsh_SetTtyMode($this->_cPtr,$name,$value);
+	function SetTtyMode($ttyName,$ttyValue) {
+		return CkSsh_SetTtyMode($this->_cPtr,$ttyName,$ttyValue);
 	}
 
 	function startKeyboardAuth($login) {

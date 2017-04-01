@@ -35,6 +35,38 @@ class CkBounce {
 		CkBounce_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_BounceAddress($str) {
+		CkBounce_get_BounceAddress($this->_cPtr,$str);
+	}
+
+	function bounceAddress() {
+		return CkBounce_bounceAddress($this->_cPtr);
+	}
+
+	function get_BounceData($str) {
+		CkBounce_get_BounceData($this->_cPtr,$str);
+	}
+
+	function bounceData() {
+		return CkBounce_bounceData($this->_cPtr);
+	}
+
+	function get_BounceType() {
+		return CkBounce_get_BounceType($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkBounce_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkBounce_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkBounce_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkBounce_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +91,12 @@ class CkBounce {
 		return CkBounce_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkBounce_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkBounce_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkBounce_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkBounce_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkBounce_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkBounce_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function put_LastMethodSuccess($newVal) {
+		CkBounce_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_VerboseLogging() {
@@ -87,36 +107,12 @@ class CkBounce {
 		CkBounce_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkBounce_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkBounce_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkBounce_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkBounce_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_BounceAddress($str) {
-		CkBounce_get_BounceAddress($this->_cPtr,$str);
-	}
-
-	function bounceAddress() {
-		return CkBounce_bounceAddress($this->_cPtr);
-	}
-
-	function get_BounceData($str) {
-		CkBounce_get_BounceData($this->_cPtr,$str);
-	}
-
-	function bounceData() {
-		return CkBounce_bounceData($this->_cPtr);
-	}
-
-	function get_BounceType() {
-		return CkBounce_get_BounceType($this->_cPtr);
+	function version() {
+		return CkBounce_version($this->_cPtr);
 	}
 
 	function ExamineEmail($email) {
@@ -129,6 +125,10 @@ class CkBounce {
 
 	function ExamineMime($mimeText) {
 		return CkBounce_ExamineMime($this->_cPtr,$mimeText);
+	}
+
+	function SaveLastError($path) {
+		return CkBounce_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UnlockComponent($unlockCode) {

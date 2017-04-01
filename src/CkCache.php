@@ -35,6 +35,18 @@ class CkCache {
 		CkCache_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkCache_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCache_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCache_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkCache_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -57,46 +69,6 @@ class CkCache {
 
 	function lastErrorXml() {
 		return CkCache_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkCache_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCache_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCache_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCache_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCache_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCache_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCache_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkCache_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkCache_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCache_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_LastEtagFetched($str) {
@@ -131,6 +103,14 @@ class CkCache {
 		return CkCache_lastKeyFetched($this->_cPtr);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkCache_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkCache_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_Level() {
 		return CkCache_get_Level($this->_cPtr);
 	}
@@ -141,6 +121,22 @@ class CkCache {
 
 	function get_NumRoots() {
 		return CkCache_get_NumRoots($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkCache_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCache_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCache_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCache_version($this->_cPtr);
 	}
 
 	function AddRoot($path) {
@@ -155,40 +151,40 @@ class CkCache {
 		return CkCache_DeleteAllExpired($this->_cPtr);
 	}
 
-	function DeleteFromCache($url) {
-		return CkCache_DeleteFromCache($this->_cPtr,$url);
+	function DeleteFromCache($key) {
+		return CkCache_DeleteFromCache($this->_cPtr,$key);
 	}
 
-	function DeleteOlder($dt) {
-		return CkCache_DeleteOlder($this->_cPtr,$dt);
+	function DeleteOlder($dateTime) {
+		return CkCache_DeleteOlder($this->_cPtr,$dateTime);
 	}
 
-	function DeleteOlderDt($dt) {
-		return CkCache_DeleteOlderDt($this->_cPtr,$dt);
+	function DeleteOlderDt($dateTime) {
+		return CkCache_DeleteOlderDt($this->_cPtr,$dateTime);
 	}
 
 	function DeleteOlderStr($dateTimeStr) {
 		return CkCache_DeleteOlderStr($this->_cPtr,$dateTimeStr);
 	}
 
-	function FetchFromCache($url,$outBytes) {
-		return CkCache_FetchFromCache($this->_cPtr,$url,$outBytes);
+	function FetchFromCache($key,$outBytes) {
+		return CkCache_FetchFromCache($this->_cPtr,$key,$outBytes);
 	}
 
 	function fetchText($key) {
 		return CkCache_fetchText($this->_cPtr,$key);
 	}
 
-	function getEtag($url) {
-		return CkCache_getEtag($this->_cPtr,$url);
+	function getEtag($key) {
+		return CkCache_getEtag($this->_cPtr,$key);
 	}
 
-	function etag($url) {
-		return CkCache_etag($this->_cPtr,$url);
+	function etag($key) {
+		return CkCache_etag($this->_cPtr,$key);
 	}
 
-	function GetExpiration($url,$outSysTime) {
-		return CkCache_GetExpiration($this->_cPtr,$url,$outSysTime);
+	function GetExpiration($key,$outSysTime) {
+		return CkCache_GetExpiration($this->_cPtr,$key,$outSysTime);
 	}
 
 	function GetExpirationDt($key) {
@@ -209,12 +205,12 @@ class CkCache {
 		return CkCache_expirationStr($this->_cPtr,$url);
 	}
 
-	function getFilename($url) {
-		return CkCache_getFilename($this->_cPtr,$url);
+	function getFilename($key) {
+		return CkCache_getFilename($this->_cPtr,$key);
 	}
 
-	function filename($url) {
-		return CkCache_filename($this->_cPtr,$url);
+	function filename($key) {
+		return CkCache_filename($this->_cPtr,$key);
 	}
 
 	function getRoot($index) {
@@ -225,52 +221,56 @@ class CkCache {
 		return CkCache_root($this->_cPtr,$index);
 	}
 
-	function IsCached($url) {
-		return CkCache_IsCached($this->_cPtr,$url);
+	function IsCached($key) {
+		return CkCache_IsCached($this->_cPtr,$key);
 	}
 
-	function SaveText($key,$expire,$eTag,$strData) {
-		return CkCache_SaveText($this->_cPtr,$key,$expire,$eTag,$strData);
+	function SaveLastError($path) {
+		return CkCache_SaveLastError($this->_cPtr,$path);
 	}
 
-	function SaveTextDt($key,$expire,$eTag,$strData) {
-		return CkCache_SaveTextDt($this->_cPtr,$key,$expire,$eTag,$strData);
+	function SaveText($key,$expireDateTime,$eTag,$itemTextData) {
+		return CkCache_SaveText($this->_cPtr,$key,$expireDateTime,$eTag,$itemTextData);
 	}
 
-	function SaveTextNoExpire($key,$eTag,$strData) {
-		return CkCache_SaveTextNoExpire($this->_cPtr,$key,$eTag,$strData);
+	function SaveTextDt($key,$expireDateTime,$eTag,$itemTextData) {
+		return CkCache_SaveTextDt($this->_cPtr,$key,$expireDateTime,$eTag,$itemTextData);
 	}
 
-	function SaveTextStr($key,$expireDateTimeStr,$eTag,$strData) {
-		return CkCache_SaveTextStr($this->_cPtr,$key,$expireDateTimeStr,$eTag,$strData);
+	function SaveTextNoExpire($key,$eTag,$itemTextData) {
+		return CkCache_SaveTextNoExpire($this->_cPtr,$key,$eTag,$itemTextData);
 	}
 
-	function SaveToCache($url,$expire,$eTag,$data) {
-		return CkCache_SaveToCache($this->_cPtr,$url,$expire,$eTag,$data);
+	function SaveTextStr($key,$expireDateTime,$eTag,$itemTextData) {
+		return CkCache_SaveTextStr($this->_cPtr,$key,$expireDateTime,$eTag,$itemTextData);
 	}
 
-	function SaveToCacheDt($url,$expire,$eTag,$data) {
-		return CkCache_SaveToCacheDt($this->_cPtr,$url,$expire,$eTag,$data);
+	function SaveToCache($key,$expireDateTime,$eTag,$itemData) {
+		return CkCache_SaveToCache($this->_cPtr,$key,$expireDateTime,$eTag,$itemData);
 	}
 
-	function SaveToCacheNoExpire($url,$eTag,$data) {
-		return CkCache_SaveToCacheNoExpire($this->_cPtr,$url,$eTag,$data);
+	function SaveToCacheDt($key,$expireDateTime,$eTag,$itemData) {
+		return CkCache_SaveToCacheDt($this->_cPtr,$key,$expireDateTime,$eTag,$itemData);
 	}
 
-	function SaveToCacheStr($url,$expireDateTimeStr,$eTag,$data) {
-		return CkCache_SaveToCacheStr($this->_cPtr,$url,$expireDateTimeStr,$eTag,$data);
+	function SaveToCacheNoExpire($key,$eTag,$itemData) {
+		return CkCache_SaveToCacheNoExpire($this->_cPtr,$key,$eTag,$itemData);
 	}
 
-	function UpdateExpiration($url,$dt) {
-		return CkCache_UpdateExpiration($this->_cPtr,$url,$dt);
+	function SaveToCacheStr($key,$expireDateTime,$eTag,$itemData) {
+		return CkCache_SaveToCacheStr($this->_cPtr,$key,$expireDateTime,$eTag,$itemData);
 	}
 
-	function UpdateExpirationDt($url,$dt) {
-		return CkCache_UpdateExpirationDt($this->_cPtr,$url,$dt);
+	function UpdateExpiration($key,$expireDateTime) {
+		return CkCache_UpdateExpiration($this->_cPtr,$key,$expireDateTime);
 	}
 
-	function UpdateExpirationStr($url,$dateTimeStr) {
-		return CkCache_UpdateExpirationStr($this->_cPtr,$url,$dateTimeStr);
+	function UpdateExpirationDt($key,$expireDateTime) {
+		return CkCache_UpdateExpirationDt($this->_cPtr,$key,$expireDateTime);
+	}
+
+	function UpdateExpirationStr($key,$expireDateTime) {
+		return CkCache_UpdateExpirationStr($this->_cPtr,$key,$expireDateTime);
 	}
 }
 

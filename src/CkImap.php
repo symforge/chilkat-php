@@ -39,70 +39,6 @@ class CkImap {
 		CkImap_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkImap_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkImap_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkImap_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkImap_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkImap_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkImap_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkImap_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkImap_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkImap_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkImap_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkImap_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkImap_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkImap_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkImap_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkImap_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkImap_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AbortCurrent() {
 		return CkImap_get_AbortCurrent($this->_cPtr);
 	}
@@ -175,6 +111,14 @@ class CkImap {
 		CkImap_put_ClientIpAddress($this->_cPtr,$newVal);
 	}
 
+	function get_ConnectedToHost($str) {
+		CkImap_get_ConnectedToHost($this->_cPtr,$str);
+	}
+
+	function connectedToHost() {
+		return CkImap_connectedToHost($this->_cPtr);
+	}
+
 	function get_ConnectTimeout() {
 		return CkImap_get_ConnectTimeout($this->_cPtr);
 	}
@@ -183,12 +127,16 @@ class CkImap {
 		CkImap_put_ConnectTimeout($this->_cPtr,$newVal);
 	}
 
-	function get_ConnectedToHost($str) {
-		CkImap_get_ConnectedToHost($this->_cPtr,$str);
+	function get_DebugLogFilePath($str) {
+		CkImap_get_DebugLogFilePath($this->_cPtr,$str);
 	}
 
-	function connectedToHost() {
-		return CkImap_connectedToHost($this->_cPtr);
+	function debugLogFilePath() {
+		return CkImap_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkImap_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_Domain($str) {
@@ -303,12 +251,44 @@ class CkImap {
 		return CkImap_lastCommand($this->_cPtr);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkImap_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkImap_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkImap_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkImap_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkImap_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkImap_lastErrorXml($this->_cPtr);
+	}
+
 	function get_LastIntermediateResponse($str) {
 		CkImap_get_LastIntermediateResponse($this->_cPtr,$str);
 	}
 
 	function lastIntermediateResponse() {
 		return CkImap_lastIntermediateResponse($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkImap_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkImap_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastResponse($str) {
@@ -435,22 +415,6 @@ class CkImap {
 		return CkImap_sessionLog($this->_cPtr);
 	}
 
-	function get_SoRcvBuf() {
-		return CkImap_get_SoRcvBuf($this->_cPtr);
-	}
-
-	function put_SoRcvBuf($newVal) {
-		CkImap_put_SoRcvBuf($this->_cPtr,$newVal);
-	}
-
-	function get_SoSndBuf() {
-		return CkImap_get_SoSndBuf($this->_cPtr);
-	}
-
-	function put_SoSndBuf($newVal) {
-		CkImap_put_SoSndBuf($this->_cPtr,$newVal);
-	}
-
 	function get_SocksHostname($str) {
 		CkImap_get_SocksHostname($this->_cPtr,$str);
 	}
@@ -501,6 +465,22 @@ class CkImap {
 
 	function put_SocksVersion($newVal) {
 		CkImap_put_SocksVersion($this->_cPtr,$newVal);
+	}
+
+	function get_SoRcvBuf() {
+		return CkImap_get_SoRcvBuf($this->_cPtr);
+	}
+
+	function put_SoRcvBuf($newVal) {
+		CkImap_put_SoRcvBuf($this->_cPtr,$newVal);
+	}
+
+	function get_SoSndBuf() {
+		return CkImap_get_SoSndBuf($this->_cPtr);
+	}
+
+	function put_SoSndBuf($newVal) {
+		CkImap_put_SoSndBuf($this->_cPtr,$newVal);
 	}
 
 	function get_Ssl() {
@@ -583,12 +563,28 @@ class CkImap {
 		return CkImap_get_UidValidity($this->_cPtr);
 	}
 
-	function AddPfxSourceData($pfxData,$password) {
-		return CkImap_AddPfxSourceData($this->_cPtr,$pfxData,$password);
+	function get_VerboseLogging() {
+		return CkImap_get_VerboseLogging($this->_cPtr);
 	}
 
-	function AddPfxSourceFile($pfxFilePath,$password) {
-		return CkImap_AddPfxSourceFile($this->_cPtr,$pfxFilePath,$password);
+	function put_VerboseLogging($newVal) {
+		CkImap_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkImap_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkImap_version($this->_cPtr);
+	}
+
+	function AddPfxSourceData($pfxBytes,$pfxPassword) {
+		return CkImap_AddPfxSourceData($this->_cPtr,$pfxBytes,$pfxPassword);
+	}
+
+	function AddPfxSourceFile($pfxFilePath,$pfxPassword) {
+		return CkImap_AddPfxSourceFile($this->_cPtr,$pfxFilePath,$pfxPassword);
 	}
 
 	function AppendMail($mailbox,$email) {
@@ -643,6 +639,20 @@ class CkImap {
 
 	function AppendMimeWithFlagsAsync($mailbox,$mimeText,$seen,$flagged,$answered,$draft) {
 		$r=CkImap_AppendMimeWithFlagsAsync($this->_cPtr,$mailbox,$mimeText,$seen,$flagged,$answered,$draft);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function AppendMimeWithFlagsSb($mailbox,$sbMime,$seen,$flagged,$answered,$draft) {
+		return CkImap_AppendMimeWithFlagsSb($this->_cPtr,$mailbox,$sbMime,$seen,$flagged,$answered,$draft);
+	}
+
+	function AppendMimeWithFlagsSbAsync($mailbox,$sbMime,$seen,$flagged,$answered,$draft) {
+		$r=CkImap_AppendMimeWithFlagsSbAsync($this->_cPtr,$mailbox,$sbMime,$seen,$flagged,$answered,$draft);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -707,12 +717,12 @@ class CkImap {
 		return $r;
 	}
 
-	function Connect($hostname) {
-		return CkImap_Connect($this->_cPtr,$hostname);
+	function Connect($domainName) {
+		return CkImap_Connect($this->_cPtr,$domainName);
 	}
 
-	function ConnectAsync($hostname) {
-		$r=CkImap_ConnectAsync($this->_cPtr,$hostname);
+	function ConnectAsync($domainName) {
+		$r=CkImap_ConnectAsync($this->_cPtr,$domainName);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -847,12 +857,26 @@ class CkImap {
 		return $r;
 	}
 
-	function FetchAttachment($email,$attachIndex,$saveToPath) {
-		return CkImap_FetchAttachment($this->_cPtr,$email,$attachIndex,$saveToPath);
+	function FetchAttachment($emailObject,$attachmentIndex,$saveToPath) {
+		return CkImap_FetchAttachment($this->_cPtr,$emailObject,$attachmentIndex,$saveToPath);
 	}
 
-	function FetchAttachmentAsync($email,$attachIndex,$saveToPath) {
-		$r=CkImap_FetchAttachmentAsync($this->_cPtr,$email,$attachIndex,$saveToPath);
+	function FetchAttachmentAsync($emailObject,$attachmentIndex,$saveToPath) {
+		$r=CkImap_FetchAttachmentAsync($this->_cPtr,$emailObject,$attachmentIndex,$saveToPath);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function FetchAttachmentBd($email,$attachmentIndex,$binData) {
+		return CkImap_FetchAttachmentBd($this->_cPtr,$email,$attachmentIndex,$binData);
+	}
+
+	function FetchAttachmentBdAsync($email,$attachmentIndex,$binData) {
+		$r=CkImap_FetchAttachmentBdAsync($this->_cPtr,$email,$attachmentIndex,$binData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -875,12 +899,26 @@ class CkImap {
 		return $r;
 	}
 
-	function fetchAttachmentString($email,$attachIndex,$charset) {
-		return CkImap_fetchAttachmentString($this->_cPtr,$email,$attachIndex,$charset);
+	function FetchAttachmentSb($email,$attachmentIndex,$charset,$sb) {
+		return CkImap_FetchAttachmentSb($this->_cPtr,$email,$attachmentIndex,$charset,$sb);
 	}
 
-	function FetchAttachmentStringAsync($email,$attachIndex,$charset) {
-		$r=CkImap_FetchAttachmentStringAsync($this->_cPtr,$email,$attachIndex,$charset);
+	function FetchAttachmentSbAsync($email,$attachmentIndex,$charset,$sb) {
+		$r=CkImap_FetchAttachmentSbAsync($this->_cPtr,$email,$attachmentIndex,$charset,$sb);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function fetchAttachmentString($emailObject,$attachmentIndex,$charset) {
+		return CkImap_fetchAttachmentString($this->_cPtr,$emailObject,$attachmentIndex,$charset);
+	}
+
+	function FetchAttachmentStringAsync($emailObject,$attachmentIndex,$charset) {
+		$r=CkImap_FetchAttachmentStringAsync($this->_cPtr,$emailObject,$attachmentIndex,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1077,6 +1115,20 @@ class CkImap {
 		return $r;
 	}
 
+	function FetchSingleAsMimeSb($msgId,$bUid,$sbMime) {
+		return CkImap_FetchSingleAsMimeSb($this->_cPtr,$msgId,$bUid,$sbMime);
+	}
+
+	function FetchSingleAsMimeSbAsync($msgId,$bUid,$sbMime) {
+		$r=CkImap_FetchSingleAsMimeSbAsync($this->_cPtr,$msgId,$bUid,$sbMime);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function FetchSingleHeader($msgId,$bUid) {
 		$r=CkImap_FetchSingleHeader($this->_cPtr,$msgId,$bUid);
 		if (is_resource($r)) {
@@ -1143,18 +1195,6 @@ class CkImap {
 		return CkImap_GetMailAttachSize($this->_cPtr,$email,$attachIndex);
 	}
 
-	function GetMailFlag($email,$flagName) {
-		return CkImap_GetMailFlag($this->_cPtr,$email,$flagName);
-	}
-
-	function GetMailNumAttach($email) {
-		return CkImap_GetMailNumAttach($this->_cPtr,$email);
-	}
-
-	function GetMailSize($email) {
-		return CkImap_GetMailSize($this->_cPtr,$email);
-	}
-
 	function getMailboxStatus($mailbox) {
 		return CkImap_getMailboxStatus($this->_cPtr,$mailbox);
 	}
@@ -1171,6 +1211,18 @@ class CkImap {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function GetMailFlag($email,$flagName) {
+		return CkImap_GetMailFlag($this->_cPtr,$email,$flagName);
+	}
+
+	function GetMailNumAttach($email) {
+		return CkImap_GetMailNumAttach($this->_cPtr,$email);
+	}
+
+	function GetMailSize($email) {
+		return CkImap_GetMailSize($this->_cPtr,$email);
 	}
 
 	function getQuota($quotaRoot) {
@@ -1317,12 +1369,12 @@ class CkImap {
 		return $r;
 	}
 
-	function Login($login,$password) {
-		return CkImap_Login($this->_cPtr,$login,$password);
+	function Login($loginName,$password) {
+		return CkImap_Login($this->_cPtr,$loginName,$password);
 	}
 
-	function LoginAsync($login,$password) {
-		$r=CkImap_LoginAsync($this->_cPtr,$login,$password);
+	function LoginAsync($loginName,$password) {
+		$r=CkImap_LoginAsync($this->_cPtr,$loginName,$password);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1337,6 +1389,20 @@ class CkImap {
 
 	function LogoutAsync() {
 		$r=CkImap_LogoutAsync($this->_cPtr);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function MoveMessages($messageSet,$destFolder) {
+		return CkImap_MoveMessages($this->_cPtr,$messageSet,$destFolder);
+	}
+
+	function MoveMessagesAsync($messageSet,$destFolder) {
+		$r=CkImap_MoveMessagesAsync($this->_cPtr,$messageSet,$destFolder);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -1385,6 +1451,10 @@ class CkImap {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkImap_SaveLastError($this->_cPtr,$path);
 	}
 
 	function Search($criteria,$bUid) {

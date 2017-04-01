@@ -35,6 +35,14 @@ class CkSFtpDir {
 		CkSFtpDir_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkSFtpDir_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSFtpDir_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_NumFilesAndDirs() {
 		return CkSFtpDir_get_NumFilesAndDirs($this->_cPtr);
 	}
@@ -47,6 +55,14 @@ class CkSFtpDir {
 		return CkSFtpDir_originalPath($this->_cPtr);
 	}
 
+	function getFilename($index) {
+		return CkSFtpDir_getFilename($this->_cPtr,$index);
+	}
+
+	function filename($index) {
+		return CkSFtpDir_filename($this->_cPtr,$index);
+	}
+
 	function GetFileObject($index) {
 		$r=CkSFtpDir_GetFileObject($this->_cPtr,$index);
 		if (is_resource($r)) {
@@ -55,14 +71,6 @@ class CkSFtpDir {
 			return new CkSFtpFile($r);
 		}
 		return $r;
-	}
-
-	function getFilename($index) {
-		return CkSFtpDir_getFilename($this->_cPtr,$index);
-	}
-
-	function filename($index) {
-		return CkSFtpDir_filename($this->_cPtr,$index);
 	}
 
 	function LoadTaskResult($task) {

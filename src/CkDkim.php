@@ -39,36 +39,12 @@ class CkDkim {
 		CkDkim_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkDkim_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkDkim_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkDkim_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkDkim_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkDkim_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkDkim_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkDkim_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkDkim_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkDkim_version($this->_cPtr);
+	function put_AbortCurrent($newVal) {
+		CkDkim_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_DebugLogFilePath($str) {
@@ -81,26 +57,6 @@ class CkDkim {
 
 	function put_DebugLogFilePath($newVal) {
 		CkDkim_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkDkim_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkDkim_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkDkim_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkDkim_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkDkim_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_DkimAlg($str) {
@@ -239,12 +195,52 @@ class CkDkim {
 		CkDkim_put_HeartbeatMs($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkDkim_get_AbortCurrent($this->_cPtr);
+	function get_LastErrorHtml($str) {
+		CkDkim_get_LastErrorHtml($this->_cPtr,$str);
 	}
 
-	function put_AbortCurrent($newVal) {
-		CkDkim_put_AbortCurrent($this->_cPtr,$newVal);
+	function lastErrorHtml() {
+		return CkDkim_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkDkim_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkDkim_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkDkim_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkDkim_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkDkim_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkDkim_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkDkim_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkDkim_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkDkim_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkDkim_version($this->_cPtr);
 	}
 
 	function AddDkimSignature($mimeIn,$outBytes) {
@@ -263,8 +259,8 @@ class CkDkim {
 		return CkDkim_LoadDkimPkBytes($this->_cPtr,$privateKeyDer,$optionalPassword);
 	}
 
-	function LoadDkimPkFile($privateKeyFilepath,$optionalPassword) {
-		return CkDkim_LoadDkimPkFile($this->_cPtr,$privateKeyFilepath,$optionalPassword);
+	function LoadDkimPkFile($privateKeyFilePath,$optionalPassword) {
+		return CkDkim_LoadDkimPkFile($this->_cPtr,$privateKeyFilePath,$optionalPassword);
 	}
 
 	function LoadDomainKeyPk($privateKey,$optionalPassword) {
@@ -275,8 +271,8 @@ class CkDkim {
 		return CkDkim_LoadDomainKeyPkBytes($this->_cPtr,$privateKeyDer,$optionalPassword);
 	}
 
-	function LoadDomainKeyPkFile($privateKeyFilepath,$optionalPassword) {
-		return CkDkim_LoadDomainKeyPkFile($this->_cPtr,$privateKeyFilepath,$optionalPassword);
+	function LoadDomainKeyPkFile($privateKeyFilePath,$optionalPassword) {
+		return CkDkim_LoadDomainKeyPkFile($this->_cPtr,$privateKeyFilePath,$optionalPassword);
 	}
 
 	function LoadPublicKey($selector,$domain,$publicKey) {
@@ -309,16 +305,20 @@ class CkDkim {
 		return $r;
 	}
 
+	function SaveLastError($path) {
+		return CkDkim_SaveLastError($this->_cPtr,$path);
+	}
+
 	function UnlockComponent($unlockCode) {
 		return CkDkim_UnlockComponent($this->_cPtr,$unlockCode);
 	}
 
-	function VerifyDkimSignature($sigIdx,$mimeData) {
-		return CkDkim_VerifyDkimSignature($this->_cPtr,$sigIdx,$mimeData);
+	function VerifyDkimSignature($sigIndex,$mimeData) {
+		return CkDkim_VerifyDkimSignature($this->_cPtr,$sigIndex,$mimeData);
 	}
 
-	function VerifyDkimSignatureAsync($sigIdx,$mimeData) {
-		$r=CkDkim_VerifyDkimSignatureAsync($this->_cPtr,$sigIdx,$mimeData);
+	function VerifyDkimSignatureAsync($sigIndex,$mimeData) {
+		$r=CkDkim_VerifyDkimSignatureAsync($this->_cPtr,$sigIndex,$mimeData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -327,12 +327,12 @@ class CkDkim {
 		return $r;
 	}
 
-	function VerifyDomainKeySignature($sigIdx,$mimeData) {
-		return CkDkim_VerifyDomainKeySignature($this->_cPtr,$sigIdx,$mimeData);
+	function VerifyDomainKeySignature($sigIndex,$mimeData) {
+		return CkDkim_VerifyDomainKeySignature($this->_cPtr,$sigIndex,$mimeData);
 	}
 
-	function VerifyDomainKeySignatureAsync($sigIdx,$mimeData) {
-		$r=CkDkim_VerifyDomainKeySignatureAsync($this->_cPtr,$sigIdx,$mimeData);
+	function VerifyDomainKeySignatureAsync($sigIndex,$mimeData) {
+		$r=CkDkim_VerifyDomainKeySignatureAsync($this->_cPtr,$sigIndex,$mimeData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);

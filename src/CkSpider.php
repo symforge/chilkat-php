@@ -39,68 +39,12 @@ class CkSpider {
 		CkSpider_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkSpider_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkSpider_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkSpider_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkSpider_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkSpider_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkSpider_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkSpider_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkSpider_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkSpider_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkSpider_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkSpider_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkSpider_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkSpider_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkSpider_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkSpider_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkSpider_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkSpider_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkSpider_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_AvoidHttps() {
@@ -139,6 +83,18 @@ class CkSpider {
 		CkSpider_put_ConnectTimeout($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkSpider_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkSpider_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkSpider_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_Domain($str) {
 		CkSpider_get_Domain($this->_cPtr,$str);
 	}
@@ -161,6 +117,30 @@ class CkSpider {
 
 	function put_HeartbeatMs($newVal) {
 		CkSpider_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkSpider_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkSpider_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkSpider_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkSpider_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkSpider_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkSpider_lastErrorXml($this->_cPtr);
 	}
 
 	function get_LastFromCache() {
@@ -197,6 +177,14 @@ class CkSpider {
 
 	function lastHtmlTitle() {
 		return CkSpider_lastHtmlTitle($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkSpider_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkSpider_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastModDate($outSysTime) {
@@ -335,20 +323,28 @@ class CkSpider {
 		CkSpider_put_UserAgent($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkSpider_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkSpider_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkSpider_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkSpider_version($this->_cPtr);
+	}
+
 	function get_WindDownCount() {
 		return CkSpider_get_WindDownCount($this->_cPtr);
 	}
 
 	function put_WindDownCount($newVal) {
 		CkSpider_put_WindDownCount($this->_cPtr,$newVal);
-	}
-
-	function get_AbortCurrent() {
-		return CkSpider_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkSpider_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function AddAvoidOutboundLinkPattern($pattern) {
@@ -485,12 +481,16 @@ class CkSpider {
 		return $r;
 	}
 
+	function SaveLastError($path) {
+		return CkSpider_SaveLastError($this->_cPtr,$path);
+	}
+
 	function SkipUnspidered($index) {
 		CkSpider_SkipUnspidered($this->_cPtr,$index);
 	}
 
-	function SleepMs($millisec) {
-		CkSpider_SleepMs($this->_cPtr,$millisec);
+	function SleepMs($numMilliseconds) {
+		CkSpider_SleepMs($this->_cPtr,$numMilliseconds);
 	}
 }
 

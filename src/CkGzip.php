@@ -39,68 +39,12 @@ class CkGzip {
 		CkGzip_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkGzip_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkGzip_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkGzip_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkGzip_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkGzip_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkGzip_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkGzip_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkGzip_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkGzip_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkGzip_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkGzip_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkGzip_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkGzip_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkGzip_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkGzip_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkGzip_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkGzip_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkGzip_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_Comment($str) {
@@ -121,6 +65,18 @@ class CkGzip {
 
 	function put_CompressionLevel($newVal) {
 		CkGzip_put_CompressionLevel($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkGzip_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkGzip_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkGzip_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_ExtraData($outBytes) {
@@ -151,6 +107,38 @@ class CkGzip {
 		CkGzip_put_HeartbeatMs($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkGzip_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkGzip_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkGzip_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkGzip_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkGzip_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkGzip_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkGzip_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkGzip_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_LastMod($outSysTime) {
 		CkGzip_get_LastMod($this->_cPtr,$outSysTime);
 	}
@@ -179,20 +167,28 @@ class CkGzip {
 		CkGzip_put_UseCurrentDate($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkGzip_get_AbortCurrent($this->_cPtr);
+	function get_VerboseLogging() {
+		return CkGzip_get_VerboseLogging($this->_cPtr);
 	}
 
-	function put_AbortCurrent($newVal) {
-		CkGzip_put_AbortCurrent($this->_cPtr,$newVal);
+	function put_VerboseLogging($newVal) {
+		CkGzip_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function CompressFile($srcPath,$destPath) {
-		return CkGzip_CompressFile($this->_cPtr,$srcPath,$destPath);
+	function get_Version($str) {
+		CkGzip_get_Version($this->_cPtr,$str);
 	}
 
-	function CompressFileAsync($srcPath,$destPath) {
-		$r=CkGzip_CompressFileAsync($this->_cPtr,$srcPath,$destPath);
+	function version() {
+		return CkGzip_version($this->_cPtr);
+	}
+
+	function CompressFile($inFilename,$destPath) {
+		return CkGzip_CompressFile($this->_cPtr,$inFilename,$destPath);
+	}
+
+	function CompressFileAsync($inFilename,$destPath) {
+		$r=CkGzip_CompressFileAsync($this->_cPtr,$inFilename,$destPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -201,12 +197,12 @@ class CkGzip {
 		return $r;
 	}
 
-	function CompressFile2($srcPath,$embeddedFilename,$destPath) {
-		return CkGzip_CompressFile2($this->_cPtr,$srcPath,$embeddedFilename,$destPath);
+	function CompressFile2($inFilename,$embeddedFilename,$destPath) {
+		return CkGzip_CompressFile2($this->_cPtr,$inFilename,$embeddedFilename,$destPath);
 	}
 
-	function CompressFile2Async($srcPath,$embeddedFilename,$destPath) {
-		$r=CkGzip_CompressFile2Async($this->_cPtr,$srcPath,$embeddedFilename,$destPath);
+	function CompressFile2Async($inFilename,$embeddedFilename,$destPath) {
+		$r=CkGzip_CompressFile2Async($this->_cPtr,$inFilename,$embeddedFilename,$destPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -229,12 +225,12 @@ class CkGzip {
 		return $r;
 	}
 
-	function CompressMemToFile($inData,$destPath) {
-		return CkGzip_CompressMemToFile($this->_cPtr,$inData,$destPath);
+	function CompressMemory($inData,$outData) {
+		return CkGzip_CompressMemory($this->_cPtr,$inData,$outData);
 	}
 
-	function CompressMemToFileAsync($inData,$destPath) {
-		$r=CkGzip_CompressMemToFileAsync($this->_cPtr,$inData,$destPath);
+	function CompressMemoryAsync($inData) {
+		$r=CkGzip_CompressMemoryAsync($this->_cPtr,$inData);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -243,12 +239,12 @@ class CkGzip {
 		return $r;
 	}
 
-	function CompressMemory($inData,$outData) {
-		return CkGzip_CompressMemory($this->_cPtr,$inData,$outData);
+	function CompressMemToFile($inData,$destPath) {
+		return CkGzip_CompressMemToFile($this->_cPtr,$inData,$destPath);
 	}
 
-	function CompressMemoryAsync($inData) {
-		$r=CkGzip_CompressMemoryAsync($this->_cPtr,$inData);
+	function CompressMemToFileAsync($inData,$destPath) {
+		$r=CkGzip_CompressMemToFileAsync($this->_cPtr,$inData,$destPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -271,8 +267,8 @@ class CkGzip {
 		return $r;
 	}
 
-	function compressStringENC($strIn,$charset,$encoding) {
-		return CkGzip_compressStringENC($this->_cPtr,$strIn,$charset,$encoding);
+	function compressStringENC($inStr,$charset,$encoding) {
+		return CkGzip_compressStringENC($this->_cPtr,$inStr,$charset,$encoding);
 	}
 
 	function CompressStringToFile($inStr,$destCharset,$destPath) {
@@ -289,20 +285,20 @@ class CkGzip {
 		return $r;
 	}
 
-	function Decode($str,$encoding,$outBytes) {
-		return CkGzip_Decode($this->_cPtr,$str,$encoding,$outBytes);
+	function Decode($encodedStr,$encoding,$outBytes) {
+		return CkGzip_Decode($this->_cPtr,$encodedStr,$encoding,$outBytes);
 	}
 
-	function deflateStringENC($strIn,$charset,$encoding) {
-		return CkGzip_deflateStringENC($this->_cPtr,$strIn,$charset,$encoding);
+	function deflateStringENC($inString,$charsetName,$outputEncoding) {
+		return CkGzip_deflateStringENC($this->_cPtr,$inString,$charsetName,$outputEncoding);
 	}
 
 	function encode($byteData,$encoding) {
 		return CkGzip_encode($this->_cPtr,$byteData,$encoding);
 	}
 
-	function ExamineFile($inGzPath) {
-		return CkGzip_ExamineFile($this->_cPtr,$inGzPath);
+	function ExamineFile($inGzFilename) {
+		return CkGzip_ExamineFile($this->_cPtr,$inGzFilename);
 	}
 
 	function ExamineMemory($inGzData) {
@@ -319,8 +315,8 @@ class CkGzip {
 		return $r;
 	}
 
-	function inflateStringENC($strIn,$charset,$encoding) {
-		return CkGzip_inflateStringENC($this->_cPtr,$strIn,$charset,$encoding);
+	function inflateStringENC($inString,$convertFromCharset,$inputEncoding) {
+		return CkGzip_inflateStringENC($this->_cPtr,$inString,$convertFromCharset,$inputEncoding);
 	}
 
 	function IsUnlocked() {
@@ -331,22 +327,12 @@ class CkGzip {
 		return CkGzip_ReadFile($this->_cPtr,$path,$outBytes);
 	}
 
+	function SaveLastError($path) {
+		return CkGzip_SaveLastError($this->_cPtr,$path);
+	}
+
 	function SetDt($dt) {
 		return CkGzip_SetDt($this->_cPtr,$dt);
-	}
-
-	function UnTarGz($gzFilename,$destDir,$bNoAbsolute) {
-		return CkGzip_UnTarGz($this->_cPtr,$gzFilename,$destDir,$bNoAbsolute);
-	}
-
-	function UnTarGzAsync($gzFilename,$destDir,$bNoAbsolute) {
-		$r=CkGzip_UnTarGzAsync($this->_cPtr,$gzFilename,$destDir,$bNoAbsolute);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkTask($r);
-		}
-		return $r;
 	}
 
 	function UncompressFile($srcPath,$destPath) {
@@ -377,26 +363,12 @@ class CkGzip {
 		return $r;
 	}
 
-	function uncompressFileToString($inFilename,$inCharset) {
-		return CkGzip_uncompressFileToString($this->_cPtr,$inFilename,$inCharset);
+	function uncompressFileToString($gzFilename,$charset) {
+		return CkGzip_uncompressFileToString($this->_cPtr,$gzFilename,$charset);
 	}
 
-	function UncompressFileToStringAsync($inFilename,$inCharset) {
-		$r=CkGzip_UncompressFileToStringAsync($this->_cPtr,$inFilename,$inCharset);
-		if (is_resource($r)) {
-			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
-			if (class_exists($c)) return new $c($r);
-			return new CkTask($r);
-		}
-		return $r;
-	}
-
-	function UncompressMemToFile($inData,$destPath) {
-		return CkGzip_UncompressMemToFile($this->_cPtr,$inData,$destPath);
-	}
-
-	function UncompressMemToFileAsync($inData,$destPath) {
-		$r=CkGzip_UncompressMemToFileAsync($this->_cPtr,$inData,$destPath);
+	function UncompressFileToStringAsync($gzFilename,$charset) {
+		$r=CkGzip_UncompressFileToStringAsync($this->_cPtr,$gzFilename,$charset);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -419,6 +391,20 @@ class CkGzip {
 		return $r;
 	}
 
+	function UncompressMemToFile($inData,$destPath) {
+		return CkGzip_UncompressMemToFile($this->_cPtr,$inData,$destPath);
+	}
+
+	function UncompressMemToFileAsync($inData,$destPath) {
+		$r=CkGzip_UncompressMemToFileAsync($this->_cPtr,$inData,$destPath);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function uncompressString($inData,$inCharset) {
 		return CkGzip_uncompressString($this->_cPtr,$inData,$inCharset);
 	}
@@ -433,20 +419,34 @@ class CkGzip {
 		return $r;
 	}
 
-	function uncompressStringENC($strIn,$charset,$encoding) {
-		return CkGzip_uncompressStringENC($this->_cPtr,$strIn,$charset,$encoding);
+	function uncompressStringENC($inStr,$charset,$encoding) {
+		return CkGzip_uncompressStringENC($this->_cPtr,$inStr,$charset,$encoding);
 	}
 
 	function UnlockComponent($unlockCode) {
 		return CkGzip_UnlockComponent($this->_cPtr,$unlockCode);
 	}
 
+	function UnTarGz($tgzFilename,$destDir,$bNoAbsolute) {
+		return CkGzip_UnTarGz($this->_cPtr,$tgzFilename,$destDir,$bNoAbsolute);
+	}
+
+	function UnTarGzAsync($tgzFilename,$destDir,$bNoAbsolute) {
+		$r=CkGzip_UnTarGzAsync($this->_cPtr,$tgzFilename,$destDir,$bNoAbsolute);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function WriteFile($path,$binaryData) {
 		return CkGzip_WriteFile($this->_cPtr,$path,$binaryData);
 	}
 
-	function xfdlToXml($xfdl) {
-		return CkGzip_xfdlToXml($this->_cPtr,$xfdl);
+	function xfdlToXml($xfldData) {
+		return CkGzip_xfdlToXml($this->_cPtr,$xfldData);
 	}
 }
 

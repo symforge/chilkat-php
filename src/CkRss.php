@@ -39,6 +39,18 @@ class CkRss {
 		CkRss_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkRss_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkRss_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkRss_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkRss_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,24 +75,20 @@ class CkRss {
 		return CkRss_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkRss_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkRss_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkRss_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkRss_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkRss_get_DebugLogFilePath($this->_cPtr,$str);
+	function get_NumChannels() {
+		return CkRss_get_NumChannels($this->_cPtr);
 	}
 
-	function debugLogFilePath() {
-		return CkRss_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkRss_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function get_NumItems() {
+		return CkRss_get_NumItems($this->_cPtr);
 	}
 
 	function get_VerboseLogging() {
@@ -91,24 +99,12 @@ class CkRss {
 		CkRss_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkRss_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkRss_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkRss_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkRss_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_NumChannels() {
-		return CkRss_get_NumChannels($this->_cPtr);
-	}
-
-	function get_NumItems() {
-		return CkRss_get_NumItems($this->_cPtr);
+	function version() {
+		return CkRss_version($this->_cPtr);
 	}
 
 	function AddNewChannel() {
@@ -221,8 +217,8 @@ class CkRss {
 		return CkRss_string($this->_cPtr,$tag);
 	}
 
-	function LoadRssFile($filename) {
-		return CkRss_LoadRssFile($this->_cPtr,$filename);
+	function LoadRssFile($filePath) {
+		return CkRss_LoadRssFile($this->_cPtr,$filePath);
 	}
 
 	function LoadRssString($rssString) {
@@ -251,6 +247,10 @@ class CkRss {
 
 	function Remove($tag) {
 		CkRss_Remove($this->_cPtr,$tag);
+	}
+
+	function SaveLastError($path) {
+		return CkRss_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetAttr($tag,$attrName,$value) {

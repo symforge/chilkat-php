@@ -35,70 +35,6 @@ class CkHttpRequest {
 		CkHttpRequest_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkHttpRequest_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkHttpRequest_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkHttpRequest_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkHttpRequest_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkHttpRequest_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkHttpRequest_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkHttpRequest_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkHttpRequest_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkHttpRequest_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkHttpRequest_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkHttpRequest_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkHttpRequest_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkHttpRequest_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkHttpRequest_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkHttpRequest_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkHttpRequest_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_Boundary($str) {
 		CkHttpRequest_get_Boundary($this->_cPtr,$str);
 	}
@@ -133,6 +69,18 @@ class CkHttpRequest {
 
 	function put_ContentType($newVal) {
 		CkHttpRequest_put_ContentType($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkHttpRequest_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkHttpRequest_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkHttpRequest_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_EntireHeader($str) {
@@ -171,6 +119,38 @@ class CkHttpRequest {
 		CkHttpRequest_put_HttpVersion($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkHttpRequest_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkHttpRequest_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkHttpRequest_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkHttpRequest_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkHttpRequest_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkHttpRequest_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkHttpRequest_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkHttpRequest_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_NumHeaderFields() {
 		return CkHttpRequest_get_NumHeaderFields($this->_cPtr);
 	}
@@ -199,24 +179,44 @@ class CkHttpRequest {
 		CkHttpRequest_put_SendCharset($this->_cPtr,$newVal);
 	}
 
-	function AddBytesForUpload($name,$filename,$byteData) {
-		return CkHttpRequest_AddBytesForUpload($this->_cPtr,$name,$filename,$byteData);
+	function get_VerboseLogging() {
+		return CkHttpRequest_get_VerboseLogging($this->_cPtr);
 	}
 
-	function AddBytesForUpload2($name,$filename,$byteData,$contentType) {
-		return CkHttpRequest_AddBytesForUpload2($this->_cPtr,$name,$filename,$byteData,$contentType);
+	function put_VerboseLogging($newVal) {
+		CkHttpRequest_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function AddFileForUpload($name,$filename) {
-		return CkHttpRequest_AddFileForUpload($this->_cPtr,$name,$filename);
+	function get_Version($str) {
+		CkHttpRequest_get_Version($this->_cPtr,$str);
 	}
 
-	function AddFileForUpload2($name,$filename,$contentType) {
-		return CkHttpRequest_AddFileForUpload2($this->_cPtr,$name,$filename,$contentType);
+	function version() {
+		return CkHttpRequest_version($this->_cPtr);
+	}
+
+	function AddBytesForUpload($name,$remoteFileName,$byteData) {
+		return CkHttpRequest_AddBytesForUpload($this->_cPtr,$name,$remoteFileName,$byteData);
+	}
+
+	function AddBytesForUpload2($name,$remoteFileName,$byteData,$contentType) {
+		return CkHttpRequest_AddBytesForUpload2($this->_cPtr,$name,$remoteFileName,$byteData,$contentType);
+	}
+
+	function AddFileForUpload($name,$filePath) {
+		return CkHttpRequest_AddFileForUpload($this->_cPtr,$name,$filePath);
+	}
+
+	function AddFileForUpload2($name,$filePath,$contentType) {
+		return CkHttpRequest_AddFileForUpload2($this->_cPtr,$name,$filePath,$contentType);
 	}
 
 	function AddHeader($name,$value) {
 		CkHttpRequest_AddHeader($this->_cPtr,$name,$value);
+	}
+
+	function AddMwsSignature($domain,$mwsSecretKey) {
+		return CkHttpRequest_AddMwsSignature($this->_cPtr,$domain,$mwsSecretKey);
 	}
 
 	function AddParam($name,$value) {
@@ -233,6 +233,10 @@ class CkHttpRequest {
 
 	function AddSubHeader($index,$name,$value) {
 		return CkHttpRequest_AddSubHeader($this->_cPtr,$index,$name,$value);
+	}
+
+	function GenerateRequestFile($path) {
+		return CkHttpRequest_GenerateRequestFile($this->_cPtr,$path);
 	}
 
 	function generateRequestText() {
@@ -295,12 +299,12 @@ class CkHttpRequest {
 		return CkHttpRequest_urlEncodedParams($this->_cPtr);
 	}
 
-	function LoadBodyFromBytes($binaryData) {
-		return CkHttpRequest_LoadBodyFromBytes($this->_cPtr,$binaryData);
+	function LoadBodyFromBytes($byteData) {
+		return CkHttpRequest_LoadBodyFromBytes($this->_cPtr,$byteData);
 	}
 
-	function LoadBodyFromFile($filename) {
-		return CkHttpRequest_LoadBodyFromFile($this->_cPtr,$filename);
+	function LoadBodyFromFile($filePath) {
+		return CkHttpRequest_LoadBodyFromFile($this->_cPtr,$filePath);
 	}
 
 	function LoadBodyFromString($bodyStr,$charset) {
@@ -319,12 +323,16 @@ class CkHttpRequest {
 		CkHttpRequest_RemoveParam($this->_cPtr,$name);
 	}
 
+	function SaveLastError($path) {
+		return CkHttpRequest_SaveLastError($this->_cPtr,$path);
+	}
+
 	function SetFromUrl($url) {
 		CkHttpRequest_SetFromUrl($this->_cPtr,$url);
 	}
 
-	function StreamBodyFromFile($filename) {
-		return CkHttpRequest_StreamBodyFromFile($this->_cPtr,$filename);
+	function StreamBodyFromFile($filePath) {
+		return CkHttpRequest_StreamBodyFromFile($this->_cPtr,$filePath);
 	}
 
 	function StreamChunkFromFile($path,$offset,$numBytes) {

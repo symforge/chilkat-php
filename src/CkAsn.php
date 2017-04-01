@@ -35,70 +35,6 @@ class CkAsn {
 		CkAsn_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkAsn_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkAsn_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkAsn_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkAsn_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkAsn_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkAsn_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkAsn_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkAsn_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkAsn_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkAsn_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkAsn_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkAsn_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkAsn_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkAsn_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkAsn_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkAsn_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_BoolValue() {
 		return CkAsn_get_BoolValue($this->_cPtr);
 	}
@@ -123,12 +59,56 @@ class CkAsn {
 		CkAsn_put_ContentStr($this->_cPtr,$newVal);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkAsn_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkAsn_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkAsn_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_IntValue() {
 		return CkAsn_get_IntValue($this->_cPtr);
 	}
 
 	function put_IntValue($newVal) {
 		CkAsn_put_IntValue($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkAsn_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkAsn_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkAsn_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkAsn_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkAsn_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkAsn_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkAsn_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkAsn_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_NumSubItems() {
@@ -145,6 +125,22 @@ class CkAsn {
 
 	function get_TagValue() {
 		return CkAsn_get_TagValue($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkAsn_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkAsn_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkAsn_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkAsn_version($this->_cPtr);
 	}
 
 	function AppendBigInt($encodedBytes,$encoding) {
@@ -289,6 +285,10 @@ class CkAsn {
 
 	function LoadEncoded($asnContent,$encoding) {
 		return CkAsn_LoadEncoded($this->_cPtr,$asnContent,$encoding);
+	}
+
+	function SaveLastError($path) {
+		return CkAsn_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetEncodedContent($encodedBytes,$encoding) {

@@ -39,6 +39,22 @@ class CkAtom {
 		CkAtom_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_AbortCurrent() {
+		return CkAtom_get_AbortCurrent($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkAtom_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkAtom_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkAtom_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkAtom_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,24 +79,16 @@ class CkAtom {
 		return CkAtom_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkAtom_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkAtom_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkAtom_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkAtom_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkAtom_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkAtom_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkAtom_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function get_NumEntries() {
+		return CkAtom_get_NumEntries($this->_cPtr);
 	}
 
 	function get_VerboseLogging() {
@@ -91,24 +99,12 @@ class CkAtom {
 		CkAtom_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkAtom_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkAtom_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkAtom_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkAtom_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_NumEntries() {
-		return CkAtom_get_NumEntries($this->_cPtr);
-	}
-
-	function get_AbortCurrent() {
-		return CkAtom_get_AbortCurrent($this->_cPtr);
+	function version() {
+		return CkAtom_version($this->_cPtr);
 	}
 
 	function AddElement($tag,$value) {
@@ -267,6 +263,10 @@ class CkAtom {
 
 	function NewFeed() {
 		CkAtom_NewFeed($this->_cPtr);
+	}
+
+	function SaveLastError($path) {
+		return CkAtom_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetElementAttr($tag,$index,$attrName,$attrValue) {

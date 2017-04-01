@@ -35,38 +35,6 @@ class CkDsa {
 		CkDsa_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkDsa_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkDsa_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkDsa_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkDsa_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkDsa_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkDsa_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkDsa_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkDsa_version($this->_cPtr);
-	}
-
 	function get_DebugLogFilePath($str) {
 		CkDsa_get_DebugLogFilePath($this->_cPtr,$str);
 	}
@@ -77,26 +45,6 @@ class CkDsa {
 
 	function put_DebugLogFilePath($newVal) {
 		CkDsa_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkDsa_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkDsa_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkDsa_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkDsa_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkDsa_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_GroupSize() {
@@ -155,12 +103,60 @@ class CkDsa {
 		return CkDsa_hexY($this->_cPtr);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkDsa_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkDsa_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkDsa_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkDsa_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkDsa_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkDsa_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkDsa_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkDsa_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_Signature($outBytes) {
 		CkDsa_get_Signature($this->_cPtr,$outBytes);
 	}
 
 	function put_Signature($inBytes) {
 		CkDsa_put_Signature($this->_cPtr,$inBytes);
+	}
+
+	function get_VerboseLogging() {
+		return CkDsa_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkDsa_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkDsa_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkDsa_version($this->_cPtr);
 	}
 
 	function FromDer($derData) {
@@ -233,6 +229,10 @@ class CkDsa {
 
 	function loadText($path) {
 		return CkDsa_loadText($this->_cPtr,$path);
+	}
+
+	function SaveLastError($path) {
+		return CkDsa_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveText($strToSave,$path) {

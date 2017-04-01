@@ -35,6 +35,18 @@ class CkXmp {
 		CkXmp_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkXmp_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkXmp_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkXmp_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkXmp_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,44 +71,12 @@ class CkXmp {
 		return CkXmp_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkXmp_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkXmp_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkXmp_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkXmp_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkXmp_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkXmp_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkXmp_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkXmp_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkXmp_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkXmp_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_NumEmbedded() {
@@ -109,6 +89,22 @@ class CkXmp {
 
 	function put_StructInnerDescrip($newVal) {
 		CkXmp_put_StructInnerDescrip($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkXmp_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkXmp_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkXmp_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkXmp_version($this->_cPtr);
 	}
 
 	function AddArray($xml,$arrType,$propName,$values) {
@@ -255,6 +251,10 @@ class CkXmp {
 
 	function SaveAppFile($filename) {
 		return CkXmp_SaveAppFile($this->_cPtr,$filename);
+	}
+
+	function SaveLastError($path) {
+		return CkXmp_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveToBuffer($outBytes) {

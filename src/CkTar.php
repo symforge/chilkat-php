@@ -39,70 +39,6 @@ class CkTar {
 		CkTar_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkTar_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkTar_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkTar_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkTar_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkTar_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkTar_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkTar_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkTar_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkTar_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkTar_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkTar_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkTar_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkTar_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkTar_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkTar_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkTar_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_CaptureXmlListing() {
 		return CkTar_get_CaptureXmlListing($this->_cPtr);
 	}
@@ -121,6 +57,18 @@ class CkTar {
 
 	function put_Charset($newVal) {
 		CkTar_put_Charset($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkTar_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkTar_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkTar_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_DirMode() {
@@ -177,6 +125,38 @@ class CkTar {
 
 	function put_HeartbeatMs($newVal) {
 		CkTar_put_HeartbeatMs($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkTar_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkTar_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkTar_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkTar_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkTar_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkTar_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkTar_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkTar_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_MatchCaseSensitive() {
@@ -323,6 +303,22 @@ class CkTar {
 		CkTar_put_UserName($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkTar_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkTar_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkTar_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkTar_version($this->_cPtr);
+	}
+
 	function get_WriteFormat($str) {
 		CkTar_get_WriteFormat($this->_cPtr,$str);
 	}
@@ -351,8 +347,16 @@ class CkTar {
 		return CkTar_AddDirRoot($this->_cPtr,$dirPath);
 	}
 
+	function AddDirRoot2($rootPrefix,$rootPath) {
+		return CkTar_AddDirRoot2($this->_cPtr,$rootPrefix,$rootPath);
+	}
+
 	function AddFile($path) {
 		return CkTar_AddFile($this->_cPtr,$path);
+	}
+
+	function CreateDeb($controlPath,$dataPath,$debPath) {
+		return CkTar_CreateDeb($this->_cPtr,$controlPath,$dataPath,$debPath);
 	}
 
 	function getDirRoot($index) {
@@ -375,6 +379,10 @@ class CkTar {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkTar_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UnlockComponent($unlockCode) {
@@ -509,10 +517,6 @@ class CkTar {
 			return new CkTask($r);
 		}
 		return $r;
-	}
-
-	function AddDirRoot2($rootPrefix,$rootPath) {
-		return CkTar_AddDirRoot2($this->_cPtr,$rootPrefix,$rootPath);
 	}
 }
 

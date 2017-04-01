@@ -39,68 +39,12 @@ class CkMht {
 		CkMht_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkMht_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AbortCurrent() {
+		return CkMht_get_AbortCurrent($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkMht_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkMht_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkMht_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkMht_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkMht_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkMht_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkMht_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkMht_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkMht_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkMht_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkMht_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkMht_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkMht_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkMht_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkMht_SaveLastError($this->_cPtr,$path);
+	function put_AbortCurrent($newVal) {
+		CkMht_put_AbortCurrent($this->_cPtr,$newVal);
 	}
 
 	function get_BaseUrl($str) {
@@ -145,6 +89,18 @@ class CkMht {
 
 	function put_DebugHtmlBefore($newVal) {
 		CkMht_put_DebugHtmlBefore($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkMht_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkMht_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkMht_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_DebugTagCleaning() {
@@ -201,6 +157,38 @@ class CkMht {
 
 	function put_IgnoreNoCache($newVal) {
 		CkMht_put_IgnoreNoCache($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkMht_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkMht_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkMht_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkMht_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkMht_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkMht_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkMht_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkMht_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_NoScripts() {
@@ -407,6 +395,22 @@ class CkMht {
 		CkMht_put_UseInline($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkMht_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkMht_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkMht_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkMht_version($this->_cPtr);
+	}
+
 	function get_WebSiteLogin($str) {
 		CkMht_get_WebSiteLogin($this->_cPtr,$str);
 	}
@@ -443,14 +447,6 @@ class CkMht {
 		CkMht_put_WebSitePassword($this->_cPtr,$newVal);
 	}
 
-	function get_AbortCurrent() {
-		return CkMht_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkMht_put_AbortCurrent($this->_cPtr,$newVal);
-	}
-
 	function AddCacheRoot($dir) {
 		CkMht_AddCacheRoot($this->_cPtr,$dir);
 	}
@@ -471,12 +467,12 @@ class CkMht {
 		CkMht_ExcludeImagesMatching($this->_cPtr,$pattern);
 	}
 
-	function GetAndSaveEML($url,$emlFilename) {
-		return CkMht_GetAndSaveEML($this->_cPtr,$url,$emlFilename);
+	function GetAndSaveEML($url_or_htmlFilepath,$emlPath) {
+		return CkMht_GetAndSaveEML($this->_cPtr,$url_or_htmlFilepath,$emlPath);
 	}
 
-	function GetAndSaveEMLAsync($url,$emlFilename) {
-		$r=CkMht_GetAndSaveEMLAsync($this->_cPtr,$url,$emlFilename);
+	function GetAndSaveEMLAsync($url_or_htmlFilepath,$emlPath) {
+		$r=CkMht_GetAndSaveEMLAsync($this->_cPtr,$url_or_htmlFilepath,$emlPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -485,12 +481,12 @@ class CkMht {
 		return $r;
 	}
 
-	function GetAndSaveMHT($url,$mhtFilename) {
-		return CkMht_GetAndSaveMHT($this->_cPtr,$url,$mhtFilename);
+	function GetAndSaveMHT($url_or_htmlFilepath,$mhtPath) {
+		return CkMht_GetAndSaveMHT($this->_cPtr,$url_or_htmlFilepath,$mhtPath);
 	}
 
-	function GetAndSaveMHTAsync($url,$mhtFilename) {
-		$r=CkMht_GetAndSaveMHTAsync($this->_cPtr,$url,$mhtFilename);
+	function GetAndSaveMHTAsync($url_or_htmlFilepath,$mhtPath) {
+		$r=CkMht_GetAndSaveMHTAsync($this->_cPtr,$url_or_htmlFilepath,$mhtPath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -499,12 +495,12 @@ class CkMht {
 		return $r;
 	}
 
-	function GetAndZipEML($url,$zipEntryFilename,$zipFilename) {
-		return CkMht_GetAndZipEML($this->_cPtr,$url,$zipEntryFilename,$zipFilename);
+	function GetAndZipEML($url_or_htmlFilepath,$zipEntryFilename,$zipFilename) {
+		return CkMht_GetAndZipEML($this->_cPtr,$url_or_htmlFilepath,$zipEntryFilename,$zipFilename);
 	}
 
-	function GetAndZipEMLAsync($url,$zipEntryFilename,$zipFilename) {
-		$r=CkMht_GetAndZipEMLAsync($this->_cPtr,$url,$zipEntryFilename,$zipFilename);
+	function GetAndZipEMLAsync($url_or_htmlFilepath,$zipEntryFilename,$zipFilename) {
+		$r=CkMht_GetAndZipEMLAsync($this->_cPtr,$url_or_htmlFilepath,$zipEntryFilename,$zipFilename);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -513,12 +509,12 @@ class CkMht {
 		return $r;
 	}
 
-	function GetAndZipMHT($url,$zipEntryFilename,$zipFilename) {
-		return CkMht_GetAndZipMHT($this->_cPtr,$url,$zipEntryFilename,$zipFilename);
+	function GetAndZipMHT($url_or_htmlFilepath,$zipEntryFilename,$zipFilename) {
+		return CkMht_GetAndZipMHT($this->_cPtr,$url_or_htmlFilepath,$zipEntryFilename,$zipFilename);
 	}
 
-	function GetAndZipMHTAsync($url,$zipEntryFilename,$zipFilename) {
-		$r=CkMht_GetAndZipMHTAsync($this->_cPtr,$url,$zipEntryFilename,$zipFilename);
+	function GetAndZipMHTAsync($url_or_htmlFilepath,$zipEntryFilename,$zipFilename) {
+		$r=CkMht_GetAndZipMHTAsync($this->_cPtr,$url_or_htmlFilepath,$zipEntryFilename,$zipFilename);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -535,16 +531,16 @@ class CkMht {
 		return CkMht_cacheRoot($this->_cPtr,$index);
 	}
 
-	function getEML($url) {
-		return CkMht_getEML($this->_cPtr,$url);
+	function getEML($url_or_htmlFilepath) {
+		return CkMht_getEML($this->_cPtr,$url_or_htmlFilepath);
 	}
 
-	function eML($url) {
-		return CkMht_eML($this->_cPtr,$url);
+	function eML($url_or_htmlFilepath) {
+		return CkMht_eML($this->_cPtr,$url_or_htmlFilepath);
 	}
 
-	function GetEMLAsync($url) {
-		$r=CkMht_GetEMLAsync($this->_cPtr,$url);
+	function GetEMLAsync($url_or_htmlFilepath) {
+		$r=CkMht_GetEMLAsync($this->_cPtr,$url_or_htmlFilepath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -553,16 +549,16 @@ class CkMht {
 		return $r;
 	}
 
-	function getMHT($url) {
-		return CkMht_getMHT($this->_cPtr,$url);
+	function getMHT($url_or_htmlFilepath) {
+		return CkMht_getMHT($this->_cPtr,$url_or_htmlFilepath);
 	}
 
-	function mHT($url) {
-		return CkMht_mHT($this->_cPtr,$url);
+	function mHT($url_or_htmlFilepath) {
+		return CkMht_mHT($this->_cPtr,$url_or_htmlFilepath);
 	}
 
-	function GetMHTAsync($url) {
-		$r=CkMht_GetMHTAsync($this->_cPtr,$url);
+	function GetMHTAsync($url_or_htmlFilepath) {
+		$r=CkMht_GetMHTAsync($this->_cPtr,$url_or_htmlFilepath);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -637,6 +633,10 @@ class CkMht {
 
 	function RestoreDefaults() {
 		CkMht_RestoreDefaults($this->_cPtr);
+	}
+
+	function SaveLastError($path) {
+		return CkMht_SaveLastError($this->_cPtr,$path);
 	}
 
 	function UnlockComponent($unlockCode) {

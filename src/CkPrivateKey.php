@@ -35,6 +35,30 @@ class CkPrivateKey {
 		CkPrivateKey_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_BitLength() {
+		return CkPrivateKey_get_BitLength($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkPrivateKey_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkPrivateKey_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkPrivateKey_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_KeyType($str) {
+		CkPrivateKey_get_KeyType($this->_cPtr,$str);
+	}
+
+	function keyType() {
+		return CkPrivateKey_keyType($this->_cPtr);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkPrivateKey_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,56 +83,12 @@ class CkPrivateKey {
 		return CkPrivateKey_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkPrivateKey_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkPrivateKey_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkPrivateKey_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkPrivateKey_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkPrivateKey_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkPrivateKey_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkPrivateKey_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkPrivateKey_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkPrivateKey_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkPrivateKey_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_BitLength() {
-		return CkPrivateKey_get_BitLength($this->_cPtr);
-	}
-
-	function get_KeyType($str) {
-		CkPrivateKey_get_KeyType($this->_cPtr,$str);
-	}
-
-	function keyType() {
-		return CkPrivateKey_keyType($this->_cPtr);
 	}
 
 	function get_Pkcs8EncryptAlg($str) {
@@ -123,12 +103,56 @@ class CkPrivateKey {
 		CkPrivateKey_put_Pkcs8EncryptAlg($this->_cPtr,$newVal);
 	}
 
+	function get_VerboseLogging() {
+		return CkPrivateKey_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkPrivateKey_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkPrivateKey_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkPrivateKey_version($this->_cPtr);
+	}
+
+	function getJwk() {
+		return CkPrivateKey_getJwk($this->_cPtr);
+	}
+
+	function jwk() {
+		return CkPrivateKey_jwk($this->_cPtr);
+	}
+
+	function getJwkThumbprint($hashAlg) {
+		return CkPrivateKey_getJwkThumbprint($this->_cPtr,$hashAlg);
+	}
+
+	function jwkThumbprint($hashAlg) {
+		return CkPrivateKey_jwkThumbprint($this->_cPtr,$hashAlg);
+	}
+
+	function GetPkcs1($outBytes) {
+		return CkPrivateKey_GetPkcs1($this->_cPtr,$outBytes);
+	}
+
 	function getPkcs1ENC($encoding) {
 		return CkPrivateKey_getPkcs1ENC($this->_cPtr,$encoding);
 	}
 
 	function pkcs1ENC($encoding) {
 		return CkPrivateKey_pkcs1ENC($this->_cPtr,$encoding);
+	}
+
+	function getPkcs1Pem() {
+		return CkPrivateKey_getPkcs1Pem($this->_cPtr);
+	}
+
+	function pkcs1Pem() {
+		return CkPrivateKey_pkcs1Pem($this->_cPtr);
 	}
 
 	function GetPkcs8($outData) {
@@ -209,12 +233,24 @@ class CkPrivateKey {
 		return CkPrivateKey_LoadEncryptedPemFile($this->_cPtr,$path,$password);
 	}
 
+	function LoadJwk($jsonStr) {
+		return CkPrivateKey_LoadJwk($this->_cPtr,$jsonStr);
+	}
+
 	function LoadPem($str) {
 		return CkPrivateKey_LoadPem($this->_cPtr,$str);
 	}
 
 	function LoadPemFile($path) {
 		return CkPrivateKey_LoadPemFile($this->_cPtr,$path);
+	}
+
+	function LoadPkcs1($data) {
+		return CkPrivateKey_LoadPkcs1($this->_cPtr,$data);
+	}
+
+	function LoadPkcs1File($path) {
+		return CkPrivateKey_LoadPkcs1File($this->_cPtr,$path);
 	}
 
 	function LoadPkcs8($data) {
@@ -249,6 +285,18 @@ class CkPrivateKey {
 		return CkPrivateKey_LoadXmlFile($this->_cPtr,$path);
 	}
 
+	function SaveLastError($path) {
+		return CkPrivateKey_SaveLastError($this->_cPtr,$path);
+	}
+
+	function SavePemFile($path) {
+		return CkPrivateKey_SavePemFile($this->_cPtr,$path);
+	}
+
+	function SavePkcs1File($path) {
+		return CkPrivateKey_SavePkcs1File($this->_cPtr,$path);
+	}
+
 	function SavePkcs8EncryptedFile($password,$path) {
 		return CkPrivateKey_SavePkcs8EncryptedFile($this->_cPtr,$password,$path);
 	}
@@ -275,34 +323,6 @@ class CkPrivateKey {
 
 	function SaveXmlFile($path) {
 		return CkPrivateKey_SaveXmlFile($this->_cPtr,$path);
-	}
-
-	function GetPkcs1($outBytes) {
-		return CkPrivateKey_GetPkcs1($this->_cPtr,$outBytes);
-	}
-
-	function getPkcs1Pem() {
-		return CkPrivateKey_getPkcs1Pem($this->_cPtr);
-	}
-
-	function pkcs1Pem() {
-		return CkPrivateKey_pkcs1Pem($this->_cPtr);
-	}
-
-	function LoadPkcs1($data) {
-		return CkPrivateKey_LoadPkcs1($this->_cPtr,$data);
-	}
-
-	function LoadPkcs1File($path) {
-		return CkPrivateKey_LoadPkcs1File($this->_cPtr,$path);
-	}
-
-	function SavePkcs1File($path) {
-		return CkPrivateKey_SavePkcs1File($this->_cPtr,$path);
-	}
-
-	function SavePemFile($path) {
-		return CkPrivateKey_SavePemFile($this->_cPtr,$path);
 	}
 }
 

@@ -35,6 +35,22 @@ class CkDh {
 		CkDh_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkDh_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkDh_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkDh_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_G() {
+		return CkDh_get_G($this->_cPtr);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkDh_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,48 +75,12 @@ class CkDh {
 		return CkDh_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkDh_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkDh_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkDh_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkDh_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkDh_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkDh_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkDh_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkDh_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkDh_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkDh_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_G() {
-		return CkDh_get_G($this->_cPtr);
 	}
 
 	function get_P($str) {
@@ -111,16 +91,36 @@ class CkDh {
 		return CkDh_p($this->_cPtr);
 	}
 
+	function get_VerboseLogging() {
+		return CkDh_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkDh_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkDh_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkDh_version($this->_cPtr);
+	}
+
 	function createE($numBits) {
 		return CkDh_createE($this->_cPtr,$numBits);
 	}
 
-	function findK($e) {
-		return CkDh_findK($this->_cPtr,$e);
+	function findK($E) {
+		return CkDh_findK($this->_cPtr,$E);
 	}
 
-	function GenPG($numBits,$g) {
-		return CkDh_GenPG($this->_cPtr,$numBits,$g);
+	function GenPG($numBits,$G) {
+		return CkDh_GenPG($this->_cPtr,$numBits,$G);
+	}
+
+	function SaveLastError($path) {
+		return CkDh_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetPG($p,$g) {

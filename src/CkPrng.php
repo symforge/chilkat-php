@@ -35,6 +35,18 @@ class CkPrng {
 		CkPrng_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkPrng_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkPrng_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkPrng_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkPrng_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,44 +71,12 @@ class CkPrng {
 		return CkPrng_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkPrng_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkPrng_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkPrng_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkPrng_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkPrng_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkPrng_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkPrng_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkPrng_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkPrng_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkPrng_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_PrngName($str) {
@@ -109,6 +89,22 @@ class CkPrng {
 
 	function put_PrngName($newVal) {
 		CkPrng_put_PrngName($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkPrng_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkPrng_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkPrng_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkPrng_version($this->_cPtr);
 	}
 
 	function AddEntropy($entropy,$encoding) {
@@ -129,6 +125,10 @@ class CkPrng {
 
 	function genRandom($numBytes,$encoding) {
 		return CkPrng_genRandom($this->_cPtr,$numBytes,$encoding);
+	}
+
+	function GenRandomBd($numBytes,$bd) {
+		return CkPrng_GenRandomBd($this->_cPtr,$numBytes,$bd);
 	}
 
 	function GenRandomBytes($numBytes,$outBytes) {
@@ -161,6 +161,10 @@ class CkPrng {
 
 	function randomString($length,$bDigits,$bLower,$bUpper) {
 		return CkPrng_randomString($this->_cPtr,$length,$bDigits,$bLower,$bUpper);
+	}
+
+	function SaveLastError($path) {
+		return CkPrng_SaveLastError($this->_cPtr,$path);
 	}
 }
 

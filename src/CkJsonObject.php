@@ -35,38 +35,6 @@ class CkJsonObject {
 		CkJsonObject_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkJsonObject_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkJsonObject_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkJsonObject_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkJsonObject_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkJsonObject_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkJsonObject_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkJsonObject_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkJsonObject_version($this->_cPtr);
-	}
-
 	function get_DebugLogFilePath($str) {
 		CkJsonObject_get_DebugLogFilePath($this->_cPtr,$str);
 	}
@@ -77,26 +45,6 @@ class CkJsonObject {
 
 	function put_DebugLogFilePath($newVal) {
 		CkJsonObject_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkJsonObject_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkJsonObject_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkJsonObject_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkJsonObject_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkJsonObject_SaveLastError($this->_cPtr,$path);
 	}
 
 	function get_DelimiterChar($str) {
@@ -151,8 +99,56 @@ class CkJsonObject {
 		CkJsonObject_put_K($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkJsonObject_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkJsonObject_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkJsonObject_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkJsonObject_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkJsonObject_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkJsonObject_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkJsonObject_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkJsonObject_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_Size() {
 		return CkJsonObject_get_Size($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkJsonObject_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkJsonObject_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkJsonObject_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkJsonObject_version($this->_cPtr);
 	}
 
 	function AddArrayAt($index,$name) {
@@ -243,6 +239,16 @@ class CkJsonObject {
 		return CkJsonObject_BoolOf($this->_cPtr,$jsonPath);
 	}
 
+	function c_Clone() {
+		$r=CkJsonObject_c_Clone($this->_cPtr);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkJsonObject($r);
+		}
+		return $r;
+	}
+
 	function Delete($name) {
 		return CkJsonObject_Delete($this->_cPtr,$name);
 	}
@@ -253,6 +259,24 @@ class CkJsonObject {
 
 	function emit() {
 		return CkJsonObject_emit($this->_cPtr);
+	}
+
+	function EmitSb($sb) {
+		return CkJsonObject_EmitSb($this->_cPtr,$sb);
+	}
+
+	function FindRecord($arrayPath,$relPath,$value,$caseSensitive) {
+		$r=CkJsonObject_FindRecord($this->_cPtr,$arrayPath,$relPath,$value,$caseSensitive);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkJsonObject($r);
+		}
+		return $r;
+	}
+
+	function findRecordString($arrayPath,$relPath,$value,$caseSensitive,$retRelPath) {
+		return CkJsonObject_findRecordString($this->_cPtr,$arrayPath,$relPath,$value,$caseSensitive,$retRelPath);
 	}
 
 	function FirebaseApplyEvent($name,$data) {
@@ -309,6 +333,10 @@ class CkJsonObject {
 		return CkJsonObject_LoadFile($this->_cPtr,$path);
 	}
 
+	function LoadSb($sb) {
+		return CkJsonObject_LoadSb($this->_cPtr,$sb);
+	}
+
 	function nameAt($index) {
 		return CkJsonObject_nameAt($this->_cPtr,$index);
 	}
@@ -339,6 +367,10 @@ class CkJsonObject {
 
 	function RenameAt($index,$name) {
 		return CkJsonObject_RenameAt($this->_cPtr,$index,$name);
+	}
+
+	function SaveLastError($path) {
+		return CkJsonObject_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetBoolAt($index,$value) {
@@ -395,6 +427,26 @@ class CkJsonObject {
 
 	function TypeAt($index) {
 		return CkJsonObject_TypeAt($this->_cPtr,$index);
+	}
+
+	function UpdateBool($jsonPath,$value) {
+		return CkJsonObject_UpdateBool($this->_cPtr,$jsonPath,$value);
+	}
+
+	function UpdateInt($jsonPath,$value) {
+		return CkJsonObject_UpdateInt($this->_cPtr,$jsonPath,$value);
+	}
+
+	function UpdateNull($jsonPath) {
+		return CkJsonObject_UpdateNull($this->_cPtr,$jsonPath);
+	}
+
+	function UpdateNumber($jsonPath,$numericStr) {
+		return CkJsonObject_UpdateNumber($this->_cPtr,$jsonPath,$numericStr);
+	}
+
+	function UpdateString($jsonPath,$value) {
+		return CkJsonObject_UpdateString($this->_cPtr,$jsonPath,$value);
 	}
 }
 

@@ -39,68 +39,20 @@ class CkRest {
 		CkRest_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkRest_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AllowHeaderFolding() {
+		return CkRest_get_AllowHeaderFolding($this->_cPtr);
 	}
 
-	function lastErrorHtml() {
-		return CkRest_lastErrorHtml($this->_cPtr);
+	function put_AllowHeaderFolding($newVal) {
+		CkRest_put_AllowHeaderFolding($this->_cPtr,$newVal);
 	}
 
-	function get_LastErrorText($str) {
-		CkRest_get_LastErrorText($this->_cPtr,$str);
+	function get_AllowHeaderQB() {
+		return CkRest_get_AllowHeaderQB($this->_cPtr);
 	}
 
-	function lastErrorText() {
-		return CkRest_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkRest_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkRest_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkRest_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkRest_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkRest_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkRest_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkRest_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkRest_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkRest_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkRest_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkRest_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkRest_SaveLastError($this->_cPtr,$path);
+	function put_AllowHeaderQB($newVal) {
+		CkRest_put_AllowHeaderQB($this->_cPtr,$newVal);
 	}
 
 	function get_Authorization($str) {
@@ -113,6 +65,22 @@ class CkRest {
 
 	function put_Authorization($newVal) {
 		CkRest_put_Authorization($this->_cPtr,$newVal);
+	}
+
+	function get_ConnectFailReason() {
+		return CkRest_get_ConnectFailReason($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkRest_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkRest_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkRest_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_HeartbeatMs() {
@@ -141,6 +109,38 @@ class CkRest {
 
 	function put_IdleTimeoutMs($newVal) {
 		CkRest_put_IdleTimeoutMs($this->_cPtr,$newVal);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkRest_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkRest_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkRest_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkRest_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkRest_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkRest_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkRest_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkRest_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_LastRequestHeader($str) {
@@ -175,6 +175,14 @@ class CkRest {
 		CkRest_put_PartSelector($this->_cPtr,$newVal);
 	}
 
+	function get_PercentDoneOnSend() {
+		return CkRest_get_PercentDoneOnSend($this->_cPtr);
+	}
+
+	function put_PercentDoneOnSend($newVal) {
+		CkRest_put_PercentDoneOnSend($this->_cPtr,$newVal);
+	}
+
 	function get_ResponseHeader($str) {
 		CkRest_get_ResponseHeader($this->_cPtr,$str);
 	}
@@ -203,20 +211,28 @@ class CkRest {
 		CkRest_put_StreamNonChunked($this->_cPtr,$newVal);
 	}
 
-	function get_ConnectFailReason() {
-		return CkRest_get_ConnectFailReason($this->_cPtr);
+	function get_VerboseLogging() {
+		return CkRest_get_VerboseLogging($this->_cPtr);
 	}
 
-	function get_PercentDoneOnSend() {
-		return CkRest_get_PercentDoneOnSend($this->_cPtr);
+	function put_VerboseLogging($newVal) {
+		CkRest_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function put_PercentDoneOnSend($newVal) {
-		CkRest_put_PercentDoneOnSend($this->_cPtr,$newVal);
+	function get_Version($str) {
+		CkRest_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkRest_version($this->_cPtr);
 	}
 
 	function AddHeader($name,$value) {
 		return CkRest_AddHeader($this->_cPtr,$name,$value);
+	}
+
+	function AddMwsSignature($httpVerb,$uriPath,$domain,$mwsSecretKey) {
+		return CkRest_AddMwsSignature($this->_cPtr,$httpVerb,$uriPath,$domain,$mwsSecretKey);
 	}
 
 	function AddQueryParam($name,$value) {
@@ -227,8 +243,16 @@ class CkRest {
 		return CkRest_AddQueryParams($this->_cPtr,$queryString);
 	}
 
+	function AddQueryParamSb($name,$value) {
+		return CkRest_AddQueryParamSb($this->_cPtr,$name,$value);
+	}
+
 	function ClearAllHeaders() {
 		return CkRest_ClearAllHeaders($this->_cPtr);
+	}
+
+	function ClearAllParts() {
+		return CkRest_ClearAllParts($this->_cPtr);
 	}
 
 	function ClearAllQueryParams() {
@@ -259,6 +283,20 @@ class CkRest {
 
 	function DisconnectAsync($maxWaitMs) {
 		$r=CkRest_DisconnectAsync($this->_cPtr,$maxWaitMs);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function FullRequestBd($httpVerb,$uriPath,$binData,$responseBody) {
+		return CkRest_FullRequestBd($this->_cPtr,$httpVerb,$uriPath,$binData,$responseBody);
+	}
+
+	function FullRequestBdAsync($httpVerb,$uriPath,$binData,$responseBody) {
+		$r=CkRest_FullRequestBdAsync($this->_cPtr,$httpVerb,$uriPath,$binData,$responseBody);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -323,6 +361,48 @@ class CkRest {
 		return $r;
 	}
 
+	function FullRequestNoBodyBd($httpVerb,$uriPath,$binData) {
+		return CkRest_FullRequestNoBodyBd($this->_cPtr,$httpVerb,$uriPath,$binData);
+	}
+
+	function FullRequestNoBodyBdAsync($httpVerb,$uriPath,$binData) {
+		$r=CkRest_FullRequestNoBodyBdAsync($this->_cPtr,$httpVerb,$uriPath,$binData);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function FullRequestNoBodySb($httpVerb,$uriPath,$sb) {
+		return CkRest_FullRequestNoBodySb($this->_cPtr,$httpVerb,$uriPath,$sb);
+	}
+
+	function FullRequestNoBodySbAsync($httpVerb,$uriPath,$sb) {
+		$r=CkRest_FullRequestNoBodySbAsync($this->_cPtr,$httpVerb,$uriPath,$sb);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function FullRequestSb($httpVerb,$uriPath,$requestBody,$responseBody) {
+		return CkRest_FullRequestSb($this->_cPtr,$httpVerb,$uriPath,$requestBody,$responseBody);
+	}
+
+	function FullRequestSbAsync($httpVerb,$uriPath,$requestBody,$responseBody) {
+		$r=CkRest_FullRequestSbAsync($this->_cPtr,$httpVerb,$uriPath,$requestBody,$responseBody);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function fullRequestStream($httpVerb,$uriPath,$stream) {
 		return CkRest_fullRequestStream($this->_cPtr,$httpVerb,$uriPath,$stream);
 	}
@@ -343,6 +423,20 @@ class CkRest {
 
 	function FullRequestStringAsync($httpVerb,$uriPath,$bodyText) {
 		$r=CkRest_FullRequestStringAsync($this->_cPtr,$httpVerb,$uriPath,$bodyText);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
+	function ReadRespBd($responseBody) {
+		return CkRest_ReadRespBd($this->_cPtr,$responseBody);
+	}
+
+	function ReadRespBdAsync($responseBody) {
+		$r=CkRest_ReadRespBdAsync($this->_cPtr,$responseBody);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -407,6 +501,20 @@ class CkRest {
 		return $r;
 	}
 
+	function ReadRespSb($responseBody) {
+		return CkRest_ReadRespSb($this->_cPtr,$responseBody);
+	}
+
+	function ReadRespSbAsync($responseBody) {
+		$r=CkRest_ReadRespSbAsync($this->_cPtr,$responseBody);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function RedirectUrl() {
 		$r=CkRest_RedirectUrl($this->_cPtr);
 		if (is_resource($r)) {
@@ -435,6 +543,24 @@ class CkRest {
 
 	function responseHdrValue($index) {
 		return CkRest_responseHdrValue($this->_cPtr,$index);
+	}
+
+	function SaveLastError($path) {
+		return CkRest_SaveLastError($this->_cPtr,$path);
+	}
+
+	function SendReqBd($httpVerb,$uriPath,$body) {
+		return CkRest_SendReqBd($this->_cPtr,$httpVerb,$uriPath,$body);
+	}
+
+	function SendReqBdAsync($httpVerb,$uriPath,$body) {
+		$r=CkRest_SendReqBdAsync($this->_cPtr,$httpVerb,$uriPath,$body);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
 	}
 
 	function SendReqBinaryBody($httpVerb,$uriPath,$body) {
@@ -493,6 +619,20 @@ class CkRest {
 		return $r;
 	}
 
+	function SendReqSb($httpVerb,$uriPath,$bodySb) {
+		return CkRest_SendReqSb($this->_cPtr,$httpVerb,$uriPath,$bodySb);
+	}
+
+	function SendReqSbAsync($httpVerb,$uriPath,$bodySb) {
+		$r=CkRest_SendReqSbAsync($this->_cPtr,$httpVerb,$uriPath,$bodySb);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new CkTask($r);
+		}
+		return $r;
+	}
+
 	function SendReqStreamBody($httpVerb,$uriPath,$stream) {
 		return CkRest_SendReqStreamBody($this->_cPtr,$httpVerb,$uriPath,$stream);
 	}
@@ -529,6 +669,10 @@ class CkRest {
 		return CkRest_SetAuthAzureAD($this->_cPtr,$authProvider);
 	}
 
+	function SetAuthAzureSas($authProvider) {
+		return CkRest_SetAuthAzureSas($this->_cPtr,$authProvider);
+	}
+
 	function SetAuthAzureStorage($authProvider) {
 		return CkRest_SetAuthAzureStorage($this->_cPtr,$authProvider);
 	}
@@ -545,8 +689,20 @@ class CkRest {
 		return CkRest_SetAuthOAuth1($this->_cPtr,$authProvider,$useQueryParams);
 	}
 
+	function SetAuthOAuth2($authProvider) {
+		return CkRest_SetAuthOAuth2($this->_cPtr,$authProvider);
+	}
+
+	function SetMultipartBodyBd($bodyData) {
+		return CkRest_SetMultipartBodyBd($this->_cPtr,$bodyData);
+	}
+
 	function SetMultipartBodyBinary($bodyData) {
 		return CkRest_SetMultipartBodyBinary($this->_cPtr,$bodyData);
+	}
+
+	function SetMultipartBodySb($bodySb) {
+		return CkRest_SetMultipartBodySb($this->_cPtr,$bodySb);
 	}
 
 	function SetMultipartBodyStream($stream) {

@@ -35,70 +35,6 @@ class CkCsv {
 		CkCsv_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkCsv_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkCsv_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkCsv_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkCsv_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkCsv_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkCsv_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkCsv_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCsv_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCsv_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCsv_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCsv_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCsv_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCsv_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkCsv_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkCsv_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCsv_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AutoTrim() {
 		return CkCsv_get_AutoTrim($this->_cPtr);
 	}
@@ -113,6 +49,18 @@ class CkCsv {
 
 	function put_Crlf($newVal) {
 		CkCsv_put_Crlf($this->_cPtr,$newVal);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkCsv_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCsv_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCsv_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_Delimiter($str) {
@@ -143,12 +91,60 @@ class CkCsv {
 		CkCsv_put_HasColumnNames($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkCsv_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkCsv_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkCsv_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkCsv_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkCsv_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkCsv_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkCsv_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkCsv_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_NumColumns() {
 		return CkCsv_get_NumColumns($this->_cPtr);
 	}
 
 	function get_NumRows() {
 		return CkCsv_get_NumRows($this->_cPtr);
+	}
+
+	function get_VerboseLogging() {
+		return CkCsv_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCsv_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCsv_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCsv_version($this->_cPtr);
 	}
 
 	function DeleteColumn($index) {
@@ -171,12 +167,12 @@ class CkCsv {
 		return CkCsv_cell($this->_cPtr,$row,$col);
 	}
 
-	function getCellByName($row,$columnName) {
-		return CkCsv_getCellByName($this->_cPtr,$row,$columnName);
+	function getCellByName($rowIndex,$columnName) {
+		return CkCsv_getCellByName($this->_cPtr,$rowIndex,$columnName);
 	}
 
-	function cellByName($row,$columnName) {
-		return CkCsv_cellByName($this->_cPtr,$row,$columnName);
+	function cellByName($rowIndex,$columnName) {
+		return CkCsv_cellByName($this->_cPtr,$rowIndex,$columnName);
 	}
 
 	function getColumnName($index) {
@@ -199,24 +195,28 @@ class CkCsv {
 		return CkCsv_LoadFile($this->_cPtr,$path);
 	}
 
-	function LoadFile2($path,$charset) {
-		return CkCsv_LoadFile2($this->_cPtr,$path,$charset);
+	function LoadFile2($filename,$charset) {
+		return CkCsv_LoadFile2($this->_cPtr,$filename,$charset);
 	}
 
 	function LoadFromString($csvData) {
 		return CkCsv_LoadFromString($this->_cPtr,$csvData);
 	}
 
-	function RowMatches($row,$matchPattern,$bCaseSensitive) {
-		return CkCsv_RowMatches($this->_cPtr,$row,$matchPattern,$bCaseSensitive);
+	function RowMatches($rowIndex,$matchPattern,$caseSensitive) {
+		return CkCsv_RowMatches($this->_cPtr,$rowIndex,$matchPattern,$caseSensitive);
 	}
 
 	function SaveFile($path) {
 		return CkCsv_SaveFile($this->_cPtr,$path);
 	}
 
-	function SaveFile2($path,$charset) {
-		return CkCsv_SaveFile2($this->_cPtr,$path,$charset);
+	function SaveFile2($filename,$charset) {
+		return CkCsv_SaveFile2($this->_cPtr,$filename,$charset);
+	}
+
+	function SaveLastError($path) {
+		return CkCsv_SaveLastError($this->_cPtr,$path);
 	}
 
 	function saveToString() {
@@ -227,16 +227,16 @@ class CkCsv {
 		return CkCsv_SetCell($this->_cPtr,$row,$col,$content);
 	}
 
-	function SetCellByName($row,$columnName,$content) {
-		return CkCsv_SetCellByName($this->_cPtr,$row,$columnName,$content);
+	function SetCellByName($rowIndex,$columnName,$contentStr) {
+		return CkCsv_SetCellByName($this->_cPtr,$rowIndex,$columnName,$contentStr);
 	}
 
 	function SetColumnName($index,$columnName) {
 		return CkCsv_SetColumnName($this->_cPtr,$index,$columnName);
 	}
 
-	function SortByColumn($columnName,$bAscending,$bCaseSensitive) {
-		return CkCsv_SortByColumn($this->_cPtr,$columnName,$bAscending,$bCaseSensitive);
+	function SortByColumn($columnName,$ascending,$caseSensitive) {
+		return CkCsv_SortByColumn($this->_cPtr,$columnName,$ascending,$caseSensitive);
 	}
 }
 

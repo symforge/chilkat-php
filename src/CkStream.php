@@ -39,6 +39,54 @@ class CkStream {
 		CkStream_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
+	function get_AbortCurrent() {
+		return CkStream_get_AbortCurrent($this->_cPtr);
+	}
+
+	function put_AbortCurrent($newVal) {
+		CkStream_put_AbortCurrent($this->_cPtr,$newVal);
+	}
+
+	function get_CanRead() {
+		return CkStream_get_CanRead($this->_cPtr);
+	}
+
+	function get_CanWrite() {
+		return CkStream_get_CanWrite($this->_cPtr);
+	}
+
+	function get_DataAvailable() {
+		return CkStream_get_DataAvailable($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkStream_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkStream_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkStream_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
+	function get_DefaultChunkSize() {
+		return CkStream_get_DefaultChunkSize($this->_cPtr);
+	}
+
+	function put_DefaultChunkSize($newVal) {
+		CkStream_put_DefaultChunkSize($this->_cPtr,$newVal);
+	}
+
+	function get_EndOfStream() {
+		return CkStream_get_EndOfStream($this->_cPtr);
+	}
+
+	function get_IsWriteClosed() {
+		return CkStream_get_IsWriteClosed($this->_cPtr);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkStream_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -63,80 +111,12 @@ class CkStream {
 		return CkStream_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkStream_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkStream_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkStream_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkStream_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkStream_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkStream_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkStream_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
 	function get_LastMethodSuccess() {
 		return CkStream_get_LastMethodSuccess($this->_cPtr);
 	}
 
 	function put_LastMethodSuccess($newVal) {
 		CkStream_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkStream_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AbortCurrent() {
-		return CkStream_get_AbortCurrent($this->_cPtr);
-	}
-
-	function put_AbortCurrent($newVal) {
-		CkStream_put_AbortCurrent($this->_cPtr,$newVal);
-	}
-
-	function get_CanRead() {
-		return CkStream_get_CanRead($this->_cPtr);
-	}
-
-	function get_CanWrite() {
-		return CkStream_get_CanWrite($this->_cPtr);
-	}
-
-	function get_DataAvailable() {
-		return CkStream_get_DataAvailable($this->_cPtr);
-	}
-
-	function get_DefaultChunkSize() {
-		return CkStream_get_DefaultChunkSize($this->_cPtr);
-	}
-
-	function put_DefaultChunkSize($newVal) {
-		CkStream_put_DefaultChunkSize($this->_cPtr,$newVal);
-	}
-
-	function get_EndOfStream() {
-		return CkStream_get_EndOfStream($this->_cPtr);
-	}
-
-	function get_IsWriteClosed() {
-		return CkStream_get_IsWriteClosed($this->_cPtr);
 	}
 
 	function get_Length32() {
@@ -183,6 +163,22 @@ class CkStream {
 		CkStream_put_SourceFile($this->_cPtr,$newVal);
 	}
 
+	function get_SourceFilePart() {
+		return CkStream_get_SourceFilePart($this->_cPtr);
+	}
+
+	function put_SourceFilePart($newVal) {
+		CkStream_put_SourceFilePart($this->_cPtr,$newVal);
+	}
+
+	function get_SourceFilePartSize() {
+		return CkStream_get_SourceFilePartSize($this->_cPtr);
+	}
+
+	function put_SourceFilePartSize($newVal) {
+		CkStream_put_SourceFilePartSize($this->_cPtr,$newVal);
+	}
+
 	function get_StringBom() {
 		return CkStream_get_StringBom($this->_cPtr);
 	}
@@ -201,6 +197,22 @@ class CkStream {
 
 	function put_StringCharset($newVal) {
 		CkStream_put_StringCharset($this->_cPtr,$newVal);
+	}
+
+	function get_VerboseLogging() {
+		return CkStream_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkStream_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkStream_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkStream_version($this->_cPtr);
 	}
 
 	function get_WriteFailReason() {
@@ -329,6 +341,10 @@ class CkStream {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkStream_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetSinkStream($strm) {

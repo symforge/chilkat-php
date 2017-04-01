@@ -39,36 +39,16 @@ class CkAuthGoogle {
 		CkAuthGoogle_put_EventCallbackObject($this->_cPtr,$progress);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkAuthGoogle_get_LastErrorHtml($this->_cPtr,$str);
+	function get_AccessToken($str) {
+		CkAuthGoogle_get_AccessToken($this->_cPtr,$str);
 	}
 
-	function lastErrorHtml() {
-		return CkAuthGoogle_lastErrorHtml($this->_cPtr);
+	function accessToken() {
+		return CkAuthGoogle_accessToken($this->_cPtr);
 	}
 
-	function get_LastErrorText($str) {
-		CkAuthGoogle_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkAuthGoogle_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkAuthGoogle_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkAuthGoogle_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkAuthGoogle_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkAuthGoogle_version($this->_cPtr);
+	function put_AccessToken($newVal) {
+		CkAuthGoogle_put_AccessToken($this->_cPtr,$newVal);
 	}
 
 	function get_DebugLogFilePath($str) {
@@ -81,38 +61,6 @@ class CkAuthGoogle {
 
 	function put_DebugLogFilePath($newVal) {
 		CkAuthGoogle_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkAuthGoogle_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkAuthGoogle_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkAuthGoogle_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkAuthGoogle_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkAuthGoogle_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_AccessToken($str) {
-		CkAuthGoogle_get_AccessToken($this->_cPtr,$str);
-	}
-
-	function accessToken() {
-		return CkAuthGoogle_accessToken($this->_cPtr);
-	}
-
-	function put_AccessToken($newVal) {
-		CkAuthGoogle_put_AccessToken($this->_cPtr,$newVal);
 	}
 
 	function get_EmailAddress($str) {
@@ -147,6 +95,38 @@ class CkAuthGoogle {
 		CkAuthGoogle_put_JsonKey($this->_cPtr,$newVal);
 	}
 
+	function get_LastErrorHtml($str) {
+		CkAuthGoogle_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkAuthGoogle_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkAuthGoogle_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkAuthGoogle_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkAuthGoogle_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkAuthGoogle_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkAuthGoogle_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkAuthGoogle_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
 	function get_NumSecondsRemaining() {
 		return CkAuthGoogle_get_NumSecondsRemaining($this->_cPtr);
 	}
@@ -179,6 +159,22 @@ class CkAuthGoogle {
 		return CkAuthGoogle_get_Valid($this->_cPtr);
 	}
 
+	function get_VerboseLogging() {
+		return CkAuthGoogle_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkAuthGoogle_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkAuthGoogle_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkAuthGoogle_version($this->_cPtr);
+	}
+
 	function GetP12() {
 		$r=CkAuthGoogle_GetP12($this->_cPtr);
 		if (is_resource($r)) {
@@ -201,6 +197,10 @@ class CkAuthGoogle {
 			return new CkTask($r);
 		}
 		return $r;
+	}
+
+	function SaveLastError($path) {
+		return CkAuthGoogle_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SetP12($key) {

@@ -35,6 +35,18 @@ class CkPfx {
 		CkPfx_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_DebugLogFilePath($str) {
+		CkPfx_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkPfx_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkPfx_put_DebugLogFilePath($this->_cPtr,$newVal);
+	}
+
 	function get_LastErrorHtml($str) {
 		CkPfx_get_LastErrorHtml($this->_cPtr,$str);
 	}
@@ -59,24 +71,20 @@ class CkPfx {
 		return CkPfx_lastErrorXml($this->_cPtr);
 	}
 
-	function get_Version($str) {
-		CkPfx_get_Version($this->_cPtr,$str);
+	function get_LastMethodSuccess() {
+		return CkPfx_get_LastMethodSuccess($this->_cPtr);
 	}
 
-	function version() {
-		return CkPfx_version($this->_cPtr);
+	function put_LastMethodSuccess($newVal) {
+		CkPfx_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
-	function get_DebugLogFilePath($str) {
-		CkPfx_get_DebugLogFilePath($this->_cPtr,$str);
+	function get_NumCerts() {
+		return CkPfx_get_NumCerts($this->_cPtr);
 	}
 
-	function debugLogFilePath() {
-		return CkPfx_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkPfx_put_DebugLogFilePath($this->_cPtr,$newVal);
+	function get_NumPrivateKeys() {
+		return CkPfx_get_NumPrivateKeys($this->_cPtr);
 	}
 
 	function get_VerboseLogging() {
@@ -87,24 +95,12 @@ class CkPfx {
 		CkPfx_put_VerboseLogging($this->_cPtr,$newVal);
 	}
 
-	function get_LastMethodSuccess() {
-		return CkPfx_get_LastMethodSuccess($this->_cPtr);
+	function get_Version($str) {
+		CkPfx_get_Version($this->_cPtr,$str);
 	}
 
-	function put_LastMethodSuccess($newVal) {
-		CkPfx_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkPfx_SaveLastError($this->_cPtr,$path);
-	}
-
-	function get_NumCerts() {
-		return CkPfx_get_NumCerts($this->_cPtr);
-	}
-
-	function get_NumPrivateKeys() {
-		return CkPfx_get_NumPrivateKeys($this->_cPtr);
+	function version() {
+		return CkPfx_version($this->_cPtr);
 	}
 
 	function AddCert($cert,$includeChain) {
@@ -149,6 +145,10 @@ class CkPfx {
 
 	function LoadPfxFile($path,$password) {
 		return CkPfx_LoadPfxFile($this->_cPtr,$path,$password);
+	}
+
+	function SaveLastError($path) {
+		return CkPfx_SaveLastError($this->_cPtr,$path);
 	}
 
 	function ToBinary($password,$outBytes) {

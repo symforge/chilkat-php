@@ -35,8 +35,24 @@ class CkHashtable {
 		CkHashtable_put_Utf8($this->_cPtr,$b);
 	}
 
+	function get_LastMethodSuccess() {
+		return CkHashtable_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkHashtable_put_LastMethodSuccess($this->_cPtr,$newVal);
+	}
+
+	function AddFromXmlSb($sbXml) {
+		return CkHashtable_AddFromXmlSb($this->_cPtr,$sbXml);
+	}
+
 	function AddInt($key,$value) {
 		return CkHashtable_AddInt($this->_cPtr,$key,$value);
+	}
+
+	function AddQueryParams($queryParams) {
+		return CkHashtable_AddQueryParams($this->_cPtr,$queryParams);
 	}
 
 	function AddStr($key,$value) {
@@ -55,6 +71,14 @@ class CkHashtable {
 		return CkHashtable_Contains($this->_cPtr,$key);
 	}
 
+	function ContainsIntKey($key) {
+		return CkHashtable_ContainsIntKey($this->_cPtr,$key);
+	}
+
+	function GetKeys($strTable) {
+		return CkHashtable_GetKeys($this->_cPtr,$strTable);
+	}
+
 	function LookupInt($key) {
 		return CkHashtable_LookupInt($this->_cPtr,$key);
 	}
@@ -65,6 +89,10 @@ class CkHashtable {
 
 	function Remove($key) {
 		return CkHashtable_Remove($this->_cPtr,$key);
+	}
+
+	function ToXmlSb($sbXml) {
+		return CkHashtable_ToXmlSb($this->_cPtr,$sbXml);
 	}
 }
 

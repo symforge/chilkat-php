@@ -35,70 +35,6 @@ class CkCert {
 		CkCert_put_Utf8($this->_cPtr,$b);
 	}
 
-	function get_LastErrorHtml($str) {
-		CkCert_get_LastErrorHtml($this->_cPtr,$str);
-	}
-
-	function lastErrorHtml() {
-		return CkCert_lastErrorHtml($this->_cPtr);
-	}
-
-	function get_LastErrorText($str) {
-		CkCert_get_LastErrorText($this->_cPtr,$str);
-	}
-
-	function lastErrorText() {
-		return CkCert_lastErrorText($this->_cPtr);
-	}
-
-	function get_LastErrorXml($str) {
-		CkCert_get_LastErrorXml($this->_cPtr,$str);
-	}
-
-	function lastErrorXml() {
-		return CkCert_lastErrorXml($this->_cPtr);
-	}
-
-	function get_Version($str) {
-		CkCert_get_Version($this->_cPtr,$str);
-	}
-
-	function version() {
-		return CkCert_version($this->_cPtr);
-	}
-
-	function get_DebugLogFilePath($str) {
-		CkCert_get_DebugLogFilePath($this->_cPtr,$str);
-	}
-
-	function debugLogFilePath() {
-		return CkCert_debugLogFilePath($this->_cPtr);
-	}
-
-	function put_DebugLogFilePath($newVal) {
-		CkCert_put_DebugLogFilePath($this->_cPtr,$newVal);
-	}
-
-	function get_VerboseLogging() {
-		return CkCert_get_VerboseLogging($this->_cPtr);
-	}
-
-	function put_VerboseLogging($newVal) {
-		CkCert_put_VerboseLogging($this->_cPtr,$newVal);
-	}
-
-	function get_LastMethodSuccess() {
-		return CkCert_get_LastMethodSuccess($this->_cPtr);
-	}
-
-	function put_LastMethodSuccess($newVal) {
-		CkCert_put_LastMethodSuccess($this->_cPtr,$newVal);
-	}
-
-	function SaveLastError($path) {
-		return CkCert_SaveLastError($this->_cPtr,$path);
-	}
-
 	function get_AuthorityKeyId($str) {
 		CkCert_get_AuthorityKeyId($this->_cPtr,$str);
 	}
@@ -125,6 +61,18 @@ class CkCert {
 
 	function cspName() {
 		return CkCert_cspName($this->_cPtr);
+	}
+
+	function get_DebugLogFilePath($str) {
+		CkCert_get_DebugLogFilePath($this->_cPtr,$str);
+	}
+
+	function debugLogFilePath() {
+		return CkCert_debugLogFilePath($this->_cPtr);
+	}
+
+	function put_DebugLogFilePath($newVal) {
+		CkCert_put_DebugLogFilePath($this->_cPtr,$newVal);
 	}
 
 	function get_Expired() {
@@ -233,6 +181,38 @@ class CkCert {
 
 	function keyContainerName() {
 		return CkCert_keyContainerName($this->_cPtr);
+	}
+
+	function get_LastErrorHtml($str) {
+		CkCert_get_LastErrorHtml($this->_cPtr,$str);
+	}
+
+	function lastErrorHtml() {
+		return CkCert_lastErrorHtml($this->_cPtr);
+	}
+
+	function get_LastErrorText($str) {
+		CkCert_get_LastErrorText($this->_cPtr,$str);
+	}
+
+	function lastErrorText() {
+		return CkCert_lastErrorText($this->_cPtr);
+	}
+
+	function get_LastErrorXml($str) {
+		CkCert_get_LastErrorXml($this->_cPtr,$str);
+	}
+
+	function lastErrorXml() {
+		return CkCert_lastErrorXml($this->_cPtr);
+	}
+
+	function get_LastMethodSuccess() {
+		return CkCert_get_LastMethodSuccess($this->_cPtr);
+	}
+
+	function put_LastMethodSuccess($newVal) {
+		CkCert_put_LastMethodSuccess($this->_cPtr,$newVal);
 	}
 
 	function get_MachineKeyset() {
@@ -391,6 +371,22 @@ class CkCert {
 		return CkCert_validToStr($this->_cPtr);
 	}
 
+	function get_VerboseLogging() {
+		return CkCert_get_VerboseLogging($this->_cPtr);
+	}
+
+	function put_VerboseLogging($newVal) {
+		CkCert_put_VerboseLogging($this->_cPtr,$newVal);
+	}
+
+	function get_Version($str) {
+		CkCert_get_Version($this->_cPtr,$str);
+	}
+
+	function version() {
+		return CkCert_version($this->_cPtr);
+	}
+
 	function CheckRevoked() {
 		return CkCert_CheckRevoked($this->_cPtr);
 	}
@@ -439,8 +435,8 @@ class CkCert {
 		return CkCert_ExportToPfxData($this->_cPtr,$password,$includeCertChain,$outBytes);
 	}
 
-	function ExportToPfxFile($pfxFilename,$password,$bIncludeChain) {
-		return CkCert_ExportToPfxFile($this->_cPtr,$pfxFilename,$password,$bIncludeChain);
+	function ExportToPfxFile($pfxFilename,$pfxPassword,$bIncludeCertChain) {
+		return CkCert_ExportToPfxFile($this->_cPtr,$pfxFilename,$pfxPassword,$bIncludeCertChain);
 	}
 
 	function FindIssuer() {
@@ -527,8 +523,8 @@ class CkCert {
 		return CkCert_LoadByEmailAddress($this->_cPtr,$emailAddress);
 	}
 
-	function LoadByIssuerAndSerialNumber($issuerCN,$serialNum) {
-		return CkCert_LoadByIssuerAndSerialNumber($this->_cPtr,$issuerCN,$serialNum);
+	function LoadByIssuerAndSerialNumber($issuerCN,$serialNumber) {
+		return CkCert_LoadByIssuerAndSerialNumber($this->_cPtr,$issuerCN,$serialNumber);
 	}
 
 	function LoadFromBase64($encodedCert) {
@@ -561,6 +557,10 @@ class CkCert {
 
 	function PemFileToDerFile($fromPath,$toPath) {
 		return CkCert_PemFileToDerFile($this->_cPtr,$fromPath,$toPath);
+	}
+
+	function SaveLastError($path) {
+		return CkCert_SaveLastError($this->_cPtr,$path);
 	}
 
 	function SaveToFile($path) {
